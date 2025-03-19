@@ -1,5 +1,4 @@
 
-import { useState } from "react";
 import { Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,21 +7,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-const languages = [
-  { code: "en", name: "English" },
-  { code: "es", name: "Español" },
-  { code: "fr", name: "Français" },
-];
+import { useLanguage, languages } from "@/contexts/LanguageContext";
 
 export function LanguageSelector() {
-  const [currentLang, setCurrentLang] = useState("en");
+  const { currentLanguage, setLanguage } = useLanguage();
 
   const handleLanguageChange = (langCode: string) => {
-    setCurrentLang(langCode);
-    // In a real implementation, you would change the application language here
-    // For example: i18n.changeLanguage(langCode);
-    console.log(`Language changed to: ${langCode}`);
+    setLanguage(langCode);
   };
 
   return (
@@ -38,7 +29,7 @@ export function LanguageSelector() {
           <DropdownMenuItem 
             key={lang.code}
             onClick={() => handleLanguageChange(lang.code)}
-            className={currentLang === lang.code ? "bg-muted" : ""}
+            className={currentLanguage === lang.code ? "bg-muted" : ""}
           >
             {lang.name}
           </DropdownMenuItem>

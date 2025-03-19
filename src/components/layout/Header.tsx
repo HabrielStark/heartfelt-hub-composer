@@ -5,17 +5,19 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Heart } from 'lucide-react';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 import { LanguageSelector } from '@/components/ui/language-selector';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { translate } = useLanguage();
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
-    { name: 'How to Help', href: '/how-to-help' },
-    { name: 'Financial Transparency', href: '/financial-transparency' },
-    { name: 'Contact Us', href: '/contact' },
+    { name: translate('home'), href: '/' },
+    { name: translate('about'), href: '/about' },
+    { name: translate('howToHelp'), href: '/how-to-help' },
+    { name: translate('financialTransparency'), href: '/financial-transparency' },
+    { name: translate('contact'), href: '/contact' },
   ];
 
   const isActive = (path: string) => {
@@ -56,7 +58,7 @@ const Header = () => {
             <ThemeToggle />
             <LanguageSelector />
             <Button className="bg-primary hover:bg-primary-600 ml-2">
-              Donate Now
+              {translate('donateNow')}
             </Button>
           </div>
 
@@ -94,7 +96,7 @@ const Header = () => {
                 </Link>
               ))}
               <Button className="bg-primary hover:bg-primary-600 mt-2">
-                Donate Now
+                {translate('donateNow')}
               </Button>
             </div>
           </nav>
