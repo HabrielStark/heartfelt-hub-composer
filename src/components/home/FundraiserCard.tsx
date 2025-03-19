@@ -38,7 +38,10 @@ const FundraiserCard: React.FC<FundraiserCardProps> = ({
         <p className="text-gray-600 mb-4 line-clamp-2">{description}</p>
         
         <div className="mb-2">
-          <Progress value={progress} className="h-2 bg-gray-100" indicatorClassName="bg-primary" />
+          <Progress 
+            value={progress} 
+            className="h-2 bg-gray-100"
+          />
         </div>
         
         <div className="flex justify-between text-sm mb-4">

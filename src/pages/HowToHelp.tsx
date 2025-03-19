@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import PageLayout from '@/components/layout/PageLayout';
 import PageBanner from '@/components/ui/PageBanner';
@@ -10,7 +9,7 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { DollarSign, Gift, Clock, Heart, Building, Check } from 'lucide-react';
+import { DollarSign, Gift, Clock, Heart, Building, Check, HandHeart } from 'lucide-react';
 import FundraiserCard from '@/components/home/FundraiserCard';
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from '@/hooks/use-toast';
@@ -127,7 +126,6 @@ const HowToHelp = () => {
               <TabsTrigger value="partners">Partners</TabsTrigger>
             </TabsList>
             
-            {/* Donations Tab */}
             <TabsContent value="donations" id="donations">
               <SectionHeading 
                 title="Make a Donation" 
@@ -236,7 +234,6 @@ const HowToHelp = () => {
               </div>
             </TabsContent>
             
-            {/* Material Aid Tab */}
             <TabsContent value="material">
               <SectionHeading 
                 title="Donate Material Aid" 
@@ -369,7 +366,6 @@ const HowToHelp = () => {
               </div>
             </TabsContent>
             
-            {/* Volunteer Tab */}
             <TabsContent value="volunteer" id="volunteer">
               <SectionHeading 
                 title="Volunteer With Us" 
@@ -521,7 +517,6 @@ const HowToHelp = () => {
               </div>
             </TabsContent>
             
-            {/* Partners Tab */}
             <TabsContent value="partners" id="partnership">
               <SectionHeading 
                 title="Partnership Opportunities" 
@@ -590,7 +585,7 @@ const HowToHelp = () => {
                 <div className="col-span-1 lg:col-span-2">
                   <div className="flex items-center space-x-4 mb-6">
                     <div className="bg-primary-100 rounded-full p-3">
-                      <Handshake className="h-6 w-6 text-primary" />
+                      <HandHeart className="h-6 w-6 text-primary" />
                     </div>
                     <h3 className="font-playfair font-semibold text-xl">Current Partners</h3>
                   </div>
@@ -642,3 +637,4 @@ const HowToHelp = () => {
 };
 
 export default HowToHelp;
+
