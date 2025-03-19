@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X, Heart } from 'lucide-react';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { LanguageSelector } from '@/components/ui/language-selector';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -25,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full bg-background border-b border-border shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -41,7 +43,7 @@ const Header = () => {
                 key={item.name}
                 to={item.href}
                 className={`font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? 'text-primary' : 'text-gray-600'
+                  isActive(item.href) ? 'text-primary' : 'text-foreground/80'
                 }`}
               >
                 {item.name}
@@ -49,24 +51,30 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Donate Button */}
-          <div className="hidden md:block">
-            <Button className="bg-primary hover:bg-primary-600">
+          {/* Theme, Language and Donate Buttons */}
+          <div className="hidden md:flex items-center space-x-2">
+            <ThemeToggle />
+            <LanguageSelector />
+            <Button className="bg-primary hover:bg-primary-600 ml-2">
               Donate Now
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-gray-600 hover:text-primary"
-            onClick={toggleMobileMenu}
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <LanguageSelector />
+            <button
+              className="text-foreground/80 hover:text-primary ml-2"
+              onClick={toggleMobileMenu}
+            >
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -78,7 +86,7 @@ const Header = () => {
                   key={item.name}
                   to={item.href}
                   className={`py-2 font-medium transition-colors hover:text-primary ${
-                    isActive(item.href) ? 'text-primary' : 'text-gray-600'
+                    isActive(item.href) ? 'text-primary' : 'text-foreground/80'
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
