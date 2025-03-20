@@ -13,20 +13,13 @@ import { DollarSign, Gift, Clock, Heart, Building, Check, HandHeart } from 'luci
 import FundraiserCard from '@/components/home/FundraiserCard';
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from '@/hooks/use-toast';
+import DonationForm from '@/components/donations/DonationForm';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const HowToHelp = () => {
   const { toast } = useToast();
-  const [customAmount, setCustomAmount] = useState('');
-  const [selectedPresetAmount, setSelectedPresetAmount] = useState('');
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
-
-  const handleDonationSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast({
-      title: "Donation Initiated",
-      description: "You'll be redirected to complete your donation securely.",
-    });
-  };
+  const { translate } = useLanguage();
 
   const handleMaterialAidSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -120,10 +113,10 @@ const HowToHelp = () => {
         <div className="container mx-auto px-4">
           <Tabs defaultValue="donations" className="w-full">
             <TabsList className="grid w-full md:max-w-2xl mx-auto grid-cols-2 md:grid-cols-4 mb-8">
-              <TabsTrigger value="donations">Donations</TabsTrigger>
-              <TabsTrigger value="material">Material Aid</TabsTrigger>
-              <TabsTrigger value="volunteer">Volunteer</TabsTrigger>
-              <TabsTrigger value="partners">Partners</TabsTrigger>
+              <TabsTrigger value="donations">{translate('donations')}</TabsTrigger>
+              <TabsTrigger value="material">{translate('materialAid')}</TabsTrigger>
+              <TabsTrigger value="volunteer">{translate('volunteer')}</TabsTrigger>
+              <TabsTrigger value="partners">{translate('partners')}</TabsTrigger>
             </TabsList>
             
             <TabsContent value="donations" id="donations">
@@ -134,54 +127,7 @@ const HowToHelp = () => {
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
                 <Card className="p-8 col-span-1 lg:col-span-1 bg-gradient-to-br from-white to-primary-50">
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="bg-primary-100 rounded-full p-3">
-                      <DollarSign className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="font-playfair font-semibold text-xl">One-time Donation</h3>
-                  </div>
-                  
-                  <form onSubmit={handleDonationSubmit}>
-                    <div className="mb-6">
-                      <Label className="mb-2 block">Choose an amount</Label>
-                      <RadioGroup value={selectedPresetAmount} onValueChange={setSelectedPresetAmount} className="grid grid-cols-2 gap-3">
-                        {['25', '50', '100', '250'].map((amount) => (
-                          <div key={amount}>
-                            <RadioGroupItem
-                              value={amount}
-                              id={`amount-${amount}`}
-                              className="peer sr-only"
-                            />
-                            <Label
-                              htmlFor={`amount-${amount}`}
-                              className="flex h-10 items-center justify-center rounded-md border-2 border-primary-100 bg-white px-3 hover:bg-primary-50 hover:text-primary peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary peer-data-[state=checked]:text-white cursor-pointer"
-                            >
-                              ${amount}
-                            </Label>
-                          </div>
-                        ))}
-                      </RadioGroup>
-                    </div>
-                    
-                    <div className="mb-6">
-                      <Label htmlFor="custom-amount">Custom amount</Label>
-                      <div className="relative mt-1">
-                        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
-                        <Input 
-                          id="custom-amount" 
-                          type="number" 
-                          placeholder="Enter amount" 
-                          className="pl-8"
-                          value={customAmount}
-                          onChange={(e) => setCustomAmount(e.target.value)}
-                        />
-                      </div>
-                    </div>
-                    
-                    <Button type="submit" className="w-full bg-primary hover:bg-primary-600">
-                      Donate Now
-                    </Button>
-                  </form>
+                  <DonationForm />
                 </Card>
                 
                 <div className="col-span-1 lg:col-span-2">
@@ -189,7 +135,7 @@ const HowToHelp = () => {
                     <div className="bg-primary-100 rounded-full p-3">
                       <Heart className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-playfair font-semibold text-xl">Current Fundraisers</h3>
+                    <h3 className="font-playfair font-semibold text-xl">{translate('currentFundraisers')}</h3>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -207,7 +153,7 @@ const HowToHelp = () => {
                   
                   <div className="mt-6">
                     <a href="#fundraisers" className="text-primary hover:underline font-medium">
-                      View all fundraisers
+                      {translate('viewAllFundraisers')}
                     </a>
                   </div>
                 </div>
@@ -637,4 +583,3 @@ const HowToHelp = () => {
 };
 
 export default HowToHelp;
-

@@ -1,69 +1,92 @@
-
-import React, { createContext, useState, useContext, ReactNode } from 'react';
-
-type Language = {
-  code: string;
-  name: string;
-};
-
-export const languages: Language[] = [
-  { code: "en", name: "English" },
-  { code: "es", name: "Español" },
-  { code: "fr", name: "Français" },
-];
+import React, { createContext, useContext, useState } from 'react';
 
 type LanguageContextType = {
-  currentLanguage: string;
-  setLanguage: (code: string) => void;
+  language: string;
+  setLanguage: (lang: string) => void;
   translate: (key: string) => string;
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-// Simple translations dictionary
-const translations: Record<string, Record<string, string>> = {
-  en: {
-    "home": "Home",
-    "about": "About Us",
-    "howToHelp": "How to Help",
-    "financialTransparency": "Financial Transparency",
-    "contact": "Contact Us",
-    "donateNow": "Donate Now",
-  },
-  es: {
-    "home": "Inicio",
-    "about": "Sobre Nosotros",
-    "howToHelp": "Cómo Ayudar",
-    "financialTransparency": "Transparencia Financiera",
-    "contact": "Contáctenos",
-    "donateNow": "Donar Ahora",
-  },
-  fr: {
-    "home": "Accueil",
-    "about": "À Propos",
-    "howToHelp": "Comment Aider",
-    "financialTransparency": "Transparence Financière",
-    "contact": "Contactez-Nous",
-    "donateNow": "Faire un Don",
-  }
+// English translations
+const en = {
+  home: 'Home',
+  about: 'About',
+  howToHelp: 'How to Help',
+  financialTransparency: 'Financial Transparency',
+  contact: 'Contact',
+  donateNow: 'Donate Now',
+  chooseAmount: 'Choose an amount',
+  customAmount: 'Custom amount',
+  enterAmount: 'Enter amount',
+  cardDetails: 'Card details',
+  processing: 'Processing...',
+  oneTimeDonation: 'One-time Donation',
+  materialAid: 'Material Aid',
+  volunteer: 'Volunteer',
+  partners: 'Partners',
+  currentFundraisers: 'Current Fundraisers',
+  viewAllFundraisers: 'View All Fundraisers',
 };
 
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [currentLanguage, setCurrentLanguage] = useState("en");
+// Spanish translations
+const es = {
+  home: 'Inicio',
+  about: 'Acerca de',
+  howToHelp: 'Cómo Ayudar',
+  financialTransparency: 'Transparencia Financiera',
+  contact: 'Contacto',
+  donateNow: 'Donar Ahora',
+  chooseAmount: 'Elige una cantidad',
+  customAmount: 'Cantidad personalizada',
+  enterAmount: 'Ingresa el monto',
+  cardDetails: 'Detalles de la tarjeta',
+  processing: 'Procesando...',
+  oneTimeDonation: 'Donación única',
+  materialAid: 'Ayuda Material',
+  volunteer: 'Voluntario',
+  partners: 'Socios',
+  currentFundraisers: 'Recaudadores de fondos actuales',
+  viewAllFundraisers: 'Ver todos los recaudadores de fondos',
+};
 
-  const setLanguage = (code: string) => {
-    setCurrentLanguage(code);
-    document.documentElement.lang = code;
-    console.log(`Language changed to: ${code}`);
-  };
+// German translations
+const de = {
+  home: 'Startseite',
+  about: 'Über uns',
+  howToHelp: 'Wie man hilft',
+  financialTransparency: 'Finanzielle Transparenz',
+  contact: 'Kontakt',
+  donateNow: 'Jetzt spenden',
+  chooseAmount: 'Wählen Sie einen Betrag',
+  customAmount: 'Individueller Betrag',
+  enterAmount: 'Betrag eingeben',
+  cardDetails: 'Kartendetails',
+  processing: 'Verarbeitung...',
+  oneTimeDonation: 'Einmalige Spende',
+  materialAid: 'Materielle Hilfe',
+  volunteer: 'Freiwilliger',
+  partners: 'Partner',
+  currentFundraisers: 'Aktuelle Spendenaktionen',
+  viewAllFundraisers: 'Alle Spendenaktionen anzeigen',
+};
+
+// Define translations map
+const translations: Record<string, Record<string, string>> = {
+  en,
+  es,
+  de,
+};
+
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState(localStorage.getItem('language') || 'en');
 
   const translate = (key: string): string => {
-    const lang = currentLanguage;
-    return translations[lang]?.[key] || translations['en'][key] || key;
+    return translations[language]?.[key] || key;
   };
 
   return (
-    <LanguageContext.Provider value={{ currentLanguage, setLanguage, translate }}>
+    <LanguageContext.Provider value={{ language, setLanguage, translate }}>
       {children}
     </LanguageContext.Provider>
   );
