@@ -1,27 +1,35 @@
 
-import { Globe } from "lucide-react";
+import React from 'react';
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
+import { CheckIcon, GlobeIcon } from "lucide-react";
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { useLanguage, languages } from "@/contexts/LanguageContext";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export function LanguageSelector() {
-  const { currentLanguage, setLanguage } = useLanguage();
+  const { language, setLanguage } = useLanguage();
 
-  const handleLanguageChange = (langCode: string) => {
-    setLanguage(langCode);
+  // Available languages
+  const languages = [
+    { code: 'en', name: 'English' },
+    { code: 'es', name: 'Español' },
+    { code: 'de', name: 'Deutsch' },
+  ];
+
+  const handleLanguageChange = (languageCode: string) => {
+    setLanguage(languageCode);
+    localStorage.setItem('language', languageCode);
   };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="w-9 px-0">
-          <Globe className="h-[1.2rem] w-[1.2rem]" />
-          <span className="sr-only">Select language</span>
+        <Button variant="outline" size="icon">
+          <GlobeIcon className="h-4 w-4" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -29,9 +37,10 @@ export function LanguageSelector() {
           <DropdownMenuItem 
             key={lang.code}
             onClick={() => handleLanguageChange(lang.code)}
-            className={currentLanguage === lang.code ? "bg-muted" : ""}
+            className="flex items-center justify-between"
           >
             {lang.name}
+            {language === lang.code && <CheckIcon className="ml-2 h-4 w-4" />}
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

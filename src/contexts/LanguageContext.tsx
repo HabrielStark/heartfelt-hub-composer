@@ -1,3 +1,4 @@
+
 import React, { createContext, useContext, useState } from 'react';
 
 type LanguageContextType = {
@@ -27,6 +28,14 @@ const en = {
   partners: 'Partners',
   currentFundraisers: 'Current Fundraisers',
   viewAllFundraisers: 'View All Fundraisers',
+  // New translations
+  kidsEvents: 'Kids Events',
+  kidsEventsSubtitle: 'Moments of Joy and Growth',
+  kidsEventsDescription: 'Our children participate in various events throughout the year that promote learning, play, and personal development. Browse through these captured moments that showcase their activities, achievements, and the bonds they form.',
+  allPhotos: 'All Photos',
+  summerCamp: 'Summer Camp',
+  schoolEvents: 'School Events',
+  specialCelebrations: 'Special Celebrations',
 };
 
 // Spanish translations
@@ -48,6 +57,14 @@ const es = {
   partners: 'Socios',
   currentFundraisers: 'Recaudadores de fondos actuales',
   viewAllFundraisers: 'Ver todos los recaudadores de fondos',
+  // New translations
+  kidsEvents: 'Eventos para Niños',
+  kidsEventsSubtitle: 'Momentos de Alegría y Crecimiento',
+  kidsEventsDescription: 'Nuestros niños participan en varios eventos durante el año que promueven el aprendizaje, el juego y el desarrollo personal. Navegue por estos momentos capturados que muestran sus actividades, logros y los vínculos que forman.',
+  allPhotos: 'Todas las Fotos',
+  summerCamp: 'Campamento de Verano',
+  schoolEvents: 'Eventos Escolares',
+  specialCelebrations: 'Celebraciones Especiales',
 };
 
 // German translations
@@ -69,6 +86,14 @@ const de = {
   partners: 'Partner',
   currentFundraisers: 'Aktuelle Spendenaktionen',
   viewAllFundraisers: 'Alle Spendenaktionen anzeigen',
+  // New translations
+  kidsEvents: 'Kinderveranstaltungen',
+  kidsEventsSubtitle: 'Momente der Freude und des Wachstums',
+  kidsEventsDescription: 'Unsere Kinder nehmen das ganze Jahr über an verschiedenen Veranstaltungen teil, die Lernen, Spiel und persönliche Entwicklung fördern. Durchstöbern Sie diese festgehaltenen Momente, die ihre Aktivitäten, Erfolge und die Bindungen, die sie eingehen, zeigen.',
+  allPhotos: 'Alle Fotos',
+  summerCamp: 'Sommercamp',
+  schoolEvents: 'Schulveranstaltungen',
+  specialCelebrations: 'Besondere Feierlichkeiten',
 };
 
 // Define translations map

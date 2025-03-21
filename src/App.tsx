@@ -12,6 +12,7 @@ import HowToHelp from "./pages/HowToHelp";
 import FinancialTransparency from "./pages/FinancialTransparency";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import KidsEvents from "./pages/KidsEvents";
 
 // Admin Pages
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/how-to-help" element={<HowToHelp />} />
           <Route path="/financial-transparency" element={<FinancialTransparency />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/kids-events" element={<KidsEvents />} />
           
           {/* Admin Routes */}
           <Route path="/admin/login" element={<AdminLogin />} />

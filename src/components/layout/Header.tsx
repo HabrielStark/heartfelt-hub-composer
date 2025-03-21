@@ -16,6 +16,7 @@ const Header = () => {
     { name: translate('home'), href: '/' },
     { name: translate('about'), href: '/about' },
     { name: translate('howToHelp'), href: '/how-to-help' },
+    { name: translate('kidsEvents'), href: '/kids-events' },
     { name: translate('financialTransparency'), href: '/financial-transparency' },
     { name: translate('contact'), href: '/contact' },
   ];
