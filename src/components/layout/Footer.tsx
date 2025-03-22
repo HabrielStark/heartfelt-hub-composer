@@ -18,9 +18,6 @@ const Footer = () => {
               <Heart className="h-6 w-6 text-primary" />
               <span className="font-playfair font-bold text-xl">CrossVerse Group</span>
             </Link>
-            <p className="text-muted-foreground">
-              {translate('footer.description')}
-            </p>
             <div className="flex space-x-3">
               <a href="#" className="text-foreground/50 hover:text-primary transition-colors">
                 <Facebook size={20} />
@@ -90,27 +87,27 @@ const Footer = () => {
 
           {/* Newsletter */}
           <div className="space-y-4">
-            <h3 className="font-bold text-lg">{translate('footer.newsletter')}</h3>
+            <h3 className="font-bold text-lg">{translate('News letter')}</h3>
             <p className="text-muted-foreground">
-              {translate('footer.subscribeText')}
+              {translate('Subscribe')}
             </p>
             <div className="flex space-x-2">
               <Input placeholder="Email" type="email" className="bg-white border-muted" />
-              <Button>{translate('footer.subscribe')}</Button>
+              <Button>{translate('Subscribe')}</Button>
             </div>
           </div>
         </div>
 
         <div className="border-t border-border mt-10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <div>
-            &copy; {new Date().getFullYear()} CrossVerse Group. {translate('footer.allRightsReserved')}
+            &copy; {new Date().getFullYear()} CrossVerse Group. {translate('All Rights Reserved')}
           </div>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link to="/privacy" className="hover:text-primary transition-colors">
-              {translate('footer.privacyPolicy')}
+              {translate('Privacy Policy')}
             </Link>
             <Link to="/terms" className="hover:text-primary transition-colors">
-              {translate('footer.termsOfService')}
+              {translate('Terms of Service')}
             </Link>
           </div>
         </div>

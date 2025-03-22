@@ -9,17 +9,21 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { DollarSign, Gift, Clock, Heart, Building, Check, HandHeart } from 'lucide-react';
+import { DollarSign, Gift, Clock, Heart, Building, Check, HandHeart, ArrowRight } from 'lucide-react';
 import FundraiserCard from '@/components/home/FundraiserCard';
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useToast } from '@/hooks/use-toast';
 import DonationForm from '@/components/donations/DonationForm';
+import CryptoDonationForm from '@/components/donations/CryptoDonationForm';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { getAllFundraisers } from '@/lib/db';
+import { Link } from 'react-router-dom';
 
 const HowToHelp = () => {
   const { toast } = useToast();
+  const { translate, language } = useLanguage();
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
-  const { translate } = useLanguage();
+  const [fundraisers, setFundraisers] = useState(getAllFundraisers());
 
   const handleMaterialAidSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,143 +41,125 @@ const HowToHelp = () => {
     });
   };
 
-  const fundraisers = [
-    {
-      name: translate('homePage.fundraisers.educational'),
-      description: translate('homePage.fundraisers.educationalDesc'),
-      goal: 25000,
-      raised: 18750,
-      imageUrl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2309&q=80"
-    },
-    {
-      name: translate('homePage.fundraisers.healthcare'),
-      description: translate('homePage.fundraisers.healthcareDesc'),
-      goal: 15000,
-      raised: 9200,
-      imageUrl: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2352&q=80"
-    },
-    {
-      name: translate('homePage.fundraisers.facility'),
-      description: translate('homePage.fundraisers.facilityDesc'),
-      goal: 50000,
-      raised: 32500,
-      imageUrl: "https://images.unsplash.com/photo-1531956003775-1b2dae38d5c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
-    },
-    {
-      name: translate('howToHelp.fundraisers.recreational'),
-      description: translate('howToHelp.fundraisers.recreationalDesc'),
-      goal: 10000,
-      raised: 4200,
-      imageUrl: "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+  const handleProgressUpdate = () => {
+    setFundraisers([...getAllFundraisers()]);
+  };
+
+  const getFundraiserName = (id) => {
+    if (language === 'en') {
+      switch (id) {
+        case 'educational': return 'Educational Support';
+        case 'healthcare': return 'Healthcare Access';
+        case 'facilities': return 'Facility Renovation';
+        case 'recreational': return 'Recreational Programs';
+        default: return translate(`homePage.fundraisers.${id}`);
+      }
     }
-  ];
+    return translate(`homePage.fundraisers.${id}`);
+  };
+
+  const getFundraiserDescription = (id) => {
+    if (language === 'en') {
+      switch (id) {
+        case 'educational': return 'Providing scholarships and educational materials to underprivileged children.';
+        case 'healthcare': return 'Bringing medical care and supplies to communities without adequate healthcare.';
+        case 'facilities': return 'Renovating community centers to create safe spaces for education and support.';
+        case 'recreational': return 'Creating recreational programs and spaces for children to play and grow.';
+        default: return translate(`homePage.fundraisers.${id}Desc`);
+      }
+    }
+    return translate(`homePage.fundraisers.${id}Desc`);
+  };
 
   const partners = [
     {
-      name: translate('howToHelp.partners.abc.name'),
-      description: translate('howToHelp.partners.abc.description'),
+      name: language === 'en' ? "ABC Foundation" : translate('howToHelp.partners.abc.name'),
+      description: language === 'en' ? "Provides financial support for our educational programs." : translate('howToHelp.partners.abc.description'),
       logo: "https://via.placeholder.com/150?text=ABC"
     },
     {
-      name: translate('howToHelp.partners.xyz.name'),
-      description: translate('howToHelp.partners.xyz.description'),
+      name: language === 'en' ? "XYZ Corporation" : translate('howToHelp.partners.xyz.name'),
+      description: language === 'en' ? "Sponsors health initiatives and medical checkups." : translate('howToHelp.partners.xyz.description'),
       logo: "https://via.placeholder.com/150?text=XYZ"
     },
     {
-      name: translate('howToHelp.partners.bank.name'),
-      description: translate('howToHelp.partners.bank.description'),
+      name: language === 'en' ? "Community Bank" : translate('howToHelp.partners.bank.name'),
+      description: language === 'en' ? "Supports facility improvements and renovations." : translate('howToHelp.partners.bank.description'),
       logo: "https://via.placeholder.com/150?text=Bank"
     },
     {
-      name: translate('howToHelp.partners.global.name'),
-      description: translate('howToHelp.partners.global.description'),
+      name: language === 'en' ? "Global Helpers" : translate('howToHelp.partners.global.name'),
+      description: language === 'en' ? "Provides volunteers and professional services." : translate('howToHelp.partners.global.description'),
       logo: "https://via.placeholder.com/150?text=Global"
     }
   ];
 
   const neededItems = [
-    { id: "clothes", label: translate('howToHelp.materialAid.items.clothes') },
-    { id: "school", label: translate('howToHelp.materialAid.items.school') },
-    { id: "toys", label: translate('howToHelp.materialAid.items.toys') },
-    { id: "books", label: translate('howToHelp.materialAid.items.books') },
-    { id: "toiletries", label: translate('howToHelp.materialAid.items.toiletries') },
-    { id: "furniture", label: translate('howToHelp.materialAid.items.furniture') },
-    { id: "electronics", label: translate('howToHelp.materialAid.items.electronics') },
-    { id: "bedding", label: translate('howToHelp.materialAid.items.bedding') }
+    { id: "clothes", label: language === 'en' ? "Clothes & Shoes" : translate('howToHelp.materialAid.items.clothes') },
+    { id: "school", label: language === 'en' ? "School Supplies" : translate('howToHelp.materialAid.items.school') },
+    { id: "toys", label: language === 'en' ? "Toys & Games" : translate('howToHelp.materialAid.items.toys') },
+    { id: "books", label: language === 'en' ? "Books" : translate('howToHelp.materialAid.items.books') },
+    { id: "toiletries", label: language === 'en' ? "Toiletries" : translate('howToHelp.materialAid.items.toiletries') },
+    { id: "furniture", label: language === 'en' ? "Furniture" : translate('howToHelp.materialAid.items.furniture') },
+    { id: "electronics", label: language === 'en' ? "Electronics" : translate('howToHelp.materialAid.items.electronics') },
+    { id: "bedding", label: language === 'en' ? "Bedding & Linens" : translate('howToHelp.materialAid.items.bedding') }
   ];
 
   return (
     <PageLayout>
       <PageBanner 
-        title={translate('howToHelp.title')}
-        subtitle={translate('howToHelp.subtitle')}
+        title={language === 'en' ? "How to Help" : translate('howToHelp.title')}
+        subtitle={language === 'en' ? "Join us in making a difference" : translate('howToHelp.subtitle')}
       />
 
       <section className="py-10 bg-white" id="options">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="donations" className="w-full">
             <TabsList className="grid w-full md:max-w-2xl mx-auto grid-cols-2 md:grid-cols-4 mb-8">
-              <TabsTrigger value="donations">{translate('howToHelp.tabs.donations')}</TabsTrigger>
-              <TabsTrigger value="material">{translate('howToHelp.tabs.material')}</TabsTrigger>
-              <TabsTrigger value="volunteer">{translate('howToHelp.tabs.volunteer')}</TabsTrigger>
-              <TabsTrigger value="partners">{translate('howToHelp.tabs.partners')}</TabsTrigger>
+              <TabsTrigger value="donations">{language === 'en' ? "Donations" : translate('howToHelp.tabs.donations')}</TabsTrigger>
+              <TabsTrigger value="material">{language === 'en' ? "Material Aid" : translate('howToHelp.tabs.material')}</TabsTrigger>
+              <TabsTrigger value="volunteer">{language === 'en' ? "Volunteer" : translate('howToHelp.tabs.volunteer')}</TabsTrigger>
+              <TabsTrigger value="partners">{language === 'en' ? "Partners" : translate('howToHelp.tabs.partners')}</TabsTrigger>
             </TabsList>
             
             <TabsContent value="donations" id="donations">
               <SectionHeading 
-                title={translate('howToHelp.donations.title')}
-                subtitle={translate('howToHelp.donations.subtitle')}
+                title={language === 'en' ? "Make a Donation" : translate('howToHelp.donations.title')}
+                subtitle={language === 'en' ? "Your financial support helps us continue our mission" : translate('howToHelp.donations.subtitle')}
               />
               
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
-                <Card className="p-8 col-span-1 lg:col-span-1 bg-gradient-to-br from-white to-primary-50">
-                  <DonationForm />
-                </Card>
+              <div className="flex flex-col items-center justify-center mt-12 mb-16">
+                <p className="text-lg text-center max-w-2xl mb-8">
+                  {language === 'en' 
+                    ? "Your generous contribution helps us continue our mission to support those in need. All donations are tax-deductible."
+                    : translate('Tax Dedutible')}
+                </p>
                 
-                <div className="col-span-1 lg:col-span-2">
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="bg-primary-100 rounded-full p-3">
-                      <Heart className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="font-playfair font-semibold text-xl">{translate('howToHelp.donations.currentFundraisers')}</h3>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {fundraisers.slice(0, 2).map((fundraiser, index) => (
-                      <FundraiserCard 
-                        key={index}
-                        name={fundraiser.name}
-                        description={fundraiser.description}
-                        goal={fundraiser.goal}
-                        raised={fundraiser.raised}
-                        imageUrl={fundraiser.imageUrl}
-                      />
-                    ))}
-                  </div>
-                  
-                  <div className="mt-6">
-                    <a href="#fundraisers" className="text-primary hover:underline font-medium">
-                      {translate('howToHelp.donations.viewAllFundraisers')}
-                    </a>
-                  </div>
-                </div>
+                <Link to="/donate">
+                  <Button size="lg" className="bg-primary hover:bg-primary-600 px-8 py-6 text-white text-lg font-medium rounded-md flex items-center">
+                    {language === 'en' ? "Go to Donation Page" : translate('Go to Donation Page')}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
               
               <div className="mt-16" id="fundraisers">
                 <SectionHeading 
-                  title={translate('howToHelp.donations.allFundraisers')}
-                  subtitle={translate('howToHelp.donations.allFundraisersSubtitle')}
+                  title={language === 'en' ? "Current Fundraising Campaigns" : translate('howToHelp.donations.allFundraisers')}
+                  subtitle={language === 'en' ? "Help us reach these important goals" : translate('howToHelp.donations.allFundraisersSubtitle')}
                 />
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-                  {fundraisers.map((fundraiser, index) => (
+                  {fundraisers.map((fundraiser) => (
                     <FundraiserCard 
-                      key={index}
-                      name={fundraiser.name}
-                      description={fundraiser.description}
+                      key={fundraiser.id}
+                      id={fundraiser.id}
+                      name={getFundraiserName(fundraiser.id)}
+                      description={getFundraiserDescription(fundraiser.id)}
                       goal={fundraiser.goal}
                       raised={fundraiser.raised}
                       imageUrl={fundraiser.imageUrl}
+                      onProgressUpdate={handleProgressUpdate}
                     />
                   ))}
                 </div>
@@ -182,8 +168,8 @@ const HowToHelp = () => {
             
             <TabsContent value="material">
               <SectionHeading 
-                title={translate('howToHelp.materialAid.title')}
-                subtitle={translate('howToHelp.materialAid.subtitle')}
+                title={language === 'en' ? "Donate Material Aid" : translate('howToHelp.materialAid.title')}
+                subtitle={language === 'en' ? "Contribute essential items to those in need" : translate('howToHelp.materialAid.subtitle')}
               />
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
@@ -192,27 +178,27 @@ const HowToHelp = () => {
                     <div className="bg-blue-100 rounded-full p-3">
                       <Gift className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-playfair font-semibold text-xl">{translate('howToHelp.materialAid.formTitle')}</h3>
+                    <h3 className="font-playfair font-semibold text-xl">{language === 'en' ? "Material Donation Form" : translate('howToHelp.materialAid.formTitle')}</h3>
                   </div>
                   
                   <form onSubmit={handleMaterialAidSubmit}>
                     <div className="mb-4">
-                      <Label htmlFor="name">{translate('howToHelp.form.name')}</Label>
+                      <Label htmlFor="name">{language === 'en' ? "Your Name" : translate('howToHelp.form.name')}</Label>
                       <Input id="name" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label htmlFor="email">{translate('howToHelp.form.email')}</Label>
+                      <Label htmlFor="email">{language === 'en' ? "Email Address" : translate('howToHelp.form.email')}</Label>
                       <Input id="email" type="email" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label htmlFor="phone">{translate('howToHelp.form.phone')}</Label>
+                      <Label htmlFor="phone">{language === 'en' ? "Phone Number" : translate('howToHelp.form.phone')}</Label>
                       <Input id="phone" type="tel" className="mt-1" />
                     </div>
                     
                     <div className="mb-6">
-                      <Label className="mb-2 block">{translate('howToHelp.materialAid.itemsToDonate')}</Label>
+                      <Label className="mb-2 block">{language === 'en' ? "Items You'd Like to Donate" : translate('howToHelp.materialAid.itemsToDonate')}</Label>
                       <div className="grid grid-cols-2 gap-2">
                         {neededItems.map((item) => (
                           <div className="flex items-center space-x-2" key={item.id}>
@@ -234,12 +220,12 @@ const HowToHelp = () => {
                     </div>
                     
                     <div className="mb-6">
-                      <Label htmlFor="details">{translate('howToHelp.form.additionalDetails')}</Label>
-                      <Textarea id="details" placeholder={translate('howToHelp.materialAid.detailsPlaceholder')} className="mt-1" />
+                      <Label htmlFor="details">{language === 'en' ? "Additional Details" : translate('howToHelp.form.additionalDetails')}</Label>
+                      <Textarea id="details" placeholder={language === 'en' ? "Please describe the items you'd like to donate" : translate('howToHelp.materialAid.detailsPlaceholder')} className="mt-1" />
                     </div>
                     
                     <Button type="submit" className="w-full bg-primary hover:bg-primary-600">
-                      {translate('common.submit')}
+                      {language === 'en' ? "Submit" : translate('common.submit')}
                     </Button>
                   </form>
                 </Card>
@@ -249,62 +235,62 @@ const HowToHelp = () => {
                     <div className="bg-primary-100 rounded-full p-3">
                       <Check className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-playfair font-semibold text-xl">Currently Needed Items</h3>
+                    <h3 className="font-playfair font-semibold text-xl">{language === 'en' ? "Currently Needed Items" : translate('howToHelp.materialAid.neededItems')}</h3>
                   </div>
                   
                   <div className="bg-white p-6 rounded-lg shadow-md">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <h4 className="font-semibold text-lg mb-3 text-primary">Clothing & Bedding</h4>
+                        <h4 className="font-semibold text-lg mb-3 text-primary">{language === 'en' ? "Clothing & Bedding" : translate('howToHelp.materialAid.categories.clothing')}</h4>
                         <ul className="space-y-2 list-disc pl-5 text-gray-700">
-                          <li>Children's clothes (ages 2-16)</li>
-                          <li>Pajamas and sleepwear</li>
-                          <li>Shoes and socks</li>
-                          <li>Bed sheets and blankets</li>
-                          <li>Towels and washcloths</li>
+                          <li>{language === 'en' ? "Children's clothes (ages 2-16)" : translate('howToHelp.materialAid.items.childrenClothes')}</li>
+                          <li>{language === 'en' ? "Pajamas and sleepwear" : translate('howToHelp.materialAid.items.pajamas')}</li>
+                          <li>{language === 'en' ? "Shoes and socks" : translate('howToHelp.materialAid.items.shoes')}</li>
+                          <li>{language === 'en' ? "Bed sheets and blankets" : translate('howToHelp.materialAid.items.bedsheets')}</li>
+                          <li>{language === 'en' ? "Towels and washcloths" : translate('howToHelp.materialAid.items.towels')}</li>
                         </ul>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-lg mb-3 text-primary">Educational Materials</h4>
+                        <h4 className="font-semibold text-lg mb-3 text-primary">{language === 'en' ? "Educational Materials" : translate('howToHelp.materialAid.categories.educational')}</h4>
                         <ul className="space-y-2 list-disc pl-5 text-gray-700">
-                          <li>Notebooks and paper</li>
-                          <li>Pens, pencils, and markers</li>
-                          <li>Backpacks</li>
-                          <li>Children's books</li>
-                          <li>Educational toys</li>
+                          <li>{language === 'en' ? "Notebooks and paper" : translate('howToHelp.materialAid.items.notebooks')}</li>
+                          <li>{language === 'en' ? "Pens, pencils, and markers" : translate('howToHelp.materialAid.items.pens')}</li>
+                          <li>{language === 'en' ? "Backpacks" : translate('howToHelp.materialAid.items.backpacks')}</li>
+                          <li>{language === 'en' ? "Children's books" : translate('howToHelp.materialAid.items.books')}</li>
+                          <li>{language === 'en' ? "Educational toys" : translate('howToHelp.materialAid.items.educationalToys')}</li>
                         </ul>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-lg mb-3 text-primary">Hygiene Products</h4>
+                        <h4 className="font-semibold text-lg mb-3 text-primary">{language === 'en' ? "Hygiene Products" : translate('howToHelp.materialAid.categories.hygiene')}</h4>
                         <ul className="space-y-2 list-disc pl-5 text-gray-700">
-                          <li>Soap and body wash</li>
-                          <li>Shampoo and conditioner</li>
-                          <li>Toothbrushes and toothpaste</li>
-                          <li>Hairbrushes and combs</li>
-                          <li>Diapers (all sizes)</li>
+                          <li>{language === 'en' ? "Soap and body wash" : translate('howToHelp.materialAid.items.soap')}</li>
+                          <li>{language === 'en' ? "Shampoo and conditioner" : translate('howToHelp.materialAid.items.shampoo')}</li>
+                          <li>{language === 'en' ? "Toothbrushes and toothpaste" : translate('howToHelp.materialAid.items.toothbrushes')}</li>
+                          <li>{language === 'en' ? "Hairbrushes and combs" : translate('howToHelp.materialAid.items.hairbrushes')}</li>
+                          <li>{language === 'en' ? "Diapers (all sizes)" : translate('howToHelp.materialAid.items.diapers')}</li>
                         </ul>
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-lg mb-3 text-primary">Recreational Items</h4>
+                        <h4 className="font-semibold text-lg mb-3 text-primary">{language === 'en' ? "Recreational Items" : translate('howToHelp.materialAid.categories.recreational')}</h4>
                         <ul className="space-y-2 list-disc pl-5 text-gray-700">
-                          <li>Board games</li>
-                          <li>Sports equipment</li>
-                          <li>Art supplies</li>
-                          <li>Musical instruments</li>
-                          <li>Outdoor play equipment</li>
+                          <li>{language === 'en' ? "Board games" : translate('howToHelp.materialAid.items.boardGames')}</li>
+                          <li>{language === 'en' ? "Sports equipment" : translate('howToHelp.materialAid.items.sportsEquipment')}</li>
+                          <li>{language === 'en' ? "Art supplies" : translate('howToHelp.materialAid.items.artSupplies')}</li>
+                          <li>{language === 'en' ? "Musical instruments" : translate('howToHelp.materialAid.items.musicalInstruments')}</li>
+                          <li>{language === 'en' ? "Outdoor play equipment" : translate('howToHelp.materialAid.items.outdoorEquipment')}</li>
                         </ul>
                       </div>
                     </div>
                     
                     <div className="mt-6 p-4 bg-primary-50 rounded-lg">
                       <p className="text-gray-700">
-                        <span className="font-semibold">Drop-off Location:</span> 123 Caring Street, Compassion City, CA 12345
+                        <span className="font-semibold">{language === 'en' ? "Drop-off Location:" : translate('howToHelp.materialAid.dropoffLocation')}</span> 123 Caring Street, Compassion City, CA 12345
                       </p>
                       <p className="text-gray-700">
-                        <span className="font-semibold">Drop-off Hours:</span> Monday-Friday 9am-5pm, Saturday 10am-2pm
+                        <span className="font-semibold">{language === 'en' ? "Drop-off Hours:" : translate('howToHelp.materialAid.dropoffHours')}</span> Monday-Friday 9am-5pm, Saturday 10am-2pm
                       </p>
                     </div>
                   </div>
@@ -314,8 +300,8 @@ const HowToHelp = () => {
             
             <TabsContent value="volunteer" id="volunteer">
               <SectionHeading 
-                title="Volunteer With Us" 
-                subtitle="Share your time, skills, and compassion to make a direct impact on children's lives."
+                title={language === 'en' ? "Volunteer With Us" : translate('howToHelp.volunteer.title')} 
+                subtitle={language === 'en' ? "Share your time, skills, and compassion to make a direct impact on children's lives." : translate('howToHelp.volunteer.subtitle')}
               />
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
@@ -324,35 +310,35 @@ const HowToHelp = () => {
                     <div className="bg-green-100 rounded-full p-3">
                       <Clock className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-playfair font-semibold text-xl">Volunteer Application</h3>
+                    <h3 className="font-playfair font-semibold text-xl">{language === 'en' ? "Volunteer Application" : translate('howToHelp.volunteer.formTitle')}</h3>
                   </div>
                   
                   <form onSubmit={handleVolunteerSubmit}>
                     <div className="mb-4">
-                      <Label htmlFor="v-name">Your Name</Label>
+                      <Label htmlFor="v-name">{language === 'en' ? "Your Name" : translate('howToHelp.form.name')}</Label>
                       <Input id="v-name" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label htmlFor="v-email">Email</Label>
+                      <Label htmlFor="v-email">{language === 'en' ? "Email" : translate('howToHelp.form.email')}</Label>
                       <Input id="v-email" type="email" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label htmlFor="v-phone">Phone</Label>
+                      <Label htmlFor="v-phone">{language === 'en' ? "Phone" : translate('howToHelp.form.phone')}</Label>
                       <Input id="v-phone" type="tel" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label>Areas of Interest</Label>
+                      <Label>{language === 'en' ? "Areas of Interest" : translate('howToHelp.volunteer.areasOfInterest')}</Label>
                       <div className="grid grid-cols-1 gap-2 mt-1">
                         {[
-                          "Childcare assistance",
-                          "Educational support",
-                          "Recreational activities",
-                          "Administrative help",
-                          "Event planning",
-                          "Fundraising"
+                          language === 'en' ? "Childcare assistance" : translate('howToHelp.volunteer.areas.childcare'),
+                          language === 'en' ? "Educational support" : translate('howToHelp.volunteer.areas.education'),
+                          language === 'en' ? "Recreational activities" : translate('howToHelp.volunteer.areas.recreation'),
+                          language === 'en' ? "Administrative help" : translate('howToHelp.volunteer.areas.admin'),
+                          language === 'en' ? "Event planning" : translate('howToHelp.volunteer.areas.events'),
+                          language === 'en' ? "Fundraising" : translate('howToHelp.volunteer.areas.fundraising')
                         ].map((area) => (
                           <div className="flex items-center space-x-2" key={area}>
                             <Checkbox id={`area-${area}`} />
@@ -363,13 +349,13 @@ const HowToHelp = () => {
                     </div>
                     
                     <div className="mb-4">
-                      <Label>Availability</Label>
+                      <Label>{language === 'en' ? "Availability" : translate('howToHelp.volunteer.availability')}</Label>
                       <div className="grid grid-cols-2 gap-2 mt-1">
                         {[
-                          "Weekdays (morning)",
-                          "Weekdays (afternoon)",
-                          "Weekends (morning)",
-                          "Weekends (afternoon)"
+                          language === 'en' ? "Weekdays (morning)" : translate('howToHelp.volunteer.time.weekdayMorning'),
+                          language === 'en' ? "Weekdays (afternoon)" : translate('howToHelp.volunteer.time.weekdayAfternoon'),
+                          language === 'en' ? "Weekends (morning)" : translate('howToHelp.volunteer.time.weekendMorning'),
+                          language === 'en' ? "Weekends (afternoon)" : translate('howToHelp.volunteer.time.weekendAfternoon')
                         ].map((time) => (
                           <div className="flex items-center space-x-2" key={time}>
                             <Checkbox id={`time-${time}`} />
@@ -380,12 +366,12 @@ const HowToHelp = () => {
                     </div>
                     
                     <div className="mb-6">
-                      <Label htmlFor="v-message">Tell us about yourself</Label>
-                      <Textarea id="v-message" placeholder="Share your skills, experience, and why you want to volunteer with us" className="mt-1" />
+                      <Label htmlFor="v-message">{language === 'en' ? "Tell us about yourself" : translate('howToHelp.volunteer.aboutYourself')}</Label>
+                      <Textarea id="v-message" placeholder={language === 'en' ? "Share your skills, experience, and why you want to volunteer with us" : translate('howToHelp.volunteer.aboutYourselfPlaceholder')} className="mt-1" />
                     </div>
                     
                     <Button type="submit" className="w-full bg-primary hover:bg-primary-600">
-                      Submit Application
+                      {language === 'en' ? "Submit Application" : translate('howToHelp.volunteer.submitApplication')}
                     </Button>
                   </form>
                 </Card>
@@ -395,68 +381,68 @@ const HowToHelp = () => {
                     <div className="bg-primary-100 rounded-full p-3">
                       <Heart className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-playfair font-semibold text-xl">Volunteer Opportunities</h3>
+                    <h3 className="font-playfair font-semibold text-xl">{language === 'en' ? "Volunteer Opportunities" : translate('howToHelp.volunteer.opportunities')}</h3>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <Card className="p-6">
-                      <h4 className="font-semibold text-lg mb-3 text-primary">Child Care Support</h4>
+                      <h4 className="font-semibold text-lg mb-3 text-primary">{language === 'en' ? "Child Care Support" : translate('howToHelp.volunteer.types.childcare')}</h4>
                       <p className="text-gray-700 mb-4">
-                        Assist our staff in daily activities with the children, including meal times, playtime, and bedtime routines.
+                        {language === 'en' ? "Assist our staff in daily activities with the children, including meal times, playtime, and bedtime routines." : translate('howToHelp.volunteer.descriptions.childcare')}
                       </p>
                       <ul className="space-y-1 list-disc pl-5 text-gray-700">
-                        <li>Minimum commitment: 4 hours/week</li>
-                        <li>Background check required</li>
-                        <li>Training provided</li>
+                        <li>{language === 'en' ? "Minimum commitment: 4 hours/week" : translate('howToHelp.volunteer.childcare.commitment')}</li>
+                        <li>{language === 'en' ? "Background check required" : translate('howToHelp.volunteer.common.backgroundCheck')}</li>
+                        <li>{language === 'en' ? "Training provided" : translate('howToHelp.volunteer.childcare.training')}</li>
                       </ul>
                     </Card>
                     
                     <Card className="p-6">
-                      <h4 className="font-semibold text-lg mb-3 text-primary">Academic Tutoring</h4>
+                      <h4 className="font-semibold text-lg mb-3 text-primary">{language === 'en' ? "Academic Tutoring" : translate('howToHelp.volunteer.types.tutoring')}</h4>
                       <p className="text-gray-700 mb-4">
-                        Help children with homework, reading, and other academic subjects to support their educational development.
+                        {language === 'en' ? "Help children with homework, reading, and other academic subjects to support their educational development." : translate('howToHelp.volunteer.descriptions.tutoring')}
                       </p>
                       <ul className="space-y-1 list-disc pl-5 text-gray-700">
-                        <li>Minimum commitment: 2 hours/week</li>
-                        <li>Background check required</li>
-                        <li>Educational experience preferred</li>
+                        <li>{language === 'en' ? "Minimum commitment: 2 hours/week" : translate('howToHelp.volunteer.tutoring.commitment')}</li>
+                        <li>{language === 'en' ? "Background check required" : translate('howToHelp.volunteer.common.backgroundCheck')}</li>
+                        <li>{language === 'en' ? "Educational experience preferred" : translate('howToHelp.volunteer.tutoring.experience')}</li>
                       </ul>
                     </Card>
                     
                     <Card className="p-6">
-                      <h4 className="font-semibold text-lg mb-3 text-primary">Special Skills Volunteer</h4>
+                      <h4 className="font-semibold text-lg mb-3 text-primary">{language === 'en' ? "Special Skills Volunteer" : translate('howToHelp.volunteer.types.specialSkills')}</h4>
                       <p className="text-gray-700 mb-4">
-                        Share your talents in music, art, sports, or other areas to enrich children's experiences and development.
+                        {language === 'en' ? "Share your talents in music, art, sports, or other areas to enrich children's experiences and development." : translate('howToHelp.volunteer.descriptions.specialSkills')}
                       </p>
                       <ul className="space-y-1 list-disc pl-5 text-gray-700">
-                        <li>Flexible schedule</li>
-                        <li>Background check required</li>
-                        <li>Demonstration of skills may be requested</li>
+                        <li>{language === 'en' ? "Flexible schedule" : translate('howToHelp.volunteer.specialSkills.schedule')}</li>
+                        <li>{language === 'en' ? "Background check required" : translate('howToHelp.volunteer.common.backgroundCheck')}</li>
+                        <li>{language === 'en' ? "Demonstration of skills may be requested" : translate('howToHelp.volunteer.specialSkills.demonstration')}</li>
                       </ul>
                     </Card>
                     
                     <Card className="p-6">
-                      <h4 className="font-semibold text-lg mb-3 text-primary">Administrative Support</h4>
+                      <h4 className="font-semibold text-lg mb-3 text-primary">{language === 'en' ? "Administrative Support" : translate('howToHelp.volunteer.types.admin')}</h4>
                       <p className="text-gray-700 mb-4">
-                        Assist with office tasks, donor communications, event planning, and other administrative needs.
+                        {language === 'en' ? "Assist with office tasks, donor communications, event planning, and other administrative needs." : translate('howToHelp.volunteer.descriptions.admin')}
                       </p>
                       <ul className="space-y-1 list-disc pl-5 text-gray-700">
-                        <li>Flexible schedule</li>
-                        <li>Background check required</li>
-                        <li>Office skills preferred</li>
+                        <li>{language === 'en' ? "Flexible schedule" : translate('howToHelp.volunteer.admin.schedule')}</li>
+                        <li>{language === 'en' ? "Background check required" : translate('howToHelp.volunteer.common.backgroundCheck')}</li>
+                        <li>{language === 'en' ? "Office skills preferred" : translate('howToHelp.volunteer.admin.skills')}</li>
                       </ul>
                     </Card>
                   </div>
                   
                   <div className="mt-8 p-5 bg-primary-50 rounded-lg">
-                    <h4 className="font-semibold text-lg mb-2">Volunteer Process</h4>
+                    <h4 className="font-semibold text-lg mb-2">{language === 'en' ? "Volunteer Process" : translate('howToHelp.volunteer.process.title')}</h4>
                     <ol className="list-decimal pl-5 space-y-2 text-gray-700">
-                      <li>Submit application form</li>
-                      <li>Initial phone interview</li>
-                      <li>Background check</li>
-                      <li>Orientation session</li>
-                      <li>Training specific to your volunteer role</li>
-                      <li>Begin volunteering!</li>
+                      <li>{language === 'en' ? "Submit application form" : translate('howToHelp.volunteer.process.submit')}</li>
+                      <li>{language === 'en' ? "Initial phone interview" : translate('howToHelp.volunteer.process.interview')}</li>
+                      <li>{language === 'en' ? "Background check" : translate('howToHelp.volunteer.process.backgroundCheck')}</li>
+                      <li>{language === 'en' ? "Orientation session" : translate('howToHelp.volunteer.process.orientation')}</li>
+                      <li>{language === 'en' ? "Training specific to your volunteer role" : translate('howToHelp.volunteer.process.training')}</li>
+                      <li>{language === 'en' ? "Begin volunteering!" : translate('howToHelp.volunteer.process.begin')}</li>
                     </ol>
                   </div>
                 </div>
@@ -465,8 +451,8 @@ const HowToHelp = () => {
             
             <TabsContent value="partners" id="partnership">
               <SectionHeading 
-                title="Partnership Opportunities" 
-                subtitle="Organizations and businesses can create meaningful partnerships to support our mission."
+                title={language === 'en' ? "Partnership Opportunities" : translate('howToHelp.partners.title')} 
+                subtitle={language === 'en' ? "Organizations and businesses can create meaningful partnerships to support our mission." : translate('howToHelp.partners.subtitle')}
               />
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
@@ -475,39 +461,39 @@ const HowToHelp = () => {
                     <div className="bg-yellow-100 rounded-full p-3">
                       <Building className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-playfair font-semibold text-xl">Partner With Us</h3>
+                    <h3 className="font-playfair font-semibold text-xl">{language === 'en' ? "Partner With Us" : translate('howToHelp.partners.formTitle')}</h3>
                   </div>
                   
                   <form>
                     <div className="mb-4">
-                      <Label htmlFor="org-name">Organization Name</Label>
+                      <Label htmlFor="org-name">{language === 'en' ? "Organization Name" : translate('howToHelp.partners.form.orgName')}</Label>
                       <Input id="org-name" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label htmlFor="contact-person">Contact Person</Label>
+                      <Label htmlFor="contact-person">{language === 'en' ? "Contact Person" : translate('howToHelp.partners.form.contactPerson')}</Label>
                       <Input id="contact-person" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label htmlFor="org-email">Email</Label>
+                      <Label htmlFor="org-email">{language === 'en' ? "Email" : translate('howToHelp.form.email')}</Label>
                       <Input id="org-email" type="email" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label htmlFor="org-phone">Phone</Label>
+                      <Label htmlFor="org-phone">{language === 'en' ? "Phone" : translate('howToHelp.form.phone')}</Label>
                       <Input id="org-phone" type="tel" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label>Partnership Interest</Label>
+                      <Label>{language === 'en' ? "Partnership Interest" : translate('howToHelp.partners.form.interest')}</Label>
                       <div className="grid grid-cols-1 gap-2 mt-1">
                         {[
-                          "Financial support",
-                          "In-kind donations",
-                          "Volunteer days",
-                          "Professional services",
-                          "Event sponsorship"
+                          language === 'en' ? "Financial support" : translate('howToHelp.partners.interests.financial'),
+                          language === 'en' ? "In-kind donations" : translate('howToHelp.partners.interests.inkind'),
+                          language === 'en' ? "Volunteer days" : translate('howToHelp.partners.interests.volunteer'),
+                          language === 'en' ? "Professional services" : translate('howToHelp.partners.interests.services'),
+                          language === 'en' ? "Event sponsorship" : translate('howToHelp.partners.interests.events')
                         ].map((type) => (
                           <div className="flex items-center space-x-2" key={type}>
                             <Checkbox id={`type-${type}`} />
@@ -518,12 +504,12 @@ const HowToHelp = () => {
                     </div>
                     
                     <div className="mb-6">
-                      <Label htmlFor="partnership-details">Additional Details</Label>
-                      <Textarea id="partnership-details" placeholder="Tell us about your organization and potential partnership ideas" className="mt-1" />
+                      <Label htmlFor="partnership-details">{language === 'en' ? "Additional Details" : translate('howToHelp.form.additionalDetails')}</Label>
+                      <Textarea id="partnership-details" placeholder={language === 'en' ? "Tell us about your organization and potential partnership ideas" : translate('howToHelp.partners.form.detailsPlaceholder')} className="mt-1" />
                     </div>
                     
                     <Button className="w-full bg-primary hover:bg-primary-600">
-                      Submit Inquiry
+                      {language === 'en' ? "Submit Inquiry" : translate('howToHelp.partners.submitInquiry')}
                     </Button>
                   </form>
                 </Card>
@@ -533,7 +519,7 @@ const HowToHelp = () => {
                     <div className="bg-primary-100 rounded-full p-3">
                       <HandHeart className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-playfair font-semibold text-xl">Current Partners</h3>
+                    <h3 className="font-playfair font-semibold text-xl">{language === 'en' ? "Current Partners" : translate('howToHelp.partners.currentPartners')}</h3>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -547,27 +533,27 @@ const HowToHelp = () => {
                   </div>
                   
                   <div className="mt-8">
-                    <h4 className="font-semibold text-lg mb-4">Partnership Benefits</h4>
+                    <h4 className="font-semibold text-lg mb-4">{language === 'en' ? "Partnership Benefits" : translate('howToHelp.partners.benefits')}</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="bg-white p-5 rounded-lg shadow">
-                        <h5 className="font-medium text-primary mb-3">For Your Organization</h5>
+                        <h5 className="font-medium text-primary mb-3">{language === 'en' ? "For Your Organization" : translate('howToHelp.partners.benefits.forOrganization')}</h5>
                         <ul className="space-y-2 list-disc pl-5 text-gray-700">
-                          <li>Demonstrate corporate social responsibility</li>
-                          <li>Employee engagement opportunities</li>
-                          <li>Brand visibility in our materials and events</li>
-                          <li>Tax benefits for eligible contributions</li>
-                          <li>Positive community impact</li>
+                          <li>{language === 'en' ? "Demonstrate corporate social responsibility" : translate('howToHelp.partners.benefits.orgBenefits.csr')}</li>
+                          <li>{language === 'en' ? "Employee engagement opportunities" : translate('howToHelp.partners.benefits.orgBenefits.engagement')}</li>
+                          <li>{language === 'en' ? "Brand visibility in our materials and events" : translate('howToHelp.partners.benefits.orgBenefits.visibility')}</li>
+                          <li>{language === 'en' ? "Tax benefits for eligible contributions" : translate('howToHelp.partners.benefits.orgBenefits.tax')}</li>
+                          <li>{language === 'en' ? "Positive community impact" : translate('howToHelp.partners.benefits.orgBenefits.impact')}</li>
                         </ul>
                       </div>
                       
                       <div className="bg-white p-5 rounded-lg shadow">
-                        <h5 className="font-medium text-primary mb-3">For the Children</h5>
+                        <h5 className="font-medium text-primary mb-3">{language === 'en' ? "For the Children" : translate('howToHelp.partners.benefits.forChildren')}</h5>
                         <ul className="space-y-2 list-disc pl-5 text-gray-700">
-                          <li>Improved facilities and resources</li>
-                          <li>Enhanced educational opportunities</li>
-                          <li>Access to professional expertise</li>
-                          <li>Enriching experiences and activities</li>
-                          <li>Exposure to positive role models</li>
+                          <li>{language === 'en' ? "Improved facilities and resources" : translate('howToHelp.partners.benefits.childBenefits.facilities')}</li>
+                          <li>{language === 'en' ? "Enhanced educational opportunities" : translate('howToHelp.partners.benefits.childBenefits.education')}</li>
+                          <li>{language === 'en' ? "Access to professional expertise" : translate('howToHelp.partners.benefits.childBenefits.expertise')}</li>
+                          <li>{language === 'en' ? "Enriching experiences and activities" : translate('howToHelp.partners.benefits.childBenefits.experiences')}</li>
+                          <li>{language === 'en' ? "Exposure to positive role models" : translate('howToHelp.partners.benefits.childBenefits.roleModels')}</li>
                         </ul>
                       </div>
                     </div>

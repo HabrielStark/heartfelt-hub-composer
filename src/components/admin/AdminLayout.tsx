@@ -8,7 +8,8 @@ import {
   LogOut,
   Calendar,
   Menu,
-  X
+  X,
+  Bitcoin
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -23,6 +24,7 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   const navigation = [
     { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
     { name: 'Donations', href: '/admin/donations', icon: DollarSign },
+    { name: 'BTCPay Settings', href: '/admin/btcpay', icon: Bitcoin },
     { name: 'Team Members', href: '/admin/team', icon: Users },
     { name: 'Events', href: '/admin/events', icon: Calendar },
     { name: 'Settings', href: '/admin/settings', icon: Settings },

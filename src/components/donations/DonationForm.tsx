@@ -95,7 +95,7 @@ const CheckoutForm = () => {
   return (
     <form onSubmit={handleDonationSubmit}>
       <div className="mb-6">
-        <Label className="mb-2 block">{translate('chooseAmount')}</Label>
+        <Label className="mb-2 block">{translate('Choose Amount')}</Label>
         <RadioGroup value={selectedPresetAmount} onValueChange={setSelectedPresetAmount} className="grid grid-cols-2 gap-3">
           {['25', '50', '100', '250'].map((amount) => (
             <div key={amount}>
@@ -116,13 +116,13 @@ const CheckoutForm = () => {
       </div>
       
       <div className="mb-6">
-        <Label htmlFor="custom-amount">{translate('customAmount')}</Label>
+        <Label htmlFor="custom-amount">{translate('Custom Amount')}</Label>
         <div className="relative mt-1">
           <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">$</span>
           <Input 
             id="custom-amount" 
             type="number" 
-            placeholder={translate('enterAmount')}
+            placeholder={translate('Enter Amount')}
             className="pl-8"
             value={customAmount}
             onChange={(e) => {
@@ -134,7 +134,7 @@ const CheckoutForm = () => {
       </div>
 
       <div className="mb-6">
-        <Label className="mb-2 block">{translate('cardDetails')}</Label>
+        <Label className="mb-2 block">{translate('Card Details')}</Label>
         <div className="p-3 border rounded-md">
           <CardElement options={CARD_ELEMENT_OPTIONS} />
         </div>
@@ -160,7 +160,7 @@ const DonationForm = () => {
         <div className="bg-primary-100 rounded-full p-3">
           <DollarSign className="h-6 w-6 text-primary" />
         </div>
-        <h3 className="font-playfair font-semibold text-xl">{translate('oneTimeDonation')}</h3>
+        <h3 className="font-playfair font-semibold text-xl">{translate('One Time Donation')}</h3>
       </div>
       
       <Elements stripe={stripePromise}>

@@ -60,9 +60,11 @@ const Header: React.FC = () => {
           {/* Language and Donate Buttons */}
           <div className="hidden md:flex items-center space-x-2">
             <LanguageSelector />
-            <Button className="bg-primary hover:bg-primary-600 ml-2">
-              {translate('common.donate')}
-            </Button>
+            <Link to="/donate">
+              <Button className="bg-primary hover:bg-primary-600 ml-2">
+                {translate('common.donate')}
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -96,9 +98,11 @@ const Header: React.FC = () => {
                   {item.name}
                 </Link>
               ))}
-              <Button className="bg-primary hover:bg-primary-600 w-full mt-2">
-                {translate('common.donate')}
-              </Button>
+              <Link to="/donate">
+                <Button className="bg-primary hover:bg-primary-600 w-full mt-2">
+                  {translate('common.donate')}
+                </Button>
+              </Link>
             </nav>
           </div>
         )}

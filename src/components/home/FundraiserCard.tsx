@@ -2,21 +2,26 @@ import React from 'react';
 import { Progress } from '@/components/ui/progress';
 import { Heart } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 interface FundraiserCardProps {
+  id: string;
   name: string;
   description: string;
   goal: number;
   raised: number;
   imageUrl: string;
+  onProgressUpdate?: () => void;
 }
 
 const FundraiserCard: React.FC<FundraiserCardProps> = ({
+  id,
   name,
   description,
   goal,
   raised,
   imageUrl,
+  onProgressUpdate
 }) => {
   const { translate } = useLanguage();
   const progress = Math.min(Math.round((raised / goal) * 100), 100);
@@ -50,9 +55,13 @@ const FundraiserCard: React.FC<FundraiserCardProps> = ({
           <span className="text-gray-500">{translate('common.goal')}: ${goal.toLocaleString()}</span>
         </div>
         
-        <button className="w-full py-2 bg-primary hover:bg-primary-600 text-white rounded-md transition-colors duration-300">
-          {translate('homePage.fundraisers.donateButton')}
-        </button>
+        <Link to="/donate">
+          <button 
+            className="w-full py-2 bg-primary hover:bg-primary-600 text-white rounded-md transition-colors duration-300"
+          >
+            {translate('Donate')}
+          </button>
+        </Link>
       </div>
     </div>
   );

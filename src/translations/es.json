@@ -464,5 +464,30 @@
       "view": "Ver"
     },
     "noPhotos": "No se encontraron fotos en esta categoría"
+  },
+  "donatePage": {
+    "title": "Donar",
+    "subtitle": "Cómo Ayudar",
+    "chooseMethod": "Elija Su Método de Donación",
+    "taxDeductible": "Su generosa contribución nos ayuda a continuar nuestra misión de apoyar a quienes lo necesitan. Todas las donaciones son deducibles de impuestos.",
+    "creditCard": "Tarjeta de Crédito",
+    "cryptocurrency": "Criptomoneda",
+    "comingSoon": "Próximamente",
+    "cardPaymentComingSoon": "Los pagos con tarjeta de crédito estarán disponibles pronto. Estamos integrando con Stripe para proporcionar procesamiento de pagos seguro.",
+    "otherWays": "Otras Formas de Apoyarnos",
+    "corporateMatching": "Contribución Corporativa",
+    "corporateMatchingDescription": "Muchos empleadores igualan las donaciones realizadas por sus empleados. Consulte con su empresa para ver si ofrecen un programa de donaciones equivalentes.",
+    "legacyGiving": "Donación Legado",
+    "legacyGivingDescription": "Considere incluirnos en su planificación patrimonial para crear un impacto duradero en las generaciones futuras.",
+    "cryptoDonation": "Donar con Criptomoneda",
+    "chooseAmount": "Elige la Cantidad",
+    "customAmount": "Cantidad Personalizada",
+    "enterAmount": "Ingrese la Cantidad",
+    "processing": "Procesando...",
+    "donationSuccessful": "¡Donación Exitosa!",
+    "thankYouForYour": "Gracias por tu",
+    "donation": "donación",
+    "pleaseSelectOrEnterDonationAmount": "Por favor, selecciona o ingresa una cantidad para donar",
+    "errorCreatingInvoice": "Error al crear la factura. Por favor, inténtalo de nuevo más tarde"
   }
 } 
