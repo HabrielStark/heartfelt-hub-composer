@@ -24,44 +24,44 @@ const HowToHelp = () => {
   const handleMaterialAidSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Thank You!",
-      description: "We'll contact you soon about your material aid donation.",
+      title: translate('howToHelp.materialAid.thankYou'),
+      description: translate('howToHelp.materialAid.confirmation'),
     });
   };
 
   const handleVolunteerSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Volunteer Application Received",
-      description: "We appreciate your interest! Our team will contact you soon.",
+      title: translate('howToHelp.volunteer.applicationReceived'),
+      description: translate('howToHelp.volunteer.confirmation'),
     });
   };
 
   const fundraisers = [
     {
-      name: "Educational Support Fund",
-      description: "Help provide school supplies, books, and educational resources for children to thrive academically.",
+      name: translate('homePage.fundraisers.educational'),
+      description: translate('homePage.fundraisers.educationalDesc'),
       goal: 25000,
       raised: 18750,
       imageUrl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2309&q=80"
     },
     {
-      name: "Healthcare Initiative",
-      description: "Support essential healthcare services, regular check-ups, and medications for children in our care.",
+      name: translate('homePage.fundraisers.healthcare'),
+      description: translate('homePage.fundraisers.healthcareDesc'),
       goal: 15000,
       raised: 9200,
       imageUrl: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2352&q=80"
     },
     {
-      name: "Facility Renovation",
-      description: "Help us renovate our main building to create a safer, more comfortable environment for the children.",
+      name: translate('homePage.fundraisers.facility'),
+      description: translate('homePage.fundraisers.facilityDesc'),
       goal: 50000,
       raised: 32500,
       imageUrl: "https://images.unsplash.com/photo-1531956003775-1b2dae38d5c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
     },
     {
-      name: "Recreational Activities Fund",
-      description: "Support sports equipment, art supplies, and field trips to enrich children's lives with fun and creativity.",
+      name: translate('howToHelp.fundraisers.recreational'),
+      description: translate('howToHelp.fundraisers.recreationalDesc'),
       goal: 10000,
       raised: 4200,
       imageUrl: "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
@@ -70,59 +70,59 @@ const HowToHelp = () => {
 
   const partners = [
     {
-      name: "ABC Foundation",
-      description: "Providing financial support for our educational programs.",
+      name: translate('howToHelp.partners.abc.name'),
+      description: translate('howToHelp.partners.abc.description'),
       logo: "https://via.placeholder.com/150?text=ABC"
     },
     {
-      name: "XYZ Corporation",
-      description: "Sponsoring healthcare initiatives and medical check-ups.",
+      name: translate('howToHelp.partners.xyz.name'),
+      description: translate('howToHelp.partners.xyz.description'),
       logo: "https://via.placeholder.com/150?text=XYZ"
     },
     {
-      name: "Community Bank",
-      description: "Supporting facility improvements and renovations.",
+      name: translate('howToHelp.partners.bank.name'),
+      description: translate('howToHelp.partners.bank.description'),
       logo: "https://via.placeholder.com/150?text=Bank"
     },
     {
-      name: "Global Helpers",
-      description: "Providing volunteers and professional services.",
+      name: translate('howToHelp.partners.global.name'),
+      description: translate('howToHelp.partners.global.description'),
       logo: "https://via.placeholder.com/150?text=Global"
     }
   ];
 
   const neededItems = [
-    { id: "clothes", label: "Children's Clothing" },
-    { id: "school", label: "School Supplies" },
-    { id: "toys", label: "Toys and Games" },
-    { id: "books", label: "Books" },
-    { id: "toiletries", label: "Toiletries" },
-    { id: "furniture", label: "Furniture" },
-    { id: "electronics", label: "Electronics" },
-    { id: "bedding", label: "Bedding" }
+    { id: "clothes", label: translate('howToHelp.materialAid.items.clothes') },
+    { id: "school", label: translate('howToHelp.materialAid.items.school') },
+    { id: "toys", label: translate('howToHelp.materialAid.items.toys') },
+    { id: "books", label: translate('howToHelp.materialAid.items.books') },
+    { id: "toiletries", label: translate('howToHelp.materialAid.items.toiletries') },
+    { id: "furniture", label: translate('howToHelp.materialAid.items.furniture') },
+    { id: "electronics", label: translate('howToHelp.materialAid.items.electronics') },
+    { id: "bedding", label: translate('howToHelp.materialAid.items.bedding') }
   ];
 
   return (
     <PageLayout>
       <PageBanner 
-        title="How You Can Help" 
-        subtitle="There are many ways to support our mission and make a positive impact in children's lives."
+        title={translate('howToHelp.title')}
+        subtitle={translate('howToHelp.subtitle')}
       />
 
       <section className="py-10 bg-white" id="options">
         <div className="container mx-auto px-4">
           <Tabs defaultValue="donations" className="w-full">
             <TabsList className="grid w-full md:max-w-2xl mx-auto grid-cols-2 md:grid-cols-4 mb-8">
-              <TabsTrigger value="donations">{translate('donations')}</TabsTrigger>
-              <TabsTrigger value="material">{translate('materialAid')}</TabsTrigger>
-              <TabsTrigger value="volunteer">{translate('volunteer')}</TabsTrigger>
-              <TabsTrigger value="partners">{translate('partners')}</TabsTrigger>
+              <TabsTrigger value="donations">{translate('howToHelp.tabs.donations')}</TabsTrigger>
+              <TabsTrigger value="material">{translate('howToHelp.tabs.material')}</TabsTrigger>
+              <TabsTrigger value="volunteer">{translate('howToHelp.tabs.volunteer')}</TabsTrigger>
+              <TabsTrigger value="partners">{translate('howToHelp.tabs.partners')}</TabsTrigger>
             </TabsList>
             
             <TabsContent value="donations" id="donations">
               <SectionHeading 
-                title="Make a Donation" 
-                subtitle="Your financial support helps us provide care, education, and opportunities for children in need."
+                title={translate('howToHelp.donations.title')}
+                subtitle={translate('howToHelp.donations.subtitle')}
               />
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
@@ -135,7 +135,7 @@ const HowToHelp = () => {
                     <div className="bg-primary-100 rounded-full p-3">
                       <Heart className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-playfair font-semibold text-xl">{translate('currentFundraisers')}</h3>
+                    <h3 className="font-playfair font-semibold text-xl">{translate('howToHelp.donations.currentFundraisers')}</h3>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -153,7 +153,7 @@ const HowToHelp = () => {
                   
                   <div className="mt-6">
                     <a href="#fundraisers" className="text-primary hover:underline font-medium">
-                      {translate('viewAllFundraisers')}
+                      {translate('howToHelp.donations.viewAllFundraisers')}
                     </a>
                   </div>
                 </div>
@@ -161,8 +161,8 @@ const HowToHelp = () => {
               
               <div className="mt-16" id="fundraisers">
                 <SectionHeading 
-                  title="All Fundraisers" 
-                  subtitle="Support our campaigns targeted at specific needs of the children and our facilities."
+                  title={translate('howToHelp.donations.allFundraisers')}
+                  subtitle={translate('howToHelp.donations.allFundraisersSubtitle')}
                 />
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
@@ -182,8 +182,8 @@ const HowToHelp = () => {
             
             <TabsContent value="material">
               <SectionHeading 
-                title="Donate Material Aid" 
-                subtitle="Help us provide for the children's daily needs with in-kind donations."
+                title={translate('howToHelp.materialAid.title')}
+                subtitle={translate('howToHelp.materialAid.subtitle')}
               />
               
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
@@ -192,27 +192,27 @@ const HowToHelp = () => {
                     <div className="bg-blue-100 rounded-full p-3">
                       <Gift className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="font-playfair font-semibold text-xl">Material Aid Form</h3>
+                    <h3 className="font-playfair font-semibold text-xl">{translate('howToHelp.materialAid.formTitle')}</h3>
                   </div>
                   
                   <form onSubmit={handleMaterialAidSubmit}>
                     <div className="mb-4">
-                      <Label htmlFor="name">Your Name</Label>
+                      <Label htmlFor="name">{translate('howToHelp.form.name')}</Label>
                       <Input id="name" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label htmlFor="email">Email</Label>
+                      <Label htmlFor="email">{translate('howToHelp.form.email')}</Label>
                       <Input id="email" type="email" className="mt-1" />
                     </div>
                     
                     <div className="mb-4">
-                      <Label htmlFor="phone">Phone</Label>
+                      <Label htmlFor="phone">{translate('howToHelp.form.phone')}</Label>
                       <Input id="phone" type="tel" className="mt-1" />
                     </div>
                     
                     <div className="mb-6">
-                      <Label className="mb-2 block">Items you wish to donate</Label>
+                      <Label className="mb-2 block">{translate('howToHelp.materialAid.itemsToDonate')}</Label>
                       <div className="grid grid-cols-2 gap-2">
                         {neededItems.map((item) => (
                           <div className="flex items-center space-x-2" key={item.id}>
@@ -234,12 +234,12 @@ const HowToHelp = () => {
                     </div>
                     
                     <div className="mb-6">
-                      <Label htmlFor="details">Additional Details</Label>
-                      <Textarea id="details" placeholder="Tell us more about the items you wish to donate" className="mt-1" />
+                      <Label htmlFor="details">{translate('howToHelp.form.additionalDetails')}</Label>
+                      <Textarea id="details" placeholder={translate('howToHelp.materialAid.detailsPlaceholder')} className="mt-1" />
                     </div>
                     
                     <Button type="submit" className="w-full bg-primary hover:bg-primary-600">
-                      Submit
+                      {translate('common.submit')}
                     </Button>
                   </form>
                 </Card>

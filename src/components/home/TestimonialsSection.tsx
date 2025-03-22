@@ -1,4 +1,3 @@
-
 import React from 'react';
 import SectionHeading from '../ui/SectionHeading';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -11,19 +10,19 @@ const TestimonialsSection = () => {
       quote: "The work that HeartfeltHome does is truly incredible. I've seen firsthand how their care transforms children's lives, giving them hope and opportunities they wouldn't otherwise have.",
       author: "Sarah Johnson",
       role: "Regular Donor",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+      image: "/IMG_4396.JPG"
     },
     {
       quote: "Volunteering with HeartfeltHome has been one of the most rewarding experiences of my life. The dedication of the staff and the resilience of the children is truly inspiring.",
       author: "Michael Chen",
       role: "Volunteer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80"
+      image: "/IMG_4397.JPG"
     },
     {
       quote: "Our partnership with HeartfeltHome has been meaningful not just for the children, but for our entire company. Their transparency and impact-focused approach makes them an ideal partner.",
       author: "Emily Rodriguez",
       role: "Corporate Partner",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=988&q=80"
+      image: "/IMG_4399.JPG"
     }
   ];
 

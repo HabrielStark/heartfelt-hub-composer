@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import AdminLayout from '@/components/admin/AdminLayout';
 import DonationTable from '@/components/admin/DonationTable';
@@ -98,7 +97,7 @@ const Donations = () => {
       startDate: '2023-01-15',
       endDate: '2023-12-31',
       isActive: true,
-      featuredImage: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2309&q=80'
+      featuredImage: '/IMG_4404.PNG'
     },
     {
       id: '2',
@@ -109,7 +108,7 @@ const Donations = () => {
       startDate: '2023-02-01',
       endDate: '2023-11-30',
       isActive: true,
-      featuredImage: 'https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2352&q=80'
+      featuredImage: '/IMG_4420.JPG'
     },
     {
       id: '3',
@@ -120,7 +119,7 @@ const Donations = () => {
       startDate: '2023-03-15',
       endDate: '2023-10-31',
       isActive: true,
-      featuredImage: 'https://images.unsplash.com/photo-1531956003775-1b2dae38d5c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80'
+      featuredImage: '/IMG_4420 (2).JPG'
     },
   ];
   

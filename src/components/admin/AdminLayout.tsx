@@ -1,20 +1,16 @@
-
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  LayoutDashboard, 
-  DollarSign, 
-  FileText, 
-  FileEdit, 
-  Settings, 
-  LogOut, 
+  LayoutDashboard,
+  DollarSign,
+  Users,
+  Settings,
+  LogOut,
+  Calendar,
   Menu,
-  X,
-  Heart
+  X
 } from 'lucide-react';
-import { Button } from "@/components/ui/button";
-import { useToast } from '@/hooks/use-toast';
-import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 interface AdminLayoutProps {
   children: React.ReactNode;
@@ -22,125 +18,86 @@ interface AdminLayoutProps {
 
 const AdminLayout: React.FC<AdminLayoutProps> = ({ children }) => {
   const location = useLocation();
-  const { toast } = useToast();
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
   
-  const navItems = [
-    {
-      label: 'Dashboard',
-      icon: <LayoutDashboard className="h-5 w-5" />,
-      href: '/admin',
-    },
-    {
-      label: 'Donations',
-      icon: <DollarSign className="h-5 w-5" />,
-      href: '/admin/donations',
-    },
-    {
-      label: 'Reports',
-      icon: <FileText className="h-5 w-5" />,
-      href: '/admin/reports',
-    },
-    {
-      label: 'Content',
-      icon: <FileEdit className="h-5 w-5" />,
-      href: '/admin/content',
-    },
-    {
-      label: 'Settings',
-      icon: <Settings className="h-5 w-5" />,
-      href: '/admin/settings',
-    },
+  const navigation = [
+    { name: 'Dashboard', href: '/admin', icon: LayoutDashboard },
+    { name: 'Donations', href: '/admin/donations', icon: DollarSign },
+    { name: 'Team Members', href: '/admin/team', icon: Users },
+    { name: 'Events', href: '/admin/events', icon: Calendar },
+    { name: 'Settings', href: '/admin/settings', icon: Settings },
   ];
 
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
-
-  const handleLogout = () => {
-    toast({
-      title: "Logged Out",
-      description: "You have been successfully logged out.",
-    });
-    // In a real app, would redirect to login or home
-  };
-
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-gray-50">
-      {/* Mobile Sidebar Toggle */}
-      <div className="md:hidden p-4 bg-white shadow-sm flex justify-between items-center">
-        <div className="flex items-center space-x-2">
-          <Heart className="h-6 w-6 text-primary" />
-          <span className="font-playfair font-bold text-xl">Admin</span>
-        </div>
-        <button
-          onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-          className="p-2 rounded-md text-gray-600 hover:bg-gray-100"
+    <div className="min-h-screen bg-gray-50">
+      {/* Mobile sidebar toggle */}
+      <div className="lg:hidden fixed top-0 left-0 w-full bg-white z-50 px-4 py-3 flex justify-between items-center border-b">
+        <div className="font-playfair font-bold text-lg">Heartfelt Admin</div>
+        <Button 
+          variant="ghost" 
+          size="icon" 
+          onClick={() => setSidebarOpen(!sidebarOpen)}
         >
-          {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+          {sidebarOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </Button>
       </div>
 
       {/* Sidebar */}
-      <aside 
-        className={`w-full md:w-64 bg-white shadow-md md:flex flex-col justify-between transition-all duration-300 ${
-          isSidebarOpen ? 'flex absolute inset-0 z-40' : 'hidden'
-        } md:sticky md:top-0 md:h-screen`}
-      >
-        <div>
-          {/* Logo */}
-          <div className="p-6 border-b border-gray-200">
-            <Link to="/admin" className="flex items-center space-x-2">
-              <Heart className="h-6 w-6 text-primary" />
-              <span className="font-playfair font-bold text-xl">HeartfeltHome</span>
-            </Link>
+      <div className={`fixed inset-0 z-40 lg:z-auto ${sidebarOpen ? 'block' : 'hidden'} lg:block`}>
+        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 lg:hidden" onClick={() => setSidebarOpen(false)}></div>
+        <div className="relative flex flex-col flex-1 min-h-screen w-64 max-w-xs bg-white border-r border-gray-200 pt-5 pb-4">
+          <div className="flex items-center px-6 mb-8">
+            <span className="font-playfair font-bold text-xl">Heartfelt Admin</span>
           </div>
-
-          {/* Nav Menu */}
-          <nav className="p-4">
-            <ul className="space-y-2">
-              {navItems.map((item) => (
-                <li key={item.label}>
+          <div className="flex-1 flex flex-col overflow-y-auto">
+            <nav className="flex-1 px-4 space-y-1">
+              {navigation.map((item) => {
+                const isActive = location.pathname === item.href;
+                return (
                   <Link
+                    key={item.name}
                     to={item.href}
-                    className={`flex items-center space-x-3 p-3 rounded-md transition-colors ${
-                      isActive(item.href)
+                    className={`group flex items-center px-3 py-2 text-sm font-medium rounded-md ${
+                      isActive
                         ? 'bg-primary text-white'
                         : 'text-gray-700 hover:bg-gray-100'
                     }`}
-                    onClick={() => setIsSidebarOpen(false)}
                   >
-                    {item.icon}
-                    <span>{item.label}</span>
+                    <item.icon
+                      className={`mr-3 h-5 w-5 ${
+                        isActive ? 'text-white' : 'text-gray-500 group-hover:text-gray-600'
+                      }`}
+                    />
+                    {item.name}
                   </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+                );
+              })}
+            </nav>
+            <div className="px-4 mt-6">
+              <Link 
+                to="/" 
+                className="inline-flex items-center px-3 py-2 w-full text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 rounded-md"
+              >
+                <LogOut className="mr-3 h-5 w-5 text-gray-500" />
+                Back to Website
+              </Link>
+            </div>
+          </div>
         </div>
-
-        {/* Logout Button */}
-        <div className="p-4 border-t border-gray-200 mt-auto">
-          <Button
-            variant="outline"
-            className="w-full flex items-center justify-center space-x-2"
-            onClick={handleLogout}
-          >
-            <LogOut className="h-4 w-4" />
-            <span>Logout</span>
-          </Button>
-          <Link to="/" className="mt-4 text-sm text-center block text-gray-600 hover:text-primary">
-            Return to Website
-          </Link>
-        </div>
-      </aside>
-
-      {/* Main Content */}
-      <main className="flex-1 p-6">
-        {children}
-      </main>
+      </div>
+      
+      {/* Main content */}
+      <div className="lg:pl-64">
+        <main className="py-6 lg:py-10 px-4 lg:px-8 mt-12 lg:mt-0">
+          {children}
+        </main>
+      </div>
     </div>
   );
 };
 
-export default AdminLayout;
+export default AdminLayout; 

@@ -1,11 +1,9 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
-import { ThemeProvider } from "next-themes";
 
 // Public Pages
 import Index from "./pages/Index";
@@ -14,7 +12,7 @@ import HowToHelp from "./pages/HowToHelp";
 import FinancialTransparency from "./pages/FinancialTransparency";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import KidsEvents from "./pages/KidsEvents";
+import Kids from "./pages/KidsEvents";
 
 // Admin Pages
 import AdminLogin from "./pages/admin/AdminLogin";
@@ -26,31 +24,29 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={true}>
-        <LanguageProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <Routes>
-              {/* Public Routes */}
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<AboutUs />} />
-              <Route path="/how-to-help" element={<HowToHelp />} />
-              <Route path="/financial-transparency" element={<FinancialTransparency />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/kids-events" element={<KidsEvents />} />
-              
-              {/* Admin Routes */}
-              <Route path="/admin/login" element={<AdminLogin />} />
-              <Route path="/admin" element={<Dashboard />} />
-              <Route path="/admin/donations" element={<Donations />} />
-              
-              {/* Catch-all route for 404 */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </LanguageProvider>
-      </ThemeProvider>
+      <LanguageProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Routes>
+            {/* Public Routes */}
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/how-to-help" element={<HowToHelp />} />
+            <Route path="/financial-transparency" element={<FinancialTransparency />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/kids" element={<Kids />} />
+            
+            {/* Admin Routes */}
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin" element={<Dashboard />} />
+            <Route path="/admin/donations" element={<Donations />} />
+            
+            {/* Catch-all route for 404 */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );

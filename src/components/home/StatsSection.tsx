@@ -1,28 +1,30 @@
-
 import React from 'react';
 import { Users, Heart, Home, BookOpen } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const StatsSection = () => {
+  const { translate } = useLanguage();
+  
   const stats = [
     {
       icon: <Users className="h-10 w-10 text-primary" />,
       number: "500+",
-      label: "Children Supported",
+      label: translate('homePage.stats.childrenHelped'),
     },
     {
       icon: <Heart className="h-10 w-10 text-primary" />,
       number: "10+",
-      label: "Years of Service",
+      label: translate('homePage.stats.communityPrograms'),
     },
     {
       icon: <Home className="h-10 w-10 text-primary" />,
       number: "3",
-      label: "Care Facilities",
+      label: translate('homePage.stats.volunteersEngaged'),
     },
     {
       icon: <BookOpen className="h-10 w-10 text-primary" />,
       number: "85%",
-      label: "Education Success Rate",
+      label: translate('homePage.stats.successStories'),
     },
   ];
 

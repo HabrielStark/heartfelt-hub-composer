@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { CheckIcon, GlobeIcon } from "lucide-react";
@@ -17,7 +16,7 @@ export function LanguageSelector() {
   const languages = [
     { code: 'en', name: 'English' },
     { code: 'es', name: 'Español' },
-    { code: 'de', name: 'Deutsch' },
+    { code: 'uk', name: 'Українська' },
   ];
 
   const handleLanguageChange = (languageCode: string) => {

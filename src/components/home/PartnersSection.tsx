@@ -1,4 +1,3 @@
-
 import React from 'react';
 import SectionHeading from '../ui/SectionHeading';
 
@@ -6,23 +5,23 @@ const PartnersSection = () => {
   const partners = [
     {
       name: "ABC Foundation",
-      logo: "https://via.placeholder.com/200x80?text=ABC+Foundation"
+      logo: "/IMG_4398.JPG"
     },
     {
       name: "XYZ Corporation",
-      logo: "https://via.placeholder.com/200x80?text=XYZ+Corp"
+      logo: "/IMG_4384.JPG"
     },
     {
       name: "Global Helpers",
-      logo: "https://via.placeholder.com/200x80?text=Global+Helpers"
+      logo: "/IMG_4374.JPG"
     },
     {
       name: "Community Bank",
-      logo: "https://via.placeholder.com/200x80?text=Community+Bank"
+      logo: "/IMG_4405.PNG"
     },
     {
       name: "Caring Partners Inc.",
-      logo: "https://via.placeholder.com/200x80?text=Caring+Partners"
+      logo: "/IMG_4388.JPG"
     }
   ];
 

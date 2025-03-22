@@ -1,0 +1,468 @@
+{
+  "common": {
+    "donate": "Donar",
+    "learnMore": "Saber más",
+    "viewAll": "Ver todo",
+    "readMore": "Leer más",
+    "contactUs": "Contáctenos",
+    "submit": "Enviar",
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "goal": "Meta"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "aboutUs": "Sobre Nosotros",
+    "howToHelp": "Cómo Ayudar",
+    "ourImpact": "Nuestro Impacto",
+    "photoGallery": "Galería de Fotos",
+    "events": "Eventos",
+    "kids": "Niños",
+    "contactUs": "Contáctenos",
+    "donate": "Donar",
+    "login": "Iniciar Sesión",
+    "admin": "Administrador",
+    "quickLinks": "Enlaces Rápidos"
+  },
+  "footer": {
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio"
+  },
+  "homePage": {
+    "hero": {
+      "title": "Creando Esperanza para",
+      "titleHighlight": "Niños Necesitados",
+      "description": "Todos los niños merecen un hogar seguro y amoroso. Únase a nuestra misión para brindar atención, apoyo y oportunidades a los niños que más lo necesitan.",
+      "donateButton": "Donar Ahora",
+      "helpButton": "Formas de Ayudar",
+      "caption": "Brindando amor y cuidado desde 2010"
+    },
+    "stats": {
+      "title": "Nuestro Impacto",
+      "description": "Así es como su apoyo está cambiando las vidas de los niños.",
+      "childrenHelped": "Niños Ayudados",
+      "communityPrograms": "Programas Comunitarios",
+      "volunteersEngaged": "Voluntarios Comprometidos",
+      "successStories": "Historias de Éxito"
+    },
+    "supportCategories": {
+      "title": "Cómo Puede Ayudar",
+      "description": "Cada contribución, grande o pequeña, marca la diferencia. Encuentre la manera que mejor se adapte a usted.",
+      "donate": {
+        "title": "Donar",
+        "description": "Sus donaciones financieras ayudan a proporcionar necesidades básicas como alimentos, educación y atención médica."
+      },
+      "volunteer": {
+        "title": "Voluntariado",
+        "description": "Dedique su tiempo y talento para impactar directamente en las vidas de los niños en nuestros programas."
+      },
+      "sponsor": {
+        "title": "Apadrinar",
+        "description": "Cambie la vida de un niño convirtiéndose en su padrino y brindando apoyo continuo para su desarrollo."
+      },
+      "fundraise": {
+        "title": "Recaudar Fondos",
+        "description": "Organice su propia recaudación de fondos o evento para involucrar a su comunidad en el apoyo a nuestra causa."
+      }
+    },
+    "fundraisers": {
+      "title": "Campañas Actuales",
+      "description": "Apoye una de nuestras iniciativas actuales para ayudarnos a satisfacer necesidades especiales.",
+      "viewAllButton": "Ver Todas las Campañas",
+      "donateButton": "Donar",
+      "progressLabel": "de",
+      "educational": "Fondo de Apoyo Educativo",
+      "educationalDesc": "Ayude a proporcionar útiles escolares, libros y recursos educativos para el desarrollo académico de los niños.",
+      "healthcare": "Iniciativa de Salud",
+      "healthcareDesc": "Apoye servicios médicos esenciales, chequeos regulares y medicamentos para los niños bajo nuestro cuidado.",
+      "facility": "Renovación de Instalaciones",
+      "facilityDesc": "Ayúdenos a renovar nuestro edificio principal para crear un entorno más seguro y cómodo para los niños."
+    },
+    "testimonials": {
+      "title": "Qué Dice la Gente",
+      "subtitle": "Escuche a nuestros partidarios, voluntarios y socios sobre sus experiencias con HeartfeltHome."
+    },
+    "partners": {
+      "title": "Nuestros Socios",
+      "subtitle": "Estamos agradecidos por el apoyo de estas organizaciones que ayudan a hacer posible nuestro trabajo."
+    },
+    "cta": {
+      "title": "Únase a Nosotros para Crear un Futuro Brillante",
+      "description": "Juntos podemos cambiar las vidas de niños vulnerables y darles la esperanza que merecen.",
+      "button": "Comience a Ayudar Hoy"
+    }
+  },
+  "howToHelp": {
+    "title": "Cómo Puede Ayudar",
+    "subtitle": "Hay muchas maneras de apoyar nuestra misión y tener un impacto positivo en las vidas de los niños.",
+    "tabs": {
+      "donations": "Donaciones",
+      "material": "Ayuda Material",
+      "volunteer": "Voluntariado",
+      "partners": "Socios"
+    },
+    "donations": {
+      "title": "Hacer una Donación",
+      "subtitle": "Su apoyo financiero nos ayuda a proporcionar cuidado, educación y oportunidades para niños necesitados.",
+      "currentFundraisers": "Recaudaciones Actuales",
+      "viewAllFundraisers": "Ver Todas las Recaudaciones",
+      "allFundraisers": "Todas las Recaudaciones",
+      "allFundraisersSubtitle": "Apoye nuestras campañas dirigidas a necesidades específicas de los niños y nuestras instalaciones."
+    },
+    "materialAid": {
+      "title": "Donar Ayuda Material",
+      "subtitle": "Ayúdenos a satisfacer las necesidades diarias de los niños con donaciones en especie.",
+      "formTitle": "Formulario de Ayuda Material",
+      "itemsToDonate": "Artículos que desea donar",
+      "detailsPlaceholder": "Cuéntenos más sobre los artículos que desea donar",
+      "thankYou": "¡Gracias!",
+      "confirmation": "Nos pondremos en contacto con usted pronto acerca de su donación de ayuda material.",
+      "items": {
+        "clothes": "Ropa para Niños",
+        "school": "Útiles Escolares",
+        "toys": "Juguetes y Juegos",
+        "books": "Libros",
+        "toiletries": "Artículos de Aseo",
+        "furniture": "Muebles",
+        "electronics": "Electrónica",
+        "bedding": "Ropa de Cama"
+      }
+    },
+    "volunteer": {
+      "applicationReceived": "Solicitud de Voluntariado Recibida",
+      "confirmation": "¡Agradecemos su interés! Nuestro equipo se pondrá en contacto con usted pronto."
+    },
+    "form": {
+      "name": "Su Nombre",
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "additionalDetails": "Detalles Adicionales"
+    },
+    "fundraisers": {
+      "recreational": "Fondo Recreativo",
+      "recreationalDesc": "Apoye equipos deportivos, materiales artísticos y excursiones para enriquecer las vidas de los niños a través de la recreación y la creatividad."
+    },
+    "partners": {
+      "abc": {
+        "name": "Fundación ABC",
+        "description": "Proporciona apoyo financiero para nuestros programas educativos."
+      },
+      "xyz": {
+        "name": "Corporación XYZ",
+        "description": "Patrocina iniciativas de salud y chequeos médicos."
+      },
+      "bank": {
+        "name": "Banco Comunitario",
+        "description": "Apoya mejoras y renovaciones de instalaciones."
+      },
+      "global": {
+        "name": "Ayudantes Globales",
+        "description": "Proporciona voluntarios y servicios profesionales."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Nos encantaría saber de usted. Comuníquese con cualquier pregunta, inquietud o para obtener más información sobre nuestro trabajo.",
+    "messageSent": "Mensaje Enviado",
+    "messageConfirmation": "Gracias por su mensaje. Responderemos lo antes posible.",
+    "getInTouch": {
+      "title": "Póngase en Contacto",
+      "subtitle": "Complete el formulario y nuestro equipo se pondrá en contacto con usted lo antes posible."
+    },
+    "form": {
+      "name": "Su Nombre",
+      "email": "Dirección de Correo Electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar Mensaje"
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "subtitle": "Encuéntrenos en nuestra ubicación o comuníquese a través de cualquiera de los métodos de contacto a continuación.",
+      "location": {
+        "title": "Nuestra Ubicación",
+        "address1": "123 Calle Solidaria",
+        "address2": "Ciudad Compasión, CA 12345",
+        "country": "Estados Unidos"
+      },
+      "phone": {
+        "title": "Números de Teléfono",
+        "main": "Oficina Principal",
+        "donations": "Donaciones",
+        "volunteer": "Información de Voluntariado"
+      },
+      "email": {
+        "title": "Direcciones de Correo Electrónico",
+        "general": "Consultas Generales",
+        "donations": "Donaciones",
+        "volunteer": "Voluntariado"
+      },
+      "hours": {
+        "title": "Horario de Operación",
+        "weekdays": "Lunes - Viernes: 9:00 AM - 5:00 PM",
+        "saturday": "Sábado: 10:00 AM - 2:00 PM",
+        "sunday": "Domingo: Cerrado"
+      }
+    },
+    "visiting": {
+      "title": "Información de Visita",
+      "info": "Para la privacidad y seguridad de nuestros niños, todas las visitas a nuestras instalaciones deben programarse con anticipación. Por favor, contáctenos para concertar una visita."
+    }
+  },
+  "financial": {
+    "title": "Transparencia Financiera",
+    "subtitle": "Creemos en la plena transparencia sobre cómo se utilizan sus donaciones para apoyar nuestra misión.",
+    "overview": {
+      "title": "Visión General Financiera",
+      "subtitle": "Así es como asignamos fondos para garantizar el máximo impacto para los niños bajo nuestro cuidado.",
+      "fundAllocation": "Asignación de Fondos",
+      "priorityText": "Priorizamos el cuidado directo de los niños, asegurando que la mayoría de los fondos beneficien directamente a los niños.",
+      "incomeVsExpenses": "Ingresos vs. Gastos (2023)",
+      "donations": "Donaciones",
+      "expenses": "Gastos",
+      "monthlyBreakdown": "Desglose mensual de donaciones recibidas y gastos incurridos a lo largo de 2023.",
+      "programExpenditure": "Gasto del Programa",
+      "amountUSD": "Cantidad (USD)",
+      "programBreakdown": "Desglose de cómo se asignan los fondos entre diferentes áreas del programa.",
+      "growthOverTime": "Crecimiento a lo Largo del Tiempo",
+      "childrenSupported": "Niños Apoyados",
+      "activeDonors": "Donantes Activos",
+      "growthText": "Crecimiento en el número de niños apoyados y donantes activos a lo largo de los años."
+    },
+    "reports": {
+      "title": "Informes Anuales y Documentos",
+      "subtitle": "Descargue nuestros informes financieros y otros documentos para obtener información detallada sobre nuestras finanzas y operaciones."
+    },
+    "fundraisingPrinciples": {
+      "title": "Principios de Recaudación de Fondos",
+      "subtitle": "Nuestro enfoque de recaudación de fondos se guía por estos principios fundamentales.",
+      "transparency": {
+        "title": "Transparencia",
+        "description": "Estamos comprometidos con la completa transparencia financiera. Toda la información sobre donaciones y detalles de gastos se publican regularmente y están disponibles para los donantes y el público."
+      },
+      "stewardship": {
+        "title": "Administración",
+        "description": "Gestionamos cuidadosamente todos los recursos que se nos confían, asegurando que los fondos se utilicen de manera efectiva para maximizar el impacto en los niños bajo nuestro cuidado."
+      },
+      "accountability": {
+        "title": "Responsabilidad",
+        "description": "Nos sometemos a auditorías externas regulares y mantenemos estrictos controles internos para garantizar una adecuada gestión de fondos y el cumplimiento de todas las regulaciones."
+      },
+      "commitment": {
+        "title": "Nuestro Compromiso con Usted",
+        "description": "Cuando dona a HeartfeltHome, puede confiar en que su contribución se utilizará de manera sabia y efectiva para mejorar las vidas de los niños. Prometemos:"
+      }
+    },
+    "documents": {
+      "annualReport2023": "Informe Anual 2023",
+      "q4Statement": "Estado Financiero Q4",
+      "auditReport": "Informe de Auditoría 2023",
+      "annualReport2022": "Informe Anual 2022",
+      "impactAssessment": "Evaluación de Impacto",
+      "strategicPlan": "Plan Estratégico 2022-2025"
+    },
+    "expenses": {
+      "childCare": "Cuidado Directo del Niño",
+      "education": "Educación",
+      "healthcare": "Salud",
+      "administration": "Administración",
+      "fundraising": "Recaudación de Fondos"
+    },
+    "programs": {
+      "food": "Alimentos",
+      "education": "Educación",
+      "healthcare": "Salud",
+      "clothing": "Ropa",
+      "recreation": "Recreación",
+      "utilities": "Servicios Públicos",
+      "facility": "Instalaciones"
+    }
+  },
+  "months": {
+    "jan": "Ene",
+    "feb": "Feb",
+    "mar": "Mar",
+    "apr": "Abr",
+    "may": "May",
+    "jun": "Jun",
+    "jul": "Jul",
+    "aug": "Ago",
+    "sep": "Sep",
+    "oct": "Oct",
+    "nov": "Nov",
+    "dec": "Dic"
+  },
+  "aboutPage": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Conozca nuestra misión, historia y el equipo dedicado detrás de HeartfeltHome.",
+    "history": {
+      "title": "Nuestra Historia",
+      "subtitle": "Un viaje de compasión y dedicación desde 2010.",
+      "paragraph1": "HeartfeltHome fue fundado en 2010 por un grupo de personas apasionadas que reconocieron la urgente necesidad de atención de calidad para niños huérfanos y vulnerables en nuestra comunidad.",
+      "paragraph2": "Lo que comenzó como una pequeña iniciativa con solo cinco niños ha crecido hasta convertirse en un programa integral de atención que ha apoyado a más de 500 niños a través de nuestros programas residenciales y comunitarios.",
+      "paragraph3": "A lo largo de los años, hemos ampliado nuestros servicios para incluir apoyo educativo, atención médica, asesoramiento psicológico y formación en habilidades para la vida para garantizar que cada niño reciba la atención que necesita para prosperar."
+    },
+    "values": {
+      "title": "Nuestros Valores Fundamentales",
+      "subtitle": "Estos principios guían todo lo que hacemos en HeartfeltHome.",
+      "compassion": {
+        "title": "Compasión",
+        "description": "Nos acercamos a cada niño con empatía y comprensión, reconociendo sus experiencias y necesidades únicas."
+      },
+      "integrity": {
+        "title": "Integridad",
+        "description": "Mantenemos los más altos estándares éticos en todas nuestras operaciones y estamos comprometidos con la transparencia."
+      },
+      "respect": {
+        "title": "Respeto",
+        "description": "Honramos la dignidad de cada niño y reconocemos su valor inherente como individuos."
+      },
+      "excellence": {
+        "title": "Excelencia",
+        "description": "Nos esforzamos por la más alta calidad en todos nuestros servicios para proporcionar el mejor cuidado posible para los niños."
+      },
+      "collaboration": {
+        "title": "Colaboración",
+        "description": "Trabajamos junto con socios, comunidades y familias para crear una red de apoyo para los niños."
+      },
+      "empowerment": {
+        "title": "Empoderamiento",
+        "description": "Equipamos a los niños con las habilidades, la confianza y las oportunidades para construir mejores futuros para sí mismos."
+      }
+    },
+    "team": {
+      "title": "Nuestro Equipo",
+      "subtitle": "Conozca a los profesionales dedicados que hacen posible nuestro trabajo.",
+      "members": {
+        "director": {
+          "name": "Dra. Emma Rodríguez",
+          "position": "Directora Ejecutiva",
+          "description": "Con más de 15 años de experiencia en protección infantil, Emma lidera nuestra organización con compasión y visión."
+        },
+        "childcare": {
+          "name": "James Wilson",
+          "position": "Director de Cuidado Infantil",
+          "description": "James asegura que cada niño reciba atención y cuidado individualizado para apoyar su desarrollo."
+        },
+        "education": {
+          "name": "Sarah Chen",
+          "position": "Coordinadora de Educación",
+          "description": "Sarah desarrolla nuestros programas educativos para ayudar a los niños a alcanzar su máximo potencial académico."
+        },
+        "financial": {
+          "name": "Michael Johnson",
+          "position": "Director Financiero",
+          "description": "Michael garantiza una gestión responsable y transparente de los fondos de los donantes para un impacto máximo."
+        }
+      }
+    },
+    "documents": {
+      "title": "Documentos Oficiales",
+      "subtitle": "Acceda a nuestros documentos públicos para obtener más información sobre la gobernanza y las operaciones de nuestra organización.",
+      "download": "Descargar PDF",
+      "annual": "Informe Anual 2023",
+      "protection": "Política de Protección Infantil",
+      "bylaws": "Estatutos de la Organización",
+      "financial": "Informe Financiero"
+    }
+  },
+  "photoGallery": {
+    "title": "Galería de Fotos",
+    "subtitle": "Vea momentos de nuestros programas, eventos y la vida diaria de los niños.",
+    "allPhotos": "Todas las Fotos",
+    "summerCamp": "Campamento de Verano",
+    "schoolEvents": "Eventos Escolares",
+    "specialCelebrations": "Celebraciones Especiales"
+  },
+  "kidsEvents": {
+    "title": "Eventos para Niños",
+    "subtitle": "Conozca eventos y programas especiales para niños bajo nuestro cuidado.",
+    "description": "En HeartfeltHome, organizamos una variedad de eventos para enriquecer las vidas de los niños, desarrollar sus habilidades y crear recuerdos alegres. Desde talleres educativos hasta excursiones recreativas, estos eventos son una parte esencial de nuestro enfoque holístico del cuidado infantil."
+  },
+  "admin": {
+    "donations": {
+      "title": "Gestión de Donaciones",
+      "description": "Gestione donaciones y campañas de recaudación de fondos.",
+      "tabs": {
+        "donations": "Donaciones",
+        "fundraisers": "Recaudaciones de Fondos"
+      },
+      "newFundraiser": "Nueva Recaudación",
+      "status": {
+        "active": "Activo",
+        "inactive": "Inactivo",
+        "completed": "Completado",
+        "pending": "Pendiente",
+        "failed": "Fallido"
+      },
+      "fields": {
+        "donor": "Donante",
+        "email": "Correo Electrónico",
+        "amount": "Cantidad",
+        "date": "Fecha",
+        "campaign": "Campaña",
+        "status": "Estado",
+        "raised": "Recaudado",
+        "goal": "Meta"
+      },
+      "buttons": {
+        "edit": "Editar",
+        "view": "Ver"
+      }
+    }
+  },
+  "kids": {
+    "title": "Galería de Niños",
+    "subtitle": "Nuestros maravillosos niños",
+    "description": "Explore nuestra colección de fotos que muestran a los maravillosos niños con los que trabajamos",
+    "photoDescriptions": {
+      "summerCamp": "Niños jugando en el campamento de verano",
+      "schoolPerformance": "Día de actuación escolar",
+      "birthdayCelebration": "Celebración de cumpleaños",
+      "artsCrafts": "Sesión de artes y manualidades",
+      "scienceFair": "Proyecto de feria científica",
+      "holidayCelebration": "Celebración festiva",
+      "groupActivities": "Actividades grupales",
+      "computerClass": "Clase de informática para niños",
+      "natureExploration": "Viaje de exploración de la naturaleza",
+      "cookingClass": "Clase de cocina para niños",
+      "heartShapes": "Niños haciendo formas de corazón",
+      "swimmingLessons": "Clases de natación en el campamento",
+      "musicClass": "Clase de música para niños",
+      "holidayCrafts": "Actividades artesanales festivas",
+      "outdoorGames": "Juegos al aire libre en el campamento de verano",
+      "learningTogether": "Niños aprendiendo juntos",
+      "birthdayParty": "Diversión en fiesta de cumpleaños",
+      "hikingTrip": "Excursión de senderismo de niños",
+      "readingBooks": "Niños leyendo libros",
+      "talentShow": "Actuación en show de talentos",
+      "sportActivities": "Actividades deportivas en el parque",
+      "artClass": "Creatividad en clase de arte",
+      "newYearCelebration": "Celebración de año nuevo",
+      "teambuilding": "Actividades de formación de equipos",
+      "mathLesson": "Lección de matemáticas",
+      "graduationCeremony": "Ceremonia de graduación",
+      "outdoorAdventure": "Aventura al aire libre",
+      "readingTime": "Tiempo de lectura con amigos",
+      "easterCelebration": "Celebración de Pascua",
+      "natureArt": "Proyectos artísticos en la naturaleza",
+      "scienceExperiment": "Día de experimentos científicos",
+      "childrensDay": "Celebración del día de los niños",
+      "beachActivities": "Actividades en la playa",
+      "groupProject": "Presentación de proyecto grupal",
+      "autumnFestival": "Festival de otoño",
+      "camping": "Acampada bajo las estrellas",
+      "dramaClass": "Actuación de clase de teatro",
+      "sportsDay": "Día deportivo",
+      "musicFestival": "Festival de música de verano",
+      "communityGathering": "Reunión comunitaria"
+    },
+    "actions": {
+      "like": "Me gusta",
+      "close": "Cerrar",
+      "view": "Ver"
+    },
+    "noPhotos": "No se encontraron fotos en esta categoría"
+  }
+} 

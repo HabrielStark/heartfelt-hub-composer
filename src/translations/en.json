@@ -1,0 +1,448 @@
+{
+  "common": {
+    "donate": "Donate",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "contactUs": "Contact Us",
+    "submit": "Submit",
+    "previous": "Previous",
+    "next": "Next",
+    "goal": "Goal"
+  },
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "howToHelp": "How to Help",
+    "ourImpact": "Our Impact",
+    "photoGallery": "Photo Gallery",
+    "kids": "Kids",
+    "contactUs": "Contact Us",
+    "donate": "Donate",
+    "login": "Login",
+    "admin": "Admin",
+    "quickLinks": "Quick Links"
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "allRightsReserved": "All rights reserved.",
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe",
+    "subscribeText": "Stay updated with our latest news and updates.",
+    "description": "We are dedicated to making a positive difference in the lives of those in need."
+  },
+  "homePage": {
+    "hero": {
+      "title": "Make a Real Difference Together",
+      "subtitle": "Support our mission to help those in need and create lasting positive change.",
+      "ctaButton": "How You Can Help",
+      "donateButton": "Donate Now"
+    },
+    "stats": {
+      "title": "Our Impact",
+      "subtitle": "The difference we've made together",
+      "peopleHelped": "People Helped",
+      "countriesServed": "Countries Served",
+      "volunteersActive": "Active Volunteers",
+      "donationsRaised": "Donations Raised"
+    },
+    "supportCategories": {
+      "title": "Ways to Support",
+      "subtitle": "Join us in making a difference",
+      "donate": {
+        "title": "Donate",
+        "description": "Your financial support helps us provide essential services to those in need."
+      },
+      "volunteer": {
+        "title": "Volunteer",
+        "description": "Give your time and skills to help us make a bigger impact in the community."
+      },
+      "sponsor": {
+        "title": "Sponsor",
+        "description": "Become a corporate sponsor and support our programs while enhancing your brand."
+      },
+      "fundraise": {
+        "title": "Fundraise",
+        "description": "Start your own fundraising campaign to support our causes and initiatives."
+      }
+    },
+    "fundraisers": {
+      "title": "Current Fundraising Campaigns",
+      "subtitle": "Help us reach these important goals",
+      "viewAll": "View All Campaigns",
+      "progressLabel": "raised of",
+      "educational": {
+        "title": "Educational Support",
+        "description": "Providing scholarships and educational materials to underprivileged children."
+      },
+      "healthcare": {
+        "title": "Healthcare Access",
+        "description": "Bringing medical care and supplies to communities without adequate healthcare."
+      },
+      "facilities": {
+        "title": "Facility Renovation",
+        "description": "Renovating community centers to create safe spaces for education and support."
+      }
+    },
+    "testimonials": {
+      "title": "Voices of Change",
+      "subtitle": "Stories of hope and transformation"
+    },
+    "cta": {
+      "title": "Join Us in Making a Difference",
+      "description": "Every contribution matters, no matter how small. Together, we can create a brighter future for children in need.",
+      "donateButton": "Donate Now",
+      "contactButton": "Contact Us"
+    }
+  },
+  "ourTeam": {
+    "title": "Our Dedicated Team",
+    "subtitle": "Meet the people behind our mission",
+    "members": {
+      "johndoe": {
+        "name": "John Doe",
+        "position": "Executive Director",
+        "bio": "John has 15 years of experience in nonprofit management and is passionate about social justice."
+      },
+      "janedoe": {
+        "name": "Jane Doe",
+        "position": "Operations Director",
+        "bio": "Jane oversees our day-to-day operations and ensures our programs run efficiently."
+      },
+      "alicesmith": {
+        "name": "Alice Smith",
+        "position": "Volunteer Coordinator",
+        "bio": "Alice manages our volunteer program and helps match volunteers with suitable opportunities."
+      },
+      "bobwilliams": {
+        "name": "Bob Williams",
+        "position": "Fundraising Manager",
+        "bio": "Bob leads our fundraising efforts and develops strategies to secure resources for our programs."
+      }
+    }
+  },
+  "aboutUs": {
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide support, resources, and hope to vulnerable communities, working together to create a more equitable and compassionate world."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "A world where every person has access to the resources, opportunities, and support they need to thrive."
+    },
+    "history": {
+      "title": "Our History",
+      "description": "Founded in 2010, our organization began as a small community initiative and has grown into an international nonprofit serving thousands annually.",
+      "milestones": {
+        "2010": "Founded as a local community support group",
+        "2012": "Expanded services to neighboring communities",
+        "2015": "Launched first international program",
+        "2018": "Reached milestone of helping 10,000 individuals",
+        "2020": "Established partnerships with global organizations",
+        "2022": "Opened regional offices in three countries"
+      }
+    },
+    "values": {
+      "title": "Our Values",
+      "compassion": {
+        "title": "Compassion",
+        "description": "We approach our work with empathy and understanding, recognizing the dignity of every person we serve."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "We maintain the highest ethical standards in all our operations and are transparent with our supporters."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "We believe in working together with communities, partners, and supporters to create sustainable change."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "We continuously seek creative solutions to complex challenges and adapt our approaches based on evidence."
+      }
+    }
+  },
+  "howToHelp": {
+    "title": "How to Help",
+    "subtitle": "Join us in making a difference",
+    "tabs": {
+      "donate": "Donate",
+      "volunteer": "Volunteer",
+      "materialAid": "Material Aid",
+      "partners": "Partners"
+    },
+    "donate": {
+      "title": "Make a Donation",
+      "subtitle": "Your financial support helps us continue our mission",
+      "options": {
+        "title": "Donation Options",
+        "oneTime": "One-time Donation",
+        "monthly": "Monthly Support",
+        "corporate": "Corporate Giving",
+        "legacy": "Legacy Giving"
+      },
+      "form": {
+        "amount": "Donation Amount",
+        "custom": "Custom Amount",
+        "info": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number (Optional)",
+        "address": "Address",
+        "city": "City",
+        "state": "State/Province",
+        "zip": "Zip/Postal Code",
+        "country": "Country",
+        "payment": "Payment Information",
+        "cardName": "Name on Card",
+        "cardNumber": "Card Number",
+        "expiration": "Expiration Date",
+        "cvv": "CVV",
+        "submit": "Complete Donation",
+        "processing": "Processing...",
+        "success": "Thank you for your donation!",
+        "error": "There was an error processing your donation. Please try again."
+      }
+    },
+    "volunteer": {
+      "title": "Volunteer With Us",
+      "subtitle": "Share your time and talents to make a difference",
+      "opportunities": {
+        "title": "Volunteer Opportunities",
+        "local": "Local Programs",
+        "events": "Event Support",
+        "skills": "Professional Skills",
+        "remote": "Remote Volunteering"
+      },
+      "form": {
+        "title": "Volunteer Application",
+        "personalInfo": "Personal Information",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "address": "Address",
+        "availability": "Availability",
+        "weekdays": "Weekdays",
+        "evenings": "Evenings",
+        "weekends": "Weekends",
+        "interests": "Areas of Interest",
+        "skills": "Skills and Experience",
+        "comments": "Additional Comments",
+        "submit": "Submit Application",
+        "processing": "Processing...",
+        "success": "Thank you for your interest in volunteering!",
+        "error": "There was an error submitting your application. Please try again."
+      }
+    },
+    "materialAid": {
+      "title": "Donate Material Aid",
+      "subtitle": "Contribute essential items to those in need",
+      "needs": {
+        "title": "Current Needs",
+        "clothing": "Clothing and Footwear",
+        "food": "Non-perishable Food",
+        "hygiene": "Hygiene Products",
+        "school": "School Supplies",
+        "medical": "Medical Supplies"
+      },
+      "dropoff": {
+        "title": "Drop-off Locations",
+        "main": "Main Office: 123 Charity St, City, State",
+        "community": "Community Center: 456 Help Ave, City, State",
+        "partner": "Partner Location: 789 Support Blvd, City, State"
+      },
+      "contact": {
+        "title": "Contact for Large Donations",
+        "name": "Contact Person: Jane Smith",
+        "phone": "Phone: (123) 456-7890",
+        "email": "Email: donations@organization.org"
+      }
+    },
+    "partners": {
+      "title": "Corporate Partnerships",
+      "subtitle": "Partner with us to create positive social impact",
+      "benefits": {
+        "title": "Partnership Benefits",
+        "impact": "Make a meaningful difference in communities",
+        "visibility": "Enhance your brand visibility and reputation",
+        "employee": "Boost employee engagement and morale",
+        "networking": "Connect with like-minded organizations"
+      },
+      "types": {
+        "title": "Partnership Opportunities",
+        "financial": "Financial Support",
+        "inkind": "In-kind Donations",
+        "volunteer": "Employee Volunteering",
+        "cause": "Cause Marketing",
+        "events": "Event Sponsorship"
+      },
+      "contact": {
+        "title": "Contact our Partnerships Team",
+        "description": "Interested in partnering with us? We'd love to discuss how we can work together.",
+        "name": "Contact: James Johnson",
+        "position": "Partnerships Director",
+        "email": "partnerships@organization.org",
+        "phone": "(123) 456-7890"
+      }
+    },
+    "confirmations": {
+      "donation": "Thank you for your generous donation! Your support makes our work possible.",
+      "volunteer": "Thank you for your interest in volunteering! We'll contact you shortly to discuss next steps.",
+      "contact": "Thank you for reaching out! We'll get back to you as soon as possible."
+    }
+  },
+  "financialTransparency": {
+    "title": "Financial Transparency",
+    "subtitle": "Our commitment to responsible stewardship",
+    "overview": {
+      "title": "Financial Overview",
+      "description": "We are committed to financial transparency and accountability. Below you can find detailed information about our income sources and how we allocate funds."
+    },
+    "incomeChart": {
+      "title": "Income Sources",
+      "individual": "Individual Donations",
+      "corporate": "Corporate Sponsorships",
+      "grants": "Foundation Grants",
+      "events": "Fundraising Events",
+      "other": "Other Income"
+    },
+    "expenseChart": {
+      "title": "Expense Allocation",
+      "programs": "Program Services",
+      "admin": "Administration",
+      "fundraising": "Fundraising",
+      "operations": "Operations"
+    },
+    "impactMetrics": {
+      "title": "Impact Metrics",
+      "costPerBeneficiary": "Average Cost Per Beneficiary",
+      "programEfficiency": "Program Efficiency Ratio",
+      "beneficiariesServed": "Annual Beneficiaries Served",
+      "volunteersEngaged": "Volunteers Engaged"
+    },
+    "annualReports": {
+      "title": "Annual Reports & Financial Statements",
+      "description": "Our annual reports and audited financial statements are available for download below."
+    },
+    "documents": {
+      "annualReport": "Annual Report",
+      "financialStatement": "Audited Financial Statement",
+      "form990": "Form 990",
+      "impactReport": "Impact Report",
+      "download": "Download"
+    },
+    "fundraisingPrinciples": {
+      "title": "Fundraising Principles",
+      "transparency": {
+        "title": "Transparency",
+        "description": "We provide clear, accurate information about how donations are used and make our financial statements publicly available."
+      },
+      "stewardship": {
+        "title": "Stewardship",
+        "description": "We carefully manage all resources entrusted to us, maximizing the impact of every donation while minimizing administrative costs."
+      },
+      "accountability": {
+        "title": "Accountability",
+        "description": "We maintain rigorous internal controls and undergo regular independent audits to ensure fiscal responsibility."
+      }
+    }
+  },
+  "contactUs": {
+    "title": "Contact Us",
+    "subtitle": "We're here to answer your questions",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "processing": "Sending...",
+      "success": "Thank you for your message! We'll get back to you soon.",
+      "error": "There was an error sending your message. Please try again."
+    },
+    "contactInfo": {
+      "title": "Contact Information",
+      "address": "123 Charity Street, Compassion City, CC 12345",
+      "phone": "(123) 456-7890",
+      "email": "info@organization.org",
+      "hours": "Monday-Friday: 9am-5pm"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "questions": {
+        "donate": {
+          "question": "How can I donate?",
+          "answer": "You can donate online through our secure form, mail a check to our address, or contact us to discuss other donation methods."
+        },
+        "volunteer": {
+          "question": "How can I volunteer?",
+          "answer": "Please fill out our volunteer application form, and a member of our team will contact you to discuss opportunities that match your skills and availability."
+        },
+        "taxDeductible": {
+          "question": "Are donations tax-deductible?",
+          "answer": "Yes, all donations are tax-deductible to the extent allowed by law. We provide receipts for all donations."
+        },
+        "corporatePartnership": {
+          "question": "How can my company partner with you?",
+          "answer": "We offer various partnership opportunities for companies. Please contact our partnerships team to discuss how we can work together."
+        }
+      }
+    }
+  },
+  "kids": {
+    "title": "Kids Gallery",
+    "subtitle": "Our wonderful children",
+    "description": "Browse through our collection of photos showcasing the wonderful children we work with",
+    "photoDescriptions": {
+      "summerCamp": "Kids playing at summer camp",
+      "schoolPerformance": "School performance day",
+      "birthdayCelebration": "Birthday celebration",
+      "artsCrafts": "Arts and crafts session",
+      "scienceFair": "Science fair project",
+      "holidayCelebration": "Holiday celebration",
+      "groupActivities": "Group activities",
+      "computerClass": "Computer class for children",
+      "natureExploration": "Nature exploration trip",
+      "cookingClass": "Cooking class for kids",
+      "heartShapes": "Kids making heart shapes",
+      "swimmingLessons": "Swimming lessons at camp",
+      "musicClass": "Music class for children",
+      "holidayCrafts": "Holiday craft activities",
+      "outdoorGames": "Outdoor games at summer camp",
+      "learningTogether": "Children learning together",
+      "birthdayParty": "Birthday party fun",
+      "hikingTrip": "Kids hiking trip",
+      "readingBooks": "Children reading books",
+      "talentShow": "Talent show performance",
+      "sportActivities": "Sport activities in the park",
+      "artClass": "Art class creativity",
+      "newYearCelebration": "New Year celebration",
+      "teambuilding": "Teambuilding activities",
+      "mathLesson": "Mathematics lesson",
+      "graduationCeremony": "Graduation ceremony",
+      "outdoorAdventure": "Outdoor adventure",
+      "readingTime": "Reading time with friends",
+      "easterCelebration": "Easter celebration",
+      "natureArt": "Nature art projects",
+      "scienceExperiment": "Science experiment day",
+      "childrensDay": "Children's day celebration",
+      "beachActivities": "Beachside activities",
+      "groupProject": "Group project presentation",
+      "autumnFestival": "Autumn festival",
+      "camping": "Camping under the stars",
+      "dramaClass": "Drama class performance",
+      "sportsDay": "Sports day event",
+      "musicFestival": "Summer music festival",
+      "communityGathering": "Community gathering"
+    },
+    "actions": {
+      "like": "Like",
+      "close": "Close",
+      "view": "View"
+    },
+    "noPhotos": "No photos found in this category"
+  }
+} 

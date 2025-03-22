@@ -1,10 +1,10 @@
-
 import React from 'react';
 import PageLayout from '@/components/layout/PageLayout';
 import PageBanner from '@/components/ui/PageBanner';
 import SectionHeading from '@/components/ui/SectionHeading';
 import { Card } from '@/components/ui/card';
 import { FileText, Download, PieChart, BarChart3, LineChart } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { 
   PieChart as RechartPie, 
   Pie, 
@@ -22,48 +22,50 @@ import {
 } from 'recharts';
 
 const FinancialTransparency = () => {
+  const { translate } = useLanguage();
+  
   const reports = [
-    { name: "Annual Report 2023", date: "Jan 15, 2024", size: "2.4 MB", url: "#" },
-    { name: "Q4 Financial Statement", date: "Jan 10, 2024", size: "1.1 MB", url: "#" },
-    { name: "Audit Report 2023", date: "Feb 1, 2024", size: "3.2 MB", url: "#" },
-    { name: "Annual Report 2022", date: "Jan 20, 2023", size: "2.1 MB", url: "#" },
-    { name: "Impact Assessment", date: "Dec 5, 2023", size: "4.5 MB", url: "#" },
-    { name: "Strategic Plan 2022-2025", date: "Mar 10, 2022", size: "1.8 MB", url: "#" }
+    { name: translate('financial.documents.annualReport2023'), date: "Jan 15, 2024", size: "2.4 MB", url: "#" },
+    { name: translate('financial.documents.q4Statement'), date: "Jan 10, 2024", size: "1.1 MB", url: "#" },
+    { name: translate('financial.documents.auditReport'), date: "Feb 1, 2024", size: "3.2 MB", url: "#" },
+    { name: translate('financial.documents.annualReport2022'), date: "Jan 20, 2023", size: "2.1 MB", url: "#" },
+    { name: translate('financial.documents.impactAssessment'), date: "Dec 5, 2023", size: "4.5 MB", url: "#" },
+    { name: translate('financial.documents.strategicPlan'), date: "Mar 10, 2022", size: "1.8 MB", url: "#" }
   ];
 
   const expenseData = [
-    { name: 'Direct Child Care', value: 65 },
-    { name: 'Education', value: 15 },
-    { name: 'Healthcare', value: 10 },
-    { name: 'Administration', value: 7 },
-    { name: 'Fundraising', value: 3 }
+    { name: translate('financial.expenses.childCare'), value: 65 },
+    { name: translate('financial.expenses.education'), value: 15 },
+    { name: translate('financial.expenses.healthcare'), value: 10 },
+    { name: translate('financial.expenses.administration'), value: 7 },
+    { name: translate('financial.expenses.fundraising'), value: 3 }
   ];
 
   const COLORS = ['#9b87f5', '#7E69AB', '#6E59A5', '#D6BCFA', '#E5DEFF'];
 
   const fundRaisingData = [
-    { name: 'Jan', donations: 12000, expenses: 10000 },
-    { name: 'Feb', donations: 15000, expenses: 12000 },
-    { name: 'Mar', donations: 18000, expenses: 14000 },
-    { name: 'Apr', donations: 16000, expenses: 13500 },
-    { name: 'May', donations: 21000, expenses: 15000 },
-    { name: 'Jun', donations: 19000, expenses: 16000 },
-    { name: 'Jul', donations: 23000, expenses: 17500 },
-    { name: 'Aug', donations: 25000, expenses: 18000 },
-    { name: 'Sep', donations: 22000, expenses: 17000 },
-    { name: 'Oct', donations: 26000, expenses: 19000 },
-    { name: 'Nov', donations: 30000, expenses: 22000 },
-    { name: 'Dec', donations: 35000, expenses: 25000 }
+    { name: translate('months.jan'), donations: 12000, expenses: 10000 },
+    { name: translate('months.feb'), donations: 15000, expenses: 12000 },
+    { name: translate('months.mar'), donations: 18000, expenses: 14000 },
+    { name: translate('months.apr'), donations: 16000, expenses: 13500 },
+    { name: translate('months.may'), donations: 21000, expenses: 15000 },
+    { name: translate('months.jun'), donations: 19000, expenses: 16000 },
+    { name: translate('months.jul'), donations: 23000, expenses: 17500 },
+    { name: translate('months.aug'), donations: 25000, expenses: 18000 },
+    { name: translate('months.sep'), donations: 22000, expenses: 17000 },
+    { name: translate('months.oct'), donations: 26000, expenses: 19000 },
+    { name: translate('months.nov'), donations: 30000, expenses: 22000 },
+    { name: translate('months.dec'), donations: 35000, expenses: 25000 }
   ];
 
   const programExpenditureData = [
-    { name: 'Food', amount: 35000 },
-    { name: 'Education', amount: 45000 },
-    { name: 'Healthcare', amount: 30000 },
-    { name: 'Clothing', amount: 15000 },
-    { name: 'Recreation', amount: 12000 },
-    { name: 'Utilities', amount: 20000 },
-    { name: 'Facility', amount: 25000 }
+    { name: translate('financial.programs.food'), amount: 35000 },
+    { name: translate('financial.programs.education'), amount: 45000 },
+    { name: translate('financial.programs.healthcare'), amount: 30000 },
+    { name: translate('financial.programs.clothing'), amount: 15000 },
+    { name: translate('financial.programs.recreation'), amount: 12000 },
+    { name: translate('financial.programs.utilities'), amount: 20000 },
+    { name: translate('financial.programs.facility'), amount: 25000 }
   ];
 
   const yearlyGrowthData = [
@@ -78,22 +80,22 @@ const FinancialTransparency = () => {
   return (
     <PageLayout>
       <PageBanner 
-        title="Financial Transparency" 
-        subtitle="We believe in full transparency about how your donations are used to support our mission."
+        title={translate('financial.title')}
+        subtitle={translate('financial.subtitle')}
       />
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <SectionHeading 
-            title="Financial Overview" 
-            subtitle="Here's how we allocate funds to ensure the maximum impact for the children in our care."
+            title={translate('financial.overview.title')}
+            subtitle={translate('financial.overview.subtitle')}
           />
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
             <Card className="p-6 col-span-1">
               <div className="flex items-center space-x-3 mb-4">
                 <PieChart className="h-6 w-6 text-primary" />
-                <h3 className="font-playfair font-semibold text-xl">Fund Allocation</h3>
+                <h3 className="font-playfair font-semibold text-xl">{translate('financial.overview.fundAllocation')}</h3>
               </div>
               
               <div className="h-64">
@@ -119,14 +121,14 @@ const FinancialTransparency = () => {
               </div>
               
               <p className="text-gray-600 text-sm mt-4">
-                We prioritize direct child care, ensuring that the majority of funds directly benefit the children.
+                {translate('financial.overview.priorityText')}
               </p>
             </Card>
             
             <Card className="p-6 col-span-1 lg:col-span-2">
               <div className="flex items-center space-x-3 mb-4">
                 <BarChart3 className="h-6 w-6 text-primary" />
-                <h3 className="font-playfair font-semibold text-xl">Income vs. Expenses (2023)</h3>
+                <h3 className="font-playfair font-semibold text-xl">{translate('financial.overview.incomeVsExpenses')}</h3>
               </div>
               
               <div className="h-64">
@@ -145,14 +147,14 @@ const FinancialTransparency = () => {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Bar dataKey="donations" name="Donations" fill="#9b87f5" />
-                    <Bar dataKey="expenses" name="Expenses" fill="#6E59A5" />
+                    <Bar dataKey="donations" name={translate('financial.overview.donations')} fill="#9b87f5" />
+                    <Bar dataKey="expenses" name={translate('financial.overview.expenses')} fill="#6E59A5" />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
               
               <p className="text-gray-600 text-sm mt-4">
-                Monthly breakdown of donations received and expenses incurred throughout 2023.
+                {translate('financial.overview.monthlyBreakdown')}
               </p>
             </Card>
           </div>
@@ -161,7 +163,7 @@ const FinancialTransparency = () => {
             <Card className="p-6">
               <div className="flex items-center space-x-3 mb-4">
                 <BarChart3 className="h-6 w-6 text-primary" />
-                <h3 className="font-playfair font-semibold text-xl">Program Expenditure</h3>
+                <h3 className="font-playfair font-semibold text-xl">{translate('financial.overview.programExpenditure')}</h3>
               </div>
               
               <div className="h-64">
@@ -180,20 +182,20 @@ const FinancialTransparency = () => {
                     <XAxis type="number" />
                     <YAxis dataKey="name" type="category" />
                     <Tooltip />
-                    <Bar dataKey="amount" name="Amount (USD)" fill="#7E69AB" />
+                    <Bar dataKey="amount" name={translate('financial.overview.amountUSD')} fill="#7E69AB" />
                   </BarChart>
                 </ResponsiveContainer>
               </div>
               
               <p className="text-gray-600 text-sm mt-4">
-                Breakdown of how funds are allocated across different program areas.
+                {translate('financial.overview.programBreakdown')}
               </p>
             </Card>
             
             <Card className="p-6">
               <div className="flex items-center space-x-3 mb-4">
                 <LineChart className="h-6 w-6 text-primary" />
-                <h3 className="font-playfair font-semibold text-xl">Growth Over Time</h3>
+                <h3 className="font-playfair font-semibold text-xl">{translate('financial.overview.growthOverTime')}</h3>
               </div>
               
               <div className="h-64">
@@ -212,14 +214,14 @@ const FinancialTransparency = () => {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="children" name="Children Supported" stroke="#9b87f5" activeDot={{ r: 8 }} />
-                    <Line type="monotone" dataKey="donors" name="Active Donors" stroke="#6E59A5" />
+                    <Line type="monotone" dataKey="children" name={translate('financial.overview.childrenSupported')} stroke="#9b87f5" activeDot={{ r: 8 }} />
+                    <Line type="monotone" dataKey="donors" name={translate('financial.overview.activeDonors')} stroke="#6E59A5" />
                   </RechartsLineChart>
                 </ResponsiveContainer>
               </div>
               
               <p className="text-gray-600 text-sm mt-4">
-                Growth in the number of children supported and active donors over the years.
+                {translate('financial.overview.growthText')}
               </p>
             </Card>
           </div>
@@ -229,8 +231,8 @@ const FinancialTransparency = () => {
       <section className="py-16 bg-gradient-to-br from-primary-50 to-white">
         <div className="container mx-auto px-4">
           <SectionHeading 
-            title="Annual Reports & Documents" 
-            subtitle="Download our financial reports and other documents for detailed information about our finances and operations."
+            title={translate('financial.reports.title')}
+            subtitle={translate('financial.reports.subtitle')}
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -260,41 +262,45 @@ const FinancialTransparency = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <SectionHeading 
-            title="Fundraising Principles" 
-            subtitle="Our approach to fundraising is guided by these core principles."
+            title={translate("financial.fundraisingPrinciples.title")} 
+            subtitle={translate("financial.fundraisingPrinciples.subtitle")}
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <Card className="p-6 bg-gradient-to-br from-white to-primary-50">
-              <h3 className="font-playfair font-semibold text-xl mb-4 text-primary">Transparency</h3>
+              <h3 className="font-playfair font-semibold text-xl mb-4 text-primary">
+                {translate("financial.fundraisingPrinciples.transparency.title")}
+              </h3>
               <p className="text-gray-700">
-                We are committed to complete financial transparency. All donation information and 
-                expense details are regularly published and available to donors and the public.
+                {translate("financial.fundraisingPrinciples.transparency.description")}
               </p>
             </Card>
             
             <Card className="p-6 bg-gradient-to-br from-white to-pastel-blue">
-              <h3 className="font-playfair font-semibold text-xl mb-4 text-primary">Stewardship</h3>
+              <h3 className="font-playfair font-semibold text-xl mb-4 text-primary">
+                {translate("financial.fundraisingPrinciples.stewardship.title")}
+              </h3>
               <p className="text-gray-700">
-                We carefully manage all resources entrusted to us, ensuring that funds are used 
-                effectively to maximize impact for the children in our care.
+                {translate("financial.fundraisingPrinciples.stewardship.description")}
               </p>
             </Card>
             
             <Card className="p-6 bg-gradient-to-br from-white to-pastel-green">
-              <h3 className="font-playfair font-semibold text-xl mb-4 text-primary">Accountability</h3>
+              <h3 className="font-playfair font-semibold text-xl mb-4 text-primary">
+                {translate("financial.fundraisingPrinciples.accountability.title")}
+              </h3>
               <p className="text-gray-700">
-                We undergo regular external audits and maintain strict internal controls to ensure 
-                proper fund management and compliance with all regulations.
+                {translate("financial.fundraisingPrinciples.accountability.description")}
               </p>
             </Card>
           </div>
           
           <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-            <h3 className="font-playfair font-semibold text-xl mb-4">Our Commitment to You</h3>
+            <h3 className="font-playfair font-semibold text-xl mb-4">
+              {translate("financial.fundraisingPrinciples.commitment.title")}
+            </h3>
             <p className="text-gray-700 mb-4">
-              When you donate to HeartfeltHome, you can trust that your contribution will be used 
-              wisely and effectively to improve children's lives. We promise to:
+              {translate("financial.fundraisingPrinciples.commitment.description")}
             </p>
             <ul className="space-y-2 list-disc pl-5 text-gray-700">
               <li>Use at least 85% of all donations for direct program expenses</li>
