@@ -9,7 +9,11 @@
     "previous": "Previous",
     "next": "Next",
     "goal": "Goal",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "donateNow": "Donate Now",
+    "submitApplication": "Submit Application",
+    "donateButton": "Donate",
+    "goToDonationPage": "Go to Donation Page"
   },
   "navigation": {
     "home": "Home",
@@ -73,22 +77,22 @@
       "subtitle": "Help us reach these important goals",
       "viewAll": "View All Campaigns",
       "progressLabel": "raised of",
-      "educational": {
-        "title": "Educational Support",
-        "description": "Providing scholarships and educational materials to underprivileged children."
-      },
-      "healthcare": {
-        "title": "Healthcare Access",
-        "description": "Bringing medical care and supplies to communities without adequate healthcare."
-      },
-      "facilities": {
-        "title": "Facility Renovation",
-        "description": "Renovating community centers to create safe spaces for education and support."
-      }
+      "educational": "Educational Support",
+      "healthcare": "Healthcare Access",
+      "facilities": "Facility Renovation",
+      "recreational": "Recreational Programs",
+      "educationalDesc": "Providing scholarships and educational materials to underprivileged children.",
+      "healthcareDesc": "Bringing medical care and supplies to communities without adequate healthcare.",
+      "facilitiesDesc": "Renovating community centers to create safe spaces for education and support.",
+      "recreationalDesc": "Creating recreational programs and spaces for children to play and grow."
     },
     "testimonials": {
       "title": "Voices of Change",
       "subtitle": "Stories of hope and transformation"
+    },
+    "partners": {
+      "title": "Our Partners",
+      "subtitle": "We're grateful for the support of these organizations who help make our work possible."
     },
     "cta": {
       "title": "Join Us in Making a Difference",
@@ -418,6 +422,35 @@
     "title": "Kids Gallery",
     "subtitle": "Our wonderful children",
     "description": "Browse through our collection of photos showcasing the wonderful children we work with",
+    "actions": {
+      "like": "Like",
+      "close": "Close"
+    },
+    "tabs": {
+      "gallery": "Gallery",
+      "supportChild": "Support a Child"
+    },
+    "support": {
+      "title": "Help a Child Directly",
+      "subtitle": "Your support can make a real difference in a child's life",
+      "description": "This feature is coming soon! You will be able to donate directly to support a specific child's needs, whether it's medical treatment, education, or basic necessities.",
+      "comingSoon": "Coming Soon",
+      "modalTitle": "Coming Soon",
+      "modalDescription": "This feature is still in development. Soon you will be able to donate directly to support this child.",
+      "close": "Close",
+      "donate": "Donate to Help",
+      "raised": "Raised",
+      "goal": "Goal",
+      "needed": "Needed",
+      "complete": "complete",
+      "tags": {
+        "medical": "Medical",
+        "urgent": "Urgent",
+        "education": "Education",
+        "supplies": "Supplies",
+        "rehabilitation": "Rehabilitation"
+      }
+    },
     "photoDescriptions": {
       "summerCamp": "Kids playing at summer camp",
       "schoolPerformance": "School performance day",
@@ -459,11 +492,6 @@
       "sportsDay": "Sports day event",
       "musicFestival": "Summer music festival",
       "communityGathering": "Community gathering"
-    },
-    "actions": {
-      "like": "Like",
-      "close": "Close",
-      "view": "View"
     },
     "noPhotos": "No photos found in this category"
   },

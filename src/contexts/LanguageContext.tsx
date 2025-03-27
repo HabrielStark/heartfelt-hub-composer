@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import enTranslations from '@/translations/en.json';
 import esTranslations from '@/translations/es.json';
 import ukTranslations from '@/translations/uk.json';
+import heTranslations from '@/translations/he.json';
 
 type LanguageContextType = {
   language: string;
@@ -16,6 +17,7 @@ const translations: Record<string, any> = {
   en: enTranslations,
   es: esTranslations,
   uk: ukTranslations,
+  he: heTranslations,
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

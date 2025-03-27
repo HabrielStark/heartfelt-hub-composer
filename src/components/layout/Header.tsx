@@ -39,7 +39,7 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <Heart className="h-8 w-8 text-primary" />
-            <span className="font-playfair font-bold text-2xl">CrossVerse group</span>
+            <span className="font-playfair font-bold text-2xl">CrossCharity</span>
           </Link>
 
           {/* Desktop Navigation */}

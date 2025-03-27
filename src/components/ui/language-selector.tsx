@@ -17,6 +17,7 @@ export function LanguageSelector() {
     { code: 'en', name: 'English' },
     { code: 'es', name: 'Español' },
     { code: 'uk', name: 'Українська' },
+    { code: 'he', name: 'עברית' },
   ];
 
   const handleLanguageChange = (languageCode: string) => {

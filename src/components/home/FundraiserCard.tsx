@@ -57,9 +57,9 @@ const FundraiserCard: React.FC<FundraiserCardProps> = ({
         
         <Link to="/donate">
           <button 
-            className="w-full py-2 bg-primary hover:bg-primary-600 text-white rounded-md transition-colors duration-300"
+            className="w-full py-2.5 bg-primary hover:bg-primary-600 text-white rounded-md transition-all duration-300 font-medium shadow-sm hover:shadow-md transform hover:-translate-y-0.5 flex items-center justify-center gap-1"
           >
-            {translate('Donate')}
+            <Heart className="h-4 w-4" /> {translate('common.donate') || 'Пожертвувати'}
           </button>
         </Link>
       </div>

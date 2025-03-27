@@ -192,41 +192,6 @@ const photos: Photo[] = [
     date: '2023-07-10'
   },
   {
-    id: '28',
-    src: '/IMG_4406.JPG',
-    category: 'schoolEvents',
-    description: 'Reading time with friends',
-    date: '2023-04-05'
-  },
-  {
-    id: '29',
-    src: '/IMG_4408.JPG',
-    category: 'specialCelebrations',
-    description: 'Easter celebration',
-    date: '2023-04-16'
-  },
-  {
-    id: '30',
-    src: '/IMG_4409.JPG',
-    category: 'summerCamp',
-    description: 'Nature art projects',
-    date: '2023-06-22'
-  },
-  {
-    id: '31',
-    src: '/IMG_4411.JPG',
-    category: 'schoolEvents',
-    description: 'Science experiment day',
-    date: '2023-03-15'
-  },
-  {
-    id: '32',
-    src: '/IMG_4412.JPG',
-    category: 'specialCelebrations',
-    description: "Children's day celebration",
-    date: '2023-06-01'
-  },
-  {
     id: '33',
     src: '/IMG_4414.JPG',
     category: 'summerCamp',
@@ -253,13 +218,6 @@ const photos: Photo[] = [
     category: 'summerCamp',
     description: 'Camping under the stars',
     date: '2023-07-12'
-  },
-  {
-    id: '37',
-    src: '/IMG_4418.JPG',
-    category: 'schoolEvents',
-    description: 'Drama class performance',
-    date: '2023-04-30'
   },
   {
     id: '38',

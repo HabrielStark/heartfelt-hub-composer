@@ -3,28 +3,64 @@ import { Users, Heart, Home, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const StatsSection = () => {
-  const { translate } = useLanguage();
+  const { translate, language } = useLanguage();
   
+  // Объект для переводов статистических меток
+  const getStatLabel = (key) => {
+    const labels = {
+      'orphans': {
+        'en': "orphans receive monthly support",
+        'uk': "дітей-сирот щомісяця отримують підтримку",
+        'es': "huérfanos reciben apoyo mensual",
+        'he': "יתומים מקבלים תמיכה חודשית",
+        'ru': "детей-сирот ежемесячно получают поддержку"
+      },
+      'orphanages': {
+        'en': "orphanages collaborate with CrossCharity",
+        'uk': "дитячих будинків співпрацюють з CrossCharity",
+        'es': "orfanatos colaboran con CrossCharity",
+        'he': "בתי יתומים משתפים פעולה עם CrossCharity",
+        'ru': "детских домов сотрудничают с CrossCharity"
+      },
+      'cancerChildren': {
+        'en': "children with cancer involved",
+        'uk': "залучених дітей з онкологією",
+        'es': "niños con cáncer involucrados",
+        'he': "ילדים חולי סרטן מעורבים",
+        'ru': "вовлечённых онкодетей"
+      },
+      'volunteers': {
+        'en': "volunteers and foundation staff",
+        'uk': "волонтерів та працівників фонду",
+        'es': "voluntarios y personal de la fundación",
+        'he': "מתנדבים וצוות הקרן",
+        'ru': "волонтёров и сотрудников фонда"
+      }
+    };
+    
+    return labels[key][language] || labels[key]['en'];
+  };
+
   const stats = [
     {
       icon: <Users className="h-10 w-10 text-primary" />,
-      number: "500+",
-      label: translate('homePage.stats.childrenHelped'),
+      number: "1500+",
+      label: getStatLabel('orphans')
     },
     {
       icon: <Heart className="h-10 w-10 text-primary" />,
-      number: "10+",
-      label: translate('homePage.stats.communityPrograms'),
+      number: "13",
+      label: getStatLabel('orphanages')
     },
     {
       icon: <Home className="h-10 w-10 text-primary" />,
-      number: "3",
-      label: translate('homePage.stats.volunteersEngaged'),
+      number: "300+",
+      label: getStatLabel('cancerChildren')
     },
     {
       icon: <BookOpen className="h-10 w-10 text-primary" />,
-      number: "85%",
-      label: translate('homePage.stats.successStories'),
+      number: "40+",
+      label: getStatLabel('volunteers')
     },
   ];
 

@@ -1,50 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import SectionHeading from '../ui/SectionHeading';
-import FundraiserCard from './FundraiserCard';
-import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { getAllFundraisers } from '@/lib/db';
+import SectionHeading from '@/components/ui/SectionHeading';
+import FundraiserCard from '@/components/home/FundraiserCard';
 
 const FundraisersSection = () => {
   const { translate, language } = useLanguage();
-  const [fundraisers, setFundraisers] = useState(getAllFundraisers());
-  
-  // При обновлении прогресса обновляем данные на странице
-  const handleProgressUpdate = () => {
-    setFundraisers([...getAllFundraisers()]);
-  };
-
-  const getFundraiserName = (id) => {
-    if (language === 'en') {
-      switch (id) {
-        case 'educational': return 'Educational Support';
-        case 'healthcare': return 'Healthcare Access';
-        case 'facilities': return 'Facility Renovation';
-        default: return translate(`homePage.fundraisers.${id}`);
-      }
+  const [fundraisers, setFundraisers] = useState([
+    {
+      id: 'educational',
+      goal: 5000,
+      raised: 2750,
+      imageUrl: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1422&q=80'
+    },
+    {
+      id: 'healthcare',
+      goal: 8000,
+      raised: 5200,
+      imageUrl: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80'
+    },
+    {
+      id: 'facility',
+      goal: 12000,
+      raised: 3600,
+      imageUrl: 'https://images.unsplash.com/photo-1591474200742-8e512e6f98f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80'
     }
+  ]);
+
+  // Functions to get localized texts
+  const getFundraiserName = (id) => {
     return translate(`homePage.fundraisers.${id}`);
   };
 
   const getFundraiserDescription = (id) => {
-    if (language === 'en') {
-      switch (id) {
-        case 'educational': return 'Providing scholarships and educational materials to underprivileged children.';
-        case 'healthcare': return 'Bringing medical care and supplies to communities without adequate healthcare.';
-        case 'facilities': return 'Renovating community centers to create safe spaces for education and support.';
-        default: return translate(`homePage.fundraisers.${id}Desc`);
-      }
-    }
     return translate(`homePage.fundraisers.${id}Desc`);
+  };
+
+  // Создаем версию handleProgressUpdate, совместимую с типом в FundraiserCard
+  const handleProgressUpdate = () => {
+    // При вызове из FundraiserCard, эта функция обновляет состояние
+    // Можно оставить пустой, так как мы не используем параметры
   };
 
   return (
     <section className="py-16 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <SectionHeading 
-          title={language === 'en' ? "Current Fundraising Campaigns" : translate('homePage.fundraisers.title')}
-          subtitle={language === 'en' ? "Help us reach these important goals" : translate('homePage.fundraisers.description')}
+          title={translate('homePage.fundraisers.title')}
+          subtitle={translate('homePage.fundraisers.description')}
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
@@ -67,7 +69,7 @@ const FundraisersSection = () => {
             href="/how-to-help#fundraisers" 
             className="inline-flex items-center py-3 px-6 bg-primary hover:bg-primary-600 text-white font-medium rounded-md transition-colors"
           >
-            {language === 'en' ? "View All Campaigns" : translate('homePage.fundraisers.viewAllButton')}
+            {translate('homePage.fundraisers.viewAllButton')}
           </a>
         </div>
       </div>

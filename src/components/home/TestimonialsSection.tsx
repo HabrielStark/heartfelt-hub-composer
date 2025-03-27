@@ -3,8 +3,11 @@ import SectionHeading from '../ui/SectionHeading';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const TestimonialsSection = () => {
+  const { translate, language } = useLanguage();
+  
   const testimonials = [
     {
       quote: "The work that HeartfeltHome does is truly incredible. I've seen firsthand how their care transforms children's lives, giving them hope and opportunities they wouldn't otherwise have.",
@@ -30,8 +33,8 @@ const TestimonialsSection = () => {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <SectionHeading 
-          title="What People Say" 
-          subtitle="Hear from our supporters, volunteers, and partners about their experiences with HeartfeltHome."
+          title={translate('homePage.testimonials.title')}
+          subtitle={translate('homePage.testimonials.subtitle')}
         />
         
         <div className="mt-12">
@@ -63,8 +66,9 @@ const TestimonialsSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-0 md:-left-12" />
+            
             <CarouselNext className="right-0 md:-right-12" />
+            <CarouselPrevious className="left-0 md:-left-12" />
           </Carousel>
         </div>
       </div>

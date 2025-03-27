@@ -1,7 +1,10 @@
 import React from 'react';
 import SectionHeading from '../ui/SectionHeading';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const PartnersSection = () => {
+  const { translate, language } = useLanguage();
+  
   const partners = [
     {
       name: "ABC Foundation",
@@ -29,9 +32,8 @@ const PartnersSection = () => {
     <section className="py-14 bg-gray-50">
       <div className="container mx-auto px-4">
         <SectionHeading 
-          title="Our Partners" 
-          subtitle="We're grateful for the support of these organizations who help make our work possible."
-          decoration={false}
+          title={translate('homePage.partners.title')}
+          subtitle={translate('homePage.partners.subtitle')}
         />
         
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">

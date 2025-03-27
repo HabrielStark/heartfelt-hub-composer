@@ -12,7 +12,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 const Contact = () => {
   const { toast } = useToast();
-  const { translate } = useLanguage();
+  const { translate, language } = useLanguage();
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -106,28 +106,34 @@ const Contact = () => {
                 
                 <div className="flex items-start">
                   <div className="bg-primary-100 rounded-full p-3 mr-4">
-                    <Mail className="h-6 w-6 text-primary" />
+                    <Clock className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-lg mb-1">{translate('contact.info.email.title')}</h3>
+                    <h3 className="font-medium text-lg mb-1">{language === 'en' ? "Hours" : "Часы работы"}</h3>
                     <p className="text-gray-600">
-                      {translate('contact.info.email.general')}: info@heartfelthome.org <br />
-                      {translate('contact.info.email.donations')}: donate@heartfelthome.org <br />
-                      {translate('contact.info.email.volunteer')}: volunteer@heartfelthome.org
+                      {language === 'en' ? "Monday - Friday: 9:00 AM - 5:00 PM" : "Понедельник - Пятница: 9:00 - 17:00"} <br />
+                      <span className="text-primary font-semibold">
+                        {language === 'en' ? "Note: Office works by appointment only, weekends closed" : "Примечание: Офис работает только по предварительной договоренности, сб и вс — выходные"}
+                      </span>
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
                   <div className="bg-primary-100 rounded-full p-3 mr-4">
-                    <Clock className="h-6 w-6 text-primary" />
+                    <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-lg mb-1">{translate('contact.info.hours.title')}</h3>
+                    <h3 className="font-medium text-lg mb-1">{language === 'en' ? "Social Media" : "Социальные сети"}</h3>
                     <p className="text-gray-600">
-                      {translate('contact.info.hours.weekdays')} <br />
-                      {translate('contact.info.hours.saturday')} <br />
-                      {translate('contact.info.hours.sunday')}
+                      <a 
+                        href="https://www.instagram.com/crosscharity.foundation?igsh=MWhyNWxtam1oMmlkZA==" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline"
+                      >
+                        Instagram
+                      </a>
                     </p>
                   </div>
                 </div>
