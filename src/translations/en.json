@@ -611,7 +611,17 @@
     "cryptoFeature1": "Support with Bitcoin, Lightning Network, and other cryptocurrencies",
     "cryptoFeature2": "Secure, private, and low-fee transactions",
     "cryptoFeature3": "100% of your donation goes to our projects",
-    "cryptoSecurePayment": "Secure payment processing by BTCPay Server"
+    "cryptoSecurePayment": "Secure payment processing by BTCPay Server",
+    "chooseMethod": "Choose Donation Method",
+    "creditCard": "Credit Card",
+    "cryptocurrency": "Cryptocurrency",
+    "comingSoon": "Coming Soon",
+    "cardPaymentComingSoon": "Card payment will be available soon. We are integrating Stripe for secure payment processing.",
+    "otherWays": "Other Ways to Support",
+    "corporateMatching": "Corporate Matching Gifts",
+    "corporateMatchingDescription": "Many employers match donations made by their employees. Check if your company offers a matching gift program to double your impact.",
+    "legacyGiving": "Legacy Giving",
+    "legacyGivingDescription": "Consider including us in your estate planning to create a lasting impact for future generations."
   },
   "founder": {
     "name": "Luiza",
