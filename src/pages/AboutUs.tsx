@@ -220,14 +220,26 @@ const AboutUs = () => {
               <p className="text-gray-700 mb-4">
                 {translate('aboutPage.history.paragraph2')}
               </p>
-              <p className="text-gray-700">
+              <p className="text-gray-700 mb-4">
                 {translate('aboutPage.history.paragraph3')}
+              </p>
+              <p className="text-gray-700 mb-4">
+                {translate('aboutPage.history.paragraph4')}
+              </p>
+              <p className="text-gray-700 mb-4">
+                {translate('aboutPage.history.paragraph5')}
+              </p>
+              <p className="text-gray-700 mb-4">
+                {translate('aboutPage.history.paragraph6')}
+              </p>
+              <p className="text-gray-700">
+                {translate('aboutPage.history.paragraph7')}
               </p>
             </div>
             <div className="rounded-xl overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1617191979507-967792787a51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
-                alt="HeartfeltHome History" 
+                src="/team/founder.JPG" 
+                alt="CrossCharity Founder" 
                 className="w-full h-auto"
               />
             </div>
@@ -239,86 +251,66 @@ const AboutUs = () => {
       <section className="py-16 bg-gradient-to-br from-primary-50 to-white">
         <div className="container mx-auto px-4">
           <SectionHeading 
-            title={language === 'en' ? "Our Values" : "Наши ценности"}
-            subtitle={language === 'en' ? "What guides us in our work" : "Что направляет нас в нашей работе"}
+            title={translate('aboutUs.values.title')}
+            subtitle={translate('aboutUs.values.subtitle')}
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
             <Card className="p-6 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{language === 'en' ? "Respect" : "Повага"}</h3>
-              <p className="text-gray-700">{language === 'en' ? "Every child matters as an individual." : "Каждый ребёнок важен как личность."}</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{translate('aboutUs.values.respect.title')}</h3>
+              <p className="text-gray-700">{translate('aboutUs.values.respect.description')}</p>
             </Card>
             
             <Card className="p-6 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{language === 'en' ? "Transparency" : "Прозорість"}</h3>
-              <p className="text-gray-700">{language === 'en' ? "Accountability and trust." : "Отчётность и доверие."}</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{translate('aboutUs.values.transparency.title')}</h3>
+              <p className="text-gray-700">{translate('aboutUs.values.transparency.description')}</p>
             </Card>
             
             <Card className="p-6 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{language === 'en' ? "Action, not emotion" : "Дія, а не емоція"}</h3>
-              <p className="text-gray-700">{language === 'en' ? "Not pity, but solutions." : "Не жаль, а решение."}</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{translate('aboutUs.values.action.title')}</h3>
+              <p className="text-gray-700">{translate('aboutUs.values.action.description')}</p>
             </Card>
             
             <Card className="p-6 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{language === 'en' ? "Systematic approach" : "Системність"}</h3>
-              <p className="text-gray-700">{language === 'en' ? "Not one-time, but stable." : "Не разово, а стабильно."}</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{translate('aboutUs.values.systematic.title')}</h3>
+              <p className="text-gray-700">{translate('aboutUs.values.systematic.description')}</p>
             </Card>
             
             <Card className="p-6 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{language === 'en' ? "Humanity" : "Людяність"}</h3>
-              <p className="text-gray-700">{language === 'en' ? "Support with warmth." : "Поддержка с теплом."}</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{translate('aboutUs.values.humanity.title')}</h3>
+              <p className="text-gray-700">{translate('aboutUs.values.humanity.description')}</p>
             </Card>
             
             <Card className="p-6 bg-white hover:shadow-lg transition-shadow duration-300">
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{language === 'en' ? "Diversity" : "Різноманіття"}</h3>
-              <p className="text-gray-700">{language === 'en' ? "Help for all children without exceptions." : "Помощь всем детям без исключений."}</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{translate('aboutUs.values.diversity.title')}</h3>
+              <p className="text-gray-700">{translate('aboutUs.values.diversity.description')}</p>
             </Card>
             
             <Card className="p-6 bg-white hover:shadow-lg transition-shadow duration-300 lg:col-start-2">
-              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{language === 'en' ? "Community" : "Спільність"}</h3>
-              <p className="text-gray-700">{language === 'en' ? "The foundation is built together." : "Фонд строится вместе."}</p>
+              <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{translate('aboutUs.values.community.title')}</h3>
+              <p className="text-gray-700">{translate('aboutUs.values.community.description')}</p>
             </Card>
           </div>
         </div>
       </section>
 
       {/* Founder Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-primary-100 to-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="rounded-xl overflow-hidden shadow-xl">
+            <div className="order-2 md:order-1">
+              <h2 className="font-playfair text-3xl font-semibold text-primary mb-4">{translate('founder.story.title')}</h2>
+              <h3 className="text-xl text-gray-600 mb-6">{translate('founder.story.subtitle')}</h3>
+              <p className="text-gray-700 mb-6">
+                {translate('founder.story.content')}
+              </p>
+            </div>
+            <div className="order-1 md:order-2 rounded-xl overflow-hidden shadow-xl">
               <img 
                 src="/team/founder.JPG" 
-                alt="Louisa - Founder" 
+                alt={`${translate('founder.name')} - ${translate('founder.title')}`} 
                 className="w-full h-auto"
               />
-            </div>
-            <div>
-              <SectionHeading 
-                title={language === 'en' ? "Louisa — Founder of the Foundation" : "Луїза — основательница фонда"}
-                subtitle={language === 'en' ? "A personal story of dedication" : "Личная история самоотдачи"}
-                centered={false}
-              />
-              <p className="text-gray-700 mb-4">
-                {language === 'en' && 
-                  "Since childhood, I felt how important it is when someone cares for you. I was drawn to those who had it harder. First volunteering, then financial help. CrossCharity was born after a personal story, which I may share later."}
-                {language === 'es' && 
-                  "Desde la infancia, sentí lo importante que es cuando alguien se preocupa por ti. Me sentí atraída por aquellos que lo tenían más difícil. Primero voluntariado, luego ayuda financiera. CrossCharity nació después de una historia personal, que quizás comparta más adelante."}
-                {language === 'uk' && 
-                  "З дитинства я відчувала, як важливо, коли про тебе дбають. Я тягнулася до тих, кому складніше. Спочатку волонтерство, потім — фінансова допомога. CrossCharity народився після особистої історії, яку, можливо, розповім пізніше."}
-                {language === 'he' && 
-                  "מילדות הרגשתי כמה חשוב כשמישהו דואג לך. נמשכתי לאלה שהיה להם קשה יותר. קודם התנדבות, אחר כך עזרה כספית. CrossCharity נולד אחרי סיפור אישי, שאולי אשתף בהמשך."}
-              </p>
-              <p className="text-gray-700 mb-4">
-                {language === 'en' && 
-                  "For the first two and a half years, the foundation worked quietly. Now — a team of 40+ people. This is not about image. This is about responsibility. About being there."}
-                {language === 'es' && 
-                  "Durante los primeros dos años y medio, la fundación trabajó en silencio. Ahora — un equipo de más de 40 personas. No se trata de imagen. Se trata de responsabilidad. De estar ahí."}
-                {language === 'uk' && 
-                  "Перші два з половиною роки фонд працював тихо. Зараз — команда з понад 40 осіб. Це не про імідж. Це про відповідальність. Про те, щоб бути поруч."}
-                {language === 'he' && 
-                  "במשך שנתיים וחצי הראשונות, הקרן עבדה בשקט. עכשיו — צוות של יותר מ-40 אנשים. זה לא על תדמית. זה על אחריות. על להיות שם."}
-              </p>
             </div>
           </div>
         </div>
@@ -328,14 +320,8 @@ const AboutUs = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <SectionHeading 
-            title={language === 'en' ? "Our Team" : 
-                  language === 'es' ? "Nuestro Equipo" : 
-                  language === 'uk' ? "Наша Команда" : 
-                  "הצוות שלנו"}
-            subtitle={language === 'en' ? "Meet the dedicated professionals behind CrossCharity" : 
-                     language === 'es' ? "Conozca a los profesionales dedicados detrás de CrossCharity" : 
-                     language === 'uk' ? "Познайомтеся з відданими професіоналами CrossCharity" : 
-                     "הכירו את אנשי המקצוע המסורים מאחורי CrossCharity"}
+            title={translate('aboutPage.team.title')}
+            subtitle={translate('aboutPage.team.subtitle')}
           />
           
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mt-10">
@@ -361,10 +347,7 @@ const AboutUs = () => {
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="font-playfair text-3xl font-bold text-center mb-8">
-            {language === 'en' ? "Key Documents" : 
-             language === 'es' ? "Documentos Clave" : 
-             language === 'uk' ? "Ключові документи" : 
-             "מסמכים מרכזיים"}
+            {translate('aboutPage.documents.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="/documents/AnnualReport" className="block bg-white p-6 rounded-lg shadow-md transition-all hover:shadow-lg">
@@ -372,16 +355,10 @@ const AboutUs = () => {
                 <FiFileText className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-semibold text-xl mb-2">
-                {language === 'en' ? "Annual Report" : 
-                 language === 'es' ? "Informe Anual" : 
-                 language === 'uk' ? "Річний звіт" : 
-                 "דוח שנתי"}
+                {translate('aboutPage.documents.annual')}
               </h3>
               <p className="text-gray-600 text-sm">
-                {language === 'en' ? "Our impact and achievements" : 
-                 language === 'es' ? "Nuestro impacto y logros" : 
-                 language === 'uk' ? "Наш вплив та досягнення" : 
-                 "ההשפעה וההישגים שלנו"}
+                {translate('aboutPage.documents.annualDesc')}
               </p>
             </a>
             <a href="/documents/ChildProtectionPolicy" className="block bg-white p-6 rounded-lg shadow-md transition-all hover:shadow-lg">
@@ -389,16 +366,10 @@ const AboutUs = () => {
                 <FiShield className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-semibold text-xl mb-2">
-                {language === 'en' ? "Child Protection Policy" : 
-                 language === 'es' ? "Política de Protección Infantil" : 
-                 language === 'uk' ? "Політика захисту дітей" : 
-                 "מדיניות הגנה על ילדים"}
+                {translate('aboutPage.documents.protection')}
               </h3>
               <p className="text-gray-600 text-sm">
-                {language === 'en' ? "Commitment to children's safety" : 
-                 language === 'es' ? "Compromiso con la seguridad de los niños" : 
-                 language === 'uk' ? "Зобов'язання щодо безпеки дітей" : 
-                 "מחויבות לבטיחות ילדים"}
+                {translate('aboutPage.documents.protectionDesc')}
               </p>
             </a>
             <a href="/documents/OrganizationBylaws" className="block bg-white p-6 rounded-lg shadow-md transition-all hover:shadow-lg">
@@ -406,16 +377,10 @@ const AboutUs = () => {
                 <FiBookOpen className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-semibold text-xl mb-2">
-                {language === 'en' ? "Organization Bylaws" : 
-                 language === 'es' ? "Estatutos de la Organización" : 
-                 language === 'uk' ? "Статут організації" : 
-                 "תקנון הארגון"}
+                {translate('aboutPage.documents.bylaws')}
               </h3>
               <p className="text-gray-600 text-sm">
-                {language === 'en' ? "Our governance framework" : 
-                 language === 'es' ? "Nuestro marco de gobernanza" : 
-                 language === 'uk' ? "Наша структура управління" : 
-                 "מסגרת הממשל שלנו"}
+                {translate('aboutPage.documents.bylawsDesc')}
               </p>
             </a>
             <a href="/documents/FinancialStatements" className="block bg-white p-6 rounded-lg shadow-md transition-all hover:shadow-lg">
@@ -423,25 +388,16 @@ const AboutUs = () => {
                 <FiDollarSign className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-semibold text-xl mb-2">
-                {language === 'en' ? "Financial Statements" : 
-                 language === 'es' ? "Estados Financieros" : 
-                 language === 'uk' ? "Фінансова звітність" : 
-                 "דוחות כספיים"}
+                {translate('aboutPage.documents.financial')}
               </h3>
               <p className="text-gray-600 text-sm">
-                {language === 'en' ? "Transparent financial reporting" : 
-                 language === 'es' ? "Informes financieros transparentes" : 
-                 language === 'uk' ? "Прозора фінансова звітність" : 
-                 "דיווח כספי שקוף"}
+                {translate('aboutPage.documents.financialDesc')}
               </p>
             </a>
-                </div>
+          </div>
           <div className="text-center mt-8">
             <a href="/documents" className="inline-block px-6 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition">
-              {language === 'en' ? "View All Documents" : 
-               language === 'es' ? "Ver Todos los Documentos" : 
-               language === 'uk' ? "Переглянути всі документи" : 
-               "צפה בכל המסמכים"}
+              {translate('aboutPage.documents.viewAll')}
             </a>
           </div>
         </div>

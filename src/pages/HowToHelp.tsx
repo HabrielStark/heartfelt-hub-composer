@@ -549,15 +549,15 @@ const HowToHelp = () => {
                             "כל מתנדב מלווה על ידי מתאם" : 
                             "Each volunteer is accompanied by a coordinator"}
                         </p>
-                      </div>
                   </div>
-                  
+                      </div>
+                      
                     <div className="relative group">
                       <div className="absolute -inset-1 bg-gradient-to-r from-primary to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                       <div className="relative bg-white rounded-lg p-6">
                         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                           <span className="text-xl font-bold text-primary">2</span>
-                        </div>
+                      </div>
                         <p className="text-gray-600">
                           {language === 'en' ? 
                             "At the beginning — a short introduction, explanation of the format, goals, and tasks" :
@@ -591,9 +591,9 @@ const HowToHelp = () => {
                         </p>
                       </div>
                     </div>
-                  </div>
                       </div>
-                      
+                    </div>
+                    
                 {/* Join Us Form */}
                 <div className="max-w-2xl mx-auto">
                   <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -716,14 +716,14 @@ const HowToHelp = () => {
                      "Learn more about sponsorship"}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </button>
-                </div>
+                    </div>
                 <div className="absolute right-0 bottom-0 opacity-10">
                   <svg className="w-64 h-64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 5H5V19H19V5Z" fill="currentColor" />
                   </svg>
                 </div>
-              </div>
-              
+                  </div>
+                  
               <div id="sponsorship-details" className="mb-12">
                 {/* Introduction Section */}
                 <div className="bg-white rounded-xl shadow-lg p-8 mb-10">
@@ -751,8 +751,8 @@ const HowToHelp = () => {
                       "CrossCharity is a space where help becomes part of your routine, values, and reputation."
                     }
                   </p>
-                </div>
-                
+                    </div>
+                    
                 {/* Features Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
                   {/* Why It's Important */}
@@ -788,8 +788,8 @@ const HowToHelp = () => {
                         "They are outside of politics. Outside of noise. Outside of breaking news. But they also need someone nearby. Not once — but constantly."
                       }
                     </p>
-                  </div>
-                  
+                    </div>
+                    
                   {/* What Sponsorship Provides */}
                   <div className="bg-gradient-to-br from-primary-50 to-white rounded-xl shadow-md p-8">
                     <h3 className="font-playfair font-semibold text-2xl mb-4 text-primary">
@@ -869,8 +869,8 @@ const HowToHelp = () => {
                        "* Publicity by request"}
                     </p>
                   </div>
-                </div>
-                
+                    </div>
+                    
                 {/* How It Works */}
                 <div className="bg-white rounded-xl shadow-lg p-8 mb-10">
                   <h3 className="font-playfair font-semibold text-2xl mb-6 text-primary text-center">
@@ -887,7 +887,7 @@ const HowToHelp = () => {
                       <div className="relative bg-white rounded-lg p-6 h-full flex flex-col">
                         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 flex-shrink-0">
                           <span className="text-xl font-bold text-primary">1</span>
-                    </div>
+                          </div>
                         <div className="flex-grow flex items-center">
                           <p className="text-gray-700">
                             {language === 'en' ? "Transparency at all stages" : 
@@ -898,14 +898,14 @@ const HowToHelp = () => {
                           </p>
                         </div>
                       </div>
-                  </div>
-                  
+                    </div>
+                    
                     <div className="relative group h-full">
                       <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                       <div className="relative bg-white rounded-lg p-6 h-full flex flex-col">
                         <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 flex-shrink-0">
                           <span className="text-xl font-bold text-primary">2</span>
-                        </div>
+                          </div>
                         <div className="flex-grow flex items-center">
                           <p className="text-gray-700">
                             {language === 'en' ? "Choice of formats from financing to integrations" : 
@@ -917,7 +917,7 @@ const HowToHelp = () => {
                         </div>
                       </div>
                     </div>
-
+                    
                     <div className="relative group h-full">
                       <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                       <div className="relative bg-white rounded-lg p-6 h-full flex flex-col">
@@ -935,7 +935,7 @@ const HowToHelp = () => {
                         </div>
                       </div>
                     </div>
-
+                    
                     <div className="relative group h-full">
                       <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
                       <div className="relative bg-white rounded-lg p-6 h-full flex flex-col">
@@ -1044,7 +1044,7 @@ const HowToHelp = () => {
                      "Learn more about fundraising"}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </button>
-                </div>
+                    </div>
                 <div className="absolute right-0 bottom-0 opacity-10">
                   <svg className="w-64 h-64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 1L17 6H7L12 1Z" fill="currentColor" />
@@ -1052,8 +1052,8 @@ const HowToHelp = () => {
                     <path d="M5 20H19V22H5V20Z" fill="currentColor" />
                   </svg>
                 </div>
-              </div>
-              
+                  </div>
+                  
               <div id="fundraising-details" className="mb-16">
                 {/* What is Fundraising Section */}
                 <div className="bg-white rounded-xl shadow-lg p-8 mb-12 transform transition-all duration-500 hover:shadow-xl">
@@ -1210,13 +1210,13 @@ const HowToHelp = () => {
                           }
                         </p>
                       </div>
-                    </div>
-                    
+                  </div>
+                  
                     <div className="bg-white p-6 rounded-lg shadow-md transform transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                       <div className="flex items-start mb-4">
                         <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center mr-4 flex-shrink-0">
                           <Globe className="h-5 w-5 text-amber-600" />
-                        </div>
+                  </div>
                         <p className="text-gray-700 leading-relaxed">
                           {language === 'en' ? 
                             "Opinion leaders, influencers, and creators who want to engage their audience in social projects" :
@@ -1229,8 +1229,8 @@ const HowToHelp = () => {
                             "Opinion leaders, influencers, and creators who want to engage their audience in social projects"
                           }
                         </p>
-                      </div>
-                    </div>
+                </div>
+              </div>
                   </div>
                 </div>
                 
@@ -1254,7 +1254,7 @@ const HowToHelp = () => {
                         <div className="absolute left-0 top-0 w-20 h-20 rounded-full bg-amber-100 flex flex-col items-center justify-center hidden md:flex">
                           <span className="text-3xl font-bold text-amber-500">1</span>
                           <span className="text-xs text-amber-700 font-medium">Stage</span>
-                        </div>
+                    </div>
                         
                         <div className="bg-amber-50 rounded-lg p-6 transform transition-all duration-300 hover:shadow-md ml-0 md:ml-6">
                           <div className="flex items-center md:hidden mb-4">
@@ -1268,8 +1268,8 @@ const HowToHelp = () => {
                                language === 'he' ? "פגישה/שיחה" : 
                                "Meeting/Call"}
                             </h4>
-                          </div>
-                          
+                  </div>
+                  
                           <h4 className="font-semibold text-xl text-amber-700 hidden md:block mb-3">
                             {language === 'en' ? "Meeting/Call" : 
                              language === 'es' ? "Reunión/Llamada" :
@@ -1291,15 +1291,15 @@ const HowToHelp = () => {
                             }
                           </p>
                         </div>
-                      </div>
-                      
+                    </div>
+                    
                       {/* Stage 2 */}
                       <div className="relative md:pl-24">
                         <div className="absolute left-0 top-0 w-20 h-20 rounded-full bg-amber-100 flex flex-col items-center justify-center hidden md:flex">
                           <span className="text-3xl font-bold text-amber-500">2</span>
                           <span className="text-xs text-amber-700 font-medium">Stage</span>
-                        </div>
-                        
+                    </div>
+                    
                         <div className="bg-amber-50 rounded-lg p-6 transform transition-all duration-300 hover:shadow-md ml-0 md:ml-6">
                           <div className="flex items-center md:hidden mb-4">
                             <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
@@ -1312,8 +1312,8 @@ const HowToHelp = () => {
                                language === 'he' ? "בחירת מטרה" : 
                                "Goal Selection"}
                             </h4>
-                          </div>
-                          
+                    </div>
+                    
                           <h4 className="font-semibold text-xl text-amber-700 hidden md:block mb-3">
                             {language === 'en' ? "Goal Selection" : 
                              language === 'es' ? "Selección de objetivo" :
@@ -1335,20 +1335,20 @@ const HowToHelp = () => {
                             }
                           </p>
                         </div>
-                      </div>
-                      
+                    </div>
+                    
                       {/* Stage 3 */}
                       <div className="relative md:pl-24">
                         <div className="absolute left-0 top-0 w-20 h-20 rounded-full bg-amber-100 flex flex-col items-center justify-center hidden md:flex">
                           <span className="text-3xl font-bold text-amber-500">3</span>
                           <span className="text-xs text-amber-700 font-medium">Stage</span>
-                        </div>
+                          </div>
                         
                         <div className="bg-amber-50 rounded-lg p-6 transform transition-all duration-300 hover:shadow-md ml-0 md:ml-6">
                           <div className="flex items-center md:hidden mb-4">
                             <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
                               <span className="text-xl font-bold text-amber-500">3</span>
-                            </div>
+                      </div>
                             <h4 className="font-semibold text-xl text-amber-700">
                               {language === 'en' ? "Packaging" : 
                                language === 'es' ? "Empaquetado" :
@@ -1356,8 +1356,8 @@ const HowToHelp = () => {
                                language === 'he' ? "אריזה" : 
                                "Packaging"}
                             </h4>
-                          </div>
-                          
+                    </div>
+                    
                           <h4 className="font-semibold text-xl text-amber-700 hidden md:block mb-3">
                             {language === 'en' ? "Packaging" : 
                              language === 'es' ? "Empaquetado" :
@@ -1379,8 +1379,8 @@ const HowToHelp = () => {
                             }
                           </p>
                         </div>
-                      </div>
-                      
+                    </div>
+                    
                       {/* Stage 4 */}
                       <div className="relative md:pl-24">
                         <div className="absolute left-0 top-0 w-20 h-20 rounded-full bg-amber-100 flex flex-col items-center justify-center hidden md:flex">
@@ -1392,7 +1392,7 @@ const HowToHelp = () => {
                           <div className="flex items-center md:hidden mb-4">
                             <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
                               <span className="text-xl font-bold text-amber-500">4</span>
-                            </div>
+                    </div>
                             <h4 className="font-semibold text-xl text-amber-700">
                               {language === 'en' ? "Launch" : 
                                language === 'es' ? "Lanzamiento" :
@@ -1400,8 +1400,8 @@ const HowToHelp = () => {
                                language === 'he' ? "השקה" : 
                                "Launch"}
                             </h4>
-                          </div>
-                          
+                  </div>
+                  
                           <h4 className="font-semibold text-xl text-amber-700 hidden md:block mb-3">
                             {language === 'en' ? "Launch" : 
                              language === 'es' ? "Lanzamiento" :
@@ -1423,20 +1423,20 @@ const HowToHelp = () => {
                             }
                           </p>
                         </div>
-                      </div>
-                      
+                  </div>
+                  
                       {/* Stage 5 */}
                       <div className="relative md:pl-24">
                         <div className="absolute left-0 top-0 w-20 h-20 rounded-full bg-amber-100 flex flex-col items-center justify-center hidden md:flex">
                           <span className="text-3xl font-bold text-amber-500">5</span>
                           <span className="text-xs text-amber-700 font-medium">Stage</span>
-                        </div>
-                        
+                      </div>
+                      
                         <div className="bg-amber-50 rounded-lg p-6 transform transition-all duration-300 hover:shadow-md ml-0 md:ml-6">
                           <div className="flex items-center md:hidden mb-4">
                             <div className="w-12 h-12 rounded-full bg-amber-100 flex items-center justify-center mr-4">
                               <span className="text-xl font-bold text-amber-500">5</span>
-                            </div>
+                      </div>
                             <h4 className="font-semibold text-xl text-amber-700">
                               {language === 'en' ? "Report" : 
                                language === 'es' ? "Informe" :
@@ -1444,7 +1444,7 @@ const HowToHelp = () => {
                                language === 'he' ? "דוח" : 
                                "Report"}
                             </h4>
-                          </div>
+                    </div>
                           
                           <h4 className="font-semibold text-xl text-amber-700 hidden md:block mb-3">
                             {language === 'en' ? "Report" : 
@@ -1466,7 +1466,7 @@ const HowToHelp = () => {
                               "We show what has been achieved with photos, figures, and a short video or stories (if needed)."
                             }
                           </p>
-                        </div>
+                  </div>
                       </div>
                     </div>
                   </div>

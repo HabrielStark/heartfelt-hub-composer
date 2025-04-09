@@ -7,42 +7,49 @@ const PartnersSection = () => {
   
   const partners = [
     {
-      name: "ABC Foundation",
-      logo: "/IMG_4398.JPG"
+      name: "Partner 1",
+      logo: "/partner.png"
     },
     {
-      name: "XYZ Corporation",
-      logo: "/IMG_4384.JPG"
+      name: "Partner 2",
+      logo: "/partner1.png"
     },
     {
-      name: "Global Helpers",
-      logo: "/IMG_4374.JPG"
+      name: "Partner 3",
+      logo: "/partner2.PNG"
     },
     {
-      name: "Community Bank",
-      logo: "/IMG_4405.PNG"
+      name: "Partner 4",
+      logo: "/partner3.PNG"
     },
     {
-      name: "Caring Partners Inc.",
-      logo: "/IMG_4388.JPG"
+      name: "Partner 5",
+      logo: "/partner4.png"
+    },
+    {
+      name: "Partner 6",
+      logo: "/partner5.png"
     }
   ];
 
   return (
-    <section className="py-14 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-gradient-to-b from-white to-gray-100">
+      <div className="container mx-auto px-6">
         <SectionHeading 
           title={translate('homePage.partners.title')}
           subtitle={translate('homePage.partners.subtitle')}
         />
         
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-16">
           {partners.map((partner, index) => (
-            <div key={index} className="grayscale hover:grayscale-0 transition-all duration-300">
+            <div 
+              key={index} 
+              className="flex items-center justify-center h-40 w-full hover:scale-110 transition-all duration-300"
+            >
               <img 
                 src={partner.logo} 
                 alt={partner.name} 
-                className="h-12 md:h-16 w-auto"
+                className="max-h-32 max-w-full object-contain"
               />
             </div>
           ))}

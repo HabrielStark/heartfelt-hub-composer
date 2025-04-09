@@ -39,10 +39,13 @@
   },
   "homePage": {
     "hero": {
-      "title": "Make a Real Difference Together",
-      "subtitle": "Support our mission to help those in need and create lasting positive change.",
-      "ctaButton": "How You Can Help",
-      "donateButton": "Donate Now"
+      "title": "Make a Real Difference",
+      "titleHighlight": "Together",
+      "subtitle": "Quietly. Systematically. With love.",
+      "description": "There are children who just need a little more warmth. Some need medicine. Some need a laptop for studying. Some need to feel they are not alone. CrossCharity supports orphanages and children with cancer in the way relatives would — calmly, thoughtfully, without unnecessary noise and with attention to detail. It's important to be there. To care. To support. And to make precise decisions that really change something in their lives.",
+      "donateButton": "Donate Now",
+      "helpButton": "How to Help",
+      "imageAlt": "Happy children playing together"
     },
     "stats": {
       "title": "Our Impact",
@@ -150,21 +153,34 @@
     },
     "values": {
       "title": "Our Values",
-      "compassion": {
-        "title": "Compassion",
-        "description": "We approach our work with empathy and understanding, recognizing the dignity of every person we serve."
+      "subtitle": "What guides us in our work",
+      "respect": {
+        "title": "Respect",
+        "description": "Every child matters as an individual."
       },
-      "integrity": {
-        "title": "Integrity",
-        "description": "We maintain the highest ethical standards in all our operations and are transparent with our supporters."
+      "transparency": {
+        "title": "Transparency",
+        "description": "Accountability and trust."
       },
-      "collaboration": {
-        "title": "Collaboration",
-        "description": "We believe in working together with communities, partners, and supporters to create sustainable change."
+      "action": {
+        "title": "Action, not emotion",
+        "description": "Not pity, but solutions."
       },
-      "innovation": {
-        "title": "Innovation",
-        "description": "We continuously seek creative solutions to complex challenges and adapt our approaches based on evidence."
+      "systematic": {
+        "title": "Systematic approach",
+        "description": "Not one-time, but stable."
+      },
+      "humanity": {
+        "title": "Humanity",
+        "description": "Support with warmth."
+      },
+      "diversity": {
+        "title": "Diversity",
+        "description": "Help for all children without exceptions."
+      },
+      "community": {
+        "title": "Community",
+        "description": "The foundation is built together."
       }
     }
   },
@@ -512,10 +528,14 @@
     "subtitle": "Learn about our mission, history, and the dedicated team behind HeartfeltHome.",
     "history": {
       "title": "Our History",
-      "subtitle": "A journey of compassion and dedication since 2010.",
-      "paragraph1": "HeartfeltHome was founded in 2010 by a group of passionate individuals who recognized the urgent need for quality care for orphaned and vulnerable children in our community.",
-      "paragraph2": "What began as a small initiative with just five children has grown into a comprehensive care program that has supported over 500 children through our residential and community programs.",
-      "paragraph3": "Over the years, we have expanded our services to include educational support, healthcare, psychological counseling, and life skills training to ensure every child receives the care they need to thrive."
+      "subtitle": "A journey of compassion and dedication.",
+      "paragraph1": "My name is Luiza. I am the founder of CrossCharity.",
+      "paragraph2": "Since childhood, I very clearly felt how important it is to be loved, to be cared for, to have support. And equally, how painful it is when these things are lacking. Especially for children.",
+      "paragraph3": "I was always drawn to those who had it a little harder. I volunteered. I visited orphanages. I hugged, played, just being there. And when I had a stable income - I started helping financially. First occasionally. Then more regularly. Especially children from disadvantaged families who lack even basic necessities - not to mention warmth.",
+      "paragraph4": "And then a personal story happened in my life. A very important one. Perhaps I'll share it later. But it was this experience that became the moment when everything fell into place. That's when CrossCharity was born.",
+      "paragraph5": "For the first two and a half years, the foundation worked quietly. Without a website, without social media pages, without publicity. Only with my personal funds, friendly partnerships, and support from friends who believed, trusted, and helped with whatever they could.",
+      "paragraph6": "Now the foundation has more than 40 people. This is not just a team - these are people who live this cause every day. CrossCharity was never about image or profit. It's about pain. About responsibility. About a deep understanding that a catastrophe can happen in children's lives - and no one but us can be there for them.",
+      "paragraph7": "We act quietly. But seriously. And always - with love."
     },
     "values": {
       "title": "Our Values",
@@ -547,38 +567,19 @@
     },
     "team": {
       "title": "Our Team",
-      "subtitle": "Meet the dedicated people behind our mission.",
-      "members": {
-        "director": {
-          "name": "John Smith",
-          "position": "Executive Director",
-          "description": "John leads our organization with 15 years of experience in nonprofit management."
-        },
-        "childcare": {
-          "name": "Maria Rodriguez",
-          "position": "Childcare Manager",
-          "description": "Maria oversees our residential care programs and ensures children receive quality care."
-        },
-        "education": {
-          "name": "David Johnson",
-          "position": "Education Coordinator",
-          "description": "David develops educational programs to support children's academic growth."
-        },
-        "financial": {
-          "name": "Sarah Williams",
-          "position": "Financial Director",
-          "description": "Sarah manages our finances with transparency and ensures resources are used effectively."
-        }
-      }
+      "subtitle": "Meet the dedicated professionals behind CrossCharity"
     },
     "documents": {
       "title": "Key Documents",
-      "subtitle": "Important information about our organization.",
       "annual": "Annual Report",
+      "annualDesc": "Our impact and achievements",
       "protection": "Child Protection Policy",
+      "protectionDesc": "Commitment to children's safety",
       "bylaws": "Organization Bylaws",
+      "bylawsDesc": "Our governance framework",
       "financial": "Financial Statements",
-      "download": "Download"
+      "financialDesc": "Transparent financial reporting",
+      "viewAll": "View All Documents"
     }
   },
   "donatePage": {
@@ -611,5 +612,15 @@
     "cryptoFeature2": "Secure, private, and low-fee transactions",
     "cryptoFeature3": "100% of your donation goes to our projects",
     "cryptoSecurePayment": "Secure payment processing by BTCPay Server"
+  },
+  "founder": {
+    "name": "Luiza",
+    "title": "Founder",
+    "description": "Luiza is the founder of CrossCharity, dedicated to helping children in need.",
+    "story": {
+      "title": "LUIZA founder of the foundation",
+      "subtitle": "A personal story of dedication",
+      "content": "From childhood, I felt how important it is to help those who are going through difficult times. I was drawn to those who needed help more than others. After my personal story of volunteering, I founded CrossCharity. In the first year and a half, the fund worked in silence, helping over 40 people. It's not about numbers. It's about being there for others."
+    }
   }
 } 
