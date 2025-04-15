@@ -406,9 +406,9 @@
       "subtitle": "Find us using the information below.",
       "location": {
         "title": "Location",
-        "address1": "1234 Charitable Way, Donation City,",
-        "address2": "DC 12345",
-        "country": "United States"
+        "address1": "Yaroslavskaya 58",
+        "address2": "Kyiv",
+        "country": "Ukraine"
       },
       "phone": {
         "title": "Phone",
@@ -529,12 +529,12 @@
     "history": {
       "title": "Our History",
       "subtitle": "A journey of compassion and dedication.",
-      "paragraph1": "My name is Luiza. I am the founder of CrossCharity.",
-      "paragraph2": "Since childhood, I very clearly felt how important it is to be loved, to be cared for, to have support. And equally, how painful it is when these things are lacking. Especially for children.",
-      "paragraph3": "I was always drawn to those who had it a little harder. I volunteered. I visited orphanages. I hugged, played, just being there. And when I had a stable income - I started helping financially. First occasionally. Then more regularly. Especially children from disadvantaged families who lack even basic necessities - not to mention warmth.",
-      "paragraph4": "And then a personal story happened in my life. A very important one. Perhaps I'll share it later. But it was this experience that became the moment when everything fell into place. That's when CrossCharity was born.",
-      "paragraph5": "For the first two and a half years, the foundation worked quietly. Without a website, without social media pages, without publicity. Only with my personal funds, friendly partnerships, and support from friends who believed, trusted, and helped with whatever they could.",
-      "paragraph6": "Now the foundation has more than 40 people. This is not just a team - these are people who live this cause every day. CrossCharity was never about image or profit. It's about pain. About responsibility. About a deep understanding that a catastrophe can happen in children's lives - and no one but us can be there for them.",
+      "paragraph1": "CrossCharity was founded with a mission to help vulnerable children.",
+      "paragraph2": "We recognized how important it is for children to be loved, cared for, and supported. And equally, how painful it is when these things are lacking.",
+      "paragraph3": "Our organization has always been drawn to those who need more help. We began by volunteering in orphanages and supporting disadvantaged families who lack even basic necessities.",
+      "paragraph4": "The foundation was born from a deep understanding that every child deserves care and support during difficult times.",
+      "paragraph5": "For the first two and a half years, the foundation worked quietly. Without a website, without social media pages, without publicity. Only with personal funds, friendly partnerships, and support from friends who believed in our mission.",
+      "paragraph6": "Now the foundation has more than 40 people. This is not just a team - these are people who live this cause every day. CrossCharity was never about image or profit. It's about responsibility and understanding that a catastrophe can happen in children's lives - and we can be there for them.",
       "paragraph7": "We act quietly. But seriously. And always - with love."
     },
     "values": {

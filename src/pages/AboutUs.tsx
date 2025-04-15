@@ -204,49 +204,6 @@ const AboutUs = () => {
         subtitle={translate('aboutPage.subtitle')}
       />
 
-      {/* History Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <SectionHeading 
-                title={translate('aboutPage.history.title')}
-                subtitle={translate('aboutPage.history.subtitle')}
-                centered={false}
-              />
-              <p className="text-gray-700 mb-4">
-                {translate('aboutPage.history.paragraph1')}
-              </p>
-              <p className="text-gray-700 mb-4">
-                {translate('aboutPage.history.paragraph2')}
-              </p>
-              <p className="text-gray-700 mb-4">
-                {translate('aboutPage.history.paragraph3')}
-              </p>
-              <p className="text-gray-700 mb-4">
-                {translate('aboutPage.history.paragraph4')}
-              </p>
-              <p className="text-gray-700 mb-4">
-                {translate('aboutPage.history.paragraph5')}
-              </p>
-              <p className="text-gray-700 mb-4">
-                {translate('aboutPage.history.paragraph6')}
-              </p>
-              <p className="text-gray-700">
-                {translate('aboutPage.history.paragraph7')}
-              </p>
-            </div>
-            <div className="rounded-xl overflow-hidden shadow-xl">
-              <img 
-                src="/team/founder.JPG" 
-                alt="CrossCharity Founder" 
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Values Section */}
       <section className="py-16 bg-gradient-to-br from-primary-50 to-white">
         <div className="container mx-auto px-4">
@@ -290,28 +247,6 @@ const AboutUs = () => {
               <h3 className="font-playfair font-semibold text-xl mb-3 text-primary">{translate('aboutUs.values.community.title')}</h3>
               <p className="text-gray-700">{translate('aboutUs.values.community.description')}</p>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Founder Section */}
-      <section className="py-16 bg-gradient-to-br from-primary-100 to-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="font-playfair text-3xl font-semibold text-primary mb-4">{translate('founder.story.title')}</h2>
-              <h3 className="text-xl text-gray-600 mb-6">{translate('founder.story.subtitle')}</h3>
-              <p className="text-gray-700 mb-6">
-                {translate('founder.story.content')}
-              </p>
-            </div>
-            <div className="order-1 md:order-2 rounded-xl overflow-hidden shadow-xl">
-              <img 
-                src="/team/founder.JPG" 
-                alt={`${translate('founder.name')} - ${translate('founder.title')}`} 
-                className="w-full h-auto"
-              />
-            </div>
           </div>
         </div>
       </section>

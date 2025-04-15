@@ -29,6 +29,14 @@ const PartnersSection = () => {
     {
       name: "Partner 6",
       logo: "/partner5.png"
+    },
+    {
+      name: "Partner 7",
+      logo: "/partner6.png"
+    },
+    {
+      name: "Partner 8",
+      logo: "/partner7.png"
     }
   ];
 

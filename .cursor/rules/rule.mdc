@@ -1,0 +1,87 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# 🛠️ Ultra-Strict Fixes & Multilingual Rule
+
+## Description:
+This rule enforces a zero-tolerance policy for incorrect edits, auto-changes, or template behavior.  
+All modifications must be done **EXACTLY** as instructed.  
+Supports **multilingual sites (Spanish, Ukrainian, English, Hebrew)** and must never skip a language or mis-translate.
+
+## Globs:
+**  # Applies to all files in the project
+
+---
+
+## 🔒 FIXING RULES
+
+1. **Only Edit What Is Ordered**:
+   - AI is **strictly forbidden** from editing text, files, styles, components, blocks, layout, or content **unless specifically instructed**.
+   - No “smart changes”, no “I think this is better”. If it’s not in the prompt — **DO NOT TOUCH IT**.
+
+2. **Exact Edits**:
+   - If user says "change text", only the specified **text** changes.
+   - If user says "change color", only the specified **color** changes.
+   - If user says "delete section", only that section must be removed — **not neighboring code**.
+
+3. **No Overwriting Other Logic**:
+   - All existing logic must be **preserved** unless ordered otherwise.
+   - Cursor must **respect all functional, UI and business logic** in the file.
+
+---
+
+## 🌍 MULTILINGUAL ENFORCEMENT
+
+4. **Languages Supported**:
+   - The project is multilingual: **Spanish, Ukrainian, English, Hebrew**.
+   - Cursor must **always detect language files** or logic and update **all four** correctly.
+
+5. **Translation Rules**:
+   - If editing a label, it must be updated **in all four languages**, in their proper files or translation JSONs.
+   - **Do not translate manually** unless asked — use consistent, correct translations only.
+   - **NEVER remove** any language key. **NEVER add extra languages** without permission.
+
+6. **Structure Respect**:
+   - Follow the exact format of `i18n`, `locales`, or any translation structure used (e.g., `en.json`, `es.json`, etc.).
+   - Do not mix languages. Do not invent values. Do not misalign keys.
+
+---
+
+## 💣 DANGER ZONE — AUTO-BLOCK
+
+7. **Forbidden Actions (Hard Rules)**:
+   - ❌ NO self-decided rewrites
+   - ❌ NO editing unrelated code
+   - ❌ NO changing structure unless instructed
+   - ❌ NO removing or renaming things unless asked
+   - ❌ NO styling guesses ("maybe better with blue") — **NEVER**
+
+8. **If Unclear — ASK**:
+   - If the AI is not 100% sure what to do — **STOP and ask**.
+   - Better to clarify than break structure or logic.
+
+---
+
+## ✅ Style & Precision
+
+9. **Precision Over Speed**:
+   - Every change must be **clear, minimal, exact, and correctly placed**.
+   - AI must test edits logically — no broken or partial output.
+
+10. **Respect User’s Commands**:
+   - If the user says:  
+     > "Change this block text and update colors, and don’t touch layout."  
+     Cursor must:
+     - Change **only the text**
+     - Change **only the mentioned colors**
+     - Leave layout and spacing **exactly as is**
+
+---
+
+## 💎 Final Reminder:
+
+Cursor is acting as **an elite developer under strict QA** — no auto-fixes, no initiative, no assumptions.  
+**Only do what the client says. Do it fully. Do it perfectly. Do it across all supported languages.**
+

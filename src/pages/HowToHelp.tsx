@@ -363,7 +363,7 @@ const HowToHelp = () => {
                        language === 'es' ? 
                         "Para aquellos que quieren ayudar no \"en algún lugar\", sino en un sistema comprensible y vivo:" :
                        language === 'uk' ? 
-                        "Для тих, хто хоче допомагати не \"десь там\", а в зрозумілій, живій системі:" :
+                        "Для тих, хто хоче допомагати не \"десь там\", а в зрозумілій, живій системі." :
                        language === 'he' ? 
                         "לאלה שרוצים לעזור לא \"אי שם\", אלא במערכת מובנת וחיה:" : 
                         "For those who want to help not \"somewhere out there,\" but in an understandable, living system:"}
@@ -688,7 +688,7 @@ const HowToHelp = () => {
               {/* Hero Section */}
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-blue-500 to-primary p-8 md:p-12 mb-12 mt-10">
                 <div className="relative z-10 max-w-3xl">
-                  <p className="text-white/90 text-lg md:text-xl mb-6">
+                  <p className="text-white/90 text-lg md:text-xl">
                     {language === 'en' ? 
                       "Sponsorship is not just help. It's an investment in stability, development, and confidence in tomorrow. If this approach resonates with you — let's get acquainted." :
                      language === 'es' ? 
@@ -700,30 +700,14 @@ const HowToHelp = () => {
                       "Sponsorship is not just help. It's an investment in stability, development, and confidence in tomorrow."
                     }
                   </p>
-                  <button 
-                    onClick={() => {
-                      const sponsorshipDetails = document.getElementById('sponsorship-details');
-                      if (sponsorshipDetails) {
-                        sponsorshipDetails.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white text-primary hover:bg-primary hover:text-white transition-all duration-300 font-medium"
-                  >
-                    {language === 'en' ? "Learn more about sponsorship" : 
-                     language === 'es' ? "Más información sobre patrocinio" :
-                     language === 'uk' ? "Дізнатися більше про спонсорство" :
-                     language === 'he' ? "מידע נוסף על חסות" : 
-                     "Learn more about sponsorship"}
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </button>
-                    </div>
+                </div>
                 <div className="absolute right-0 bottom-0 opacity-10">
                   <svg className="w-64 h-64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M19 5H5V19H19V5Z" fill="currentColor" />
                   </svg>
                 </div>
-                  </div>
-                  
+              </div>
+              
               <div id="sponsorship-details" className="mb-12">
                 {/* Introduction Section */}
                 <div className="bg-white rounded-xl shadow-lg p-8 mb-10">

@@ -226,15 +226,9 @@ const photos: Photo[] = [
     description: 'Sports day event',
     date: '2023-09-20'
   },
+
   {
     id: '39',
-    src: '/IMG_4420.JPG',
-    category: 'summerCamp',
-    description: 'Summer music festival',
-    date: '2023-08-01'
-  },
-  {
-    id: '40',
     src: '/IMG_4420 (2).JPG',
     category: 'specialCelebrations',
     description: 'Community gathering',

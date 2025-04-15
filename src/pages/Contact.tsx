@@ -83,9 +83,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-lg mb-1">{translate('contact.info.location.title')}</h3>
                     <p className="text-gray-600">
-                      {translate('contact.info.location.address1')} <br />
-                      {translate('contact.info.location.address2')} <br />
-                      {translate('contact.info.location.country')}
+                      Ярославская 58 <br />
+                      Киев <br />
+                      Україна
                     </p>
                   </div>
                 </div>
@@ -97,9 +97,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-lg mb-1">{translate('contact.info.phone.title')}</h3>
                     <p className="text-gray-600">
-                      {translate('contact.info.phone.main')}: (123) 456-7890 <br />
-                      {translate('contact.info.phone.donations')}: (123) 456-7891 <br />
-                      {translate('contact.info.phone.volunteer')}: (123) 456-7892
+                      {translate('contact.info.phone.main')}: +380961727085 <br />
+                      {translate('contact.info.phone.donations')}: +380 93 729 59 66 <br />
+                      {translate('contact.info.phone.volunteer')}: +380961727085
                     </p>
                   </div>
                 </div>
@@ -109,11 +109,11 @@ const Contact = () => {
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-lg mb-1">{language === 'en' ? "Hours" : "Часы работы"}</h3>
+                    <h3 className="font-medium text-lg mb-1">{translate('contact.info.hours.title')}</h3>
                     <p className="text-gray-600">
-                      {language === 'en' ? "Monday - Friday: 9:00 AM - 5:00 PM" : "Понедельник - Пятница: 9:00 - 17:00"} <br />
+                      {translate('contact.info.hours.weekdays')} <br />
                       <span className="text-primary font-semibold">
-                        {language === 'en' ? "Note: Office works by appointment only, weekends closed" : "Примечание: Офис работает только по предварительной договоренности, сб и вс — выходные"}
+                        {translate('contact.visiting.info')}
                       </span>
                     </p>
                   </div>
@@ -124,7 +124,7 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-medium text-lg mb-1">{language === 'en' ? "Social Media" : "Социальные сети"}</h3>
+                    <h3 className="font-medium text-lg mb-1">{translate('navigation.contactUs')}</h3>
                     <p className="text-gray-600">
                       <a 
                         href="https://www.instagram.com/crosscharity.foundation?igsh=MWhyNWxtam1oMmlkZA==" 
@@ -139,12 +139,12 @@ const Contact = () => {
                 </div>
               </div>
               
-              <div className="mt-8 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+              <div className="mt-8 p-6 bg-primary-100 rounded-lg border-2 border-primary-300 shadow-md">
                 <div className="flex items-center">
-                  <AlertCircle className="h-5 w-5 text-yellow-600 mr-2" />
-                  <h3 className="font-medium text-yellow-700">{translate('contact.visiting.title')}</h3>
+                  <AlertCircle className="h-6 w-6 text-primary mr-3" />
+                  <h3 className="font-bold text-lg text-primary">{translate('contact.visiting.title')}</h3>
                 </div>
-                <p className="text-yellow-600 mt-2 text-sm">
+                <p className="text-primary-700 mt-3 text-base">
                   {translate('contact.visiting.info')}
                 </p>
               </div>
@@ -157,14 +157,14 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="rounded-xl overflow-hidden shadow-lg">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423283.4355537047!2d-118.69192057645281!3d34.020731277884844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sca!4v1653427926116!5m2!1sen!2sca" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.5131410693387!2d30.482894915459513!3d50.45031397947596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5b772e2585%3A0xf4fca52741aad248!2z0K_RgNC-0YHQu9Cw0LLRgdC60LDRjywgNTgsINCa0LjQtdCyLCAwMjAwMA!5e0!3m2!1sru!2sua!4v1686567001054!5m2!1sru!2sua" 
               width="100%" 
               height="450" 
               style={{ border: 0 }} 
               allowFullScreen 
               loading="lazy" 
               referrerPolicy="no-referrer-when-downgrade"
-              title="HeartfeltHome Location"
+              title="CrossCharity Location"
             ></iframe>
           </div>
         </div>

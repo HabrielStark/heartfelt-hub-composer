@@ -180,12 +180,12 @@
     },
     "info": {
       "title": "Información de Contacto",
-      "subtitle": "Encuéntrenos en nuestra ubicación o comuníquese a través de cualquiera de los métodos de contacto a continuación.",
+      "subtitle": "Encuéntranos usando la información a continuación.",
       "location": {
-        "title": "Nuestra Ubicación",
-        "address1": "123 Calle Solidaria",
-        "address2": "Ciudad Compasión, CA 12345",
-        "country": "Estados Unidos"
+        "title": "Ubicación",
+        "address1": "Yaroslavskaya 58",
+        "address2": "Kiev",
+        "country": "Ucrania"
       },
       "phone": {
         "title": "Números de Teléfono",

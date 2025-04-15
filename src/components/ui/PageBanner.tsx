@@ -19,7 +19,7 @@ const PageBanner: React.FC<PageBannerProps> = ({
 
   return (
     <div 
-      className="relative py-16 md:py-24 bg-gradient-to-r from-primary-50 to-pastel-blue"
+      className="relative py-16 md:py-24 bg-gradient-to-r from-primary-600 to-blue-700"
       style={bannerStyle}
     >
       {/* Полупрозрачная темная подложка для лучшей видимости текста */}
